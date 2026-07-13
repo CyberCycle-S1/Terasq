@@ -1,0 +1,26 @@
+{
+  "id": "1783699225596-r7cwsv8ub",
+  "name": "Cloudflare - S1",
+  "config": {
+    "startingTeamFinances": {
+      "bankBalance": 2500,
+      "cryptoCurrencyBalance": 10
+    },
+    "globalSettings": {
+      "maxTeamSize": 4,
+      "useBlackMarket": true,
+      "publicScoreboard": true,
+      "scoreBotEnabled": false,
+      "dynamicScoringEnabled": false,
+      "botRewardBase": 50,
+      "useItemBotReward": false,
+      "itemBotRewardUuid": "",
+      "recycleBoxes": false,
+      "showBoxManufacturers": false
+    }
+  },
+  "sharing": {
+    "enabled": true,
+    "directory": "cloudflare-s1"
+  }
+}

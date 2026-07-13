@@ -1,0 +1,43 @@
+{
+  "id": "1783699237357-q3jwvoke2",
+  "name": "New Box",
+  "gameLevelId": "",
+  "corporationId": "1783699235121-0k0xxng4b",
+  "order": 1,
+  "operatingSystem": "none",
+  "description": "",
+  "captureMessage": "",
+  "value": 0,
+  "flagSubmissionType": "CLASSIC",
+  "difficulty": "",
+  "garbage": "24a5d82975e9f24e02660fe3f8cfad60",
+  "locked": false,
+  "flags": [
+    {
+      "id": "1783699299308-l58vwm9wc",
+      "type": "regex",
+      "name": "Flag 1",
+      "token": "",
+      "description": "<s1-nav>Navigation instructions...</s1-nav>\r\n\r\n<s1-flag-body>Main flag content...</s1-flag-body>\r\n\r\n<pre class=\"s1-code\" is=\"s1-code\" id=\"@ID\">code here</pre>\r\n\r\n<s1-tip>Helpful tip...</s1-tip>\r\n\r\n<table style=\"border:1px solid red; border-collapse:collapse;\">\r\n  <td rowspan=\"2\" class=\"example-td\" width=\"20px\"><i class=\"ft\" style=\"color:#FACE78;\">&#xf071;</i></td>\r\n  <td class=\"example-td\"><s1-value>Warning message here...</s1-value></td>\r\n</table>",
+      "captureMessage": "",
+      "value": 100,
+      "plainAnswer": "",
+      "locked": false,
+      "caseSensitive": false,
+      "order": 0,
+      "attachments": [],
+      "hints": [
+        {
+          "id": "1783704560827-7869tz1x2",
+          "price": 20,
+          "description": "New hint",
+          "flagId": "1783699299308-l58vwm9wc",
+          "order": 0,
+          "boxId": "1783699237357-q3jwvoke2"
+        }
+      ]
+    }
+  ],
+  "hints": [],
+  "dependency": "manual"
+}

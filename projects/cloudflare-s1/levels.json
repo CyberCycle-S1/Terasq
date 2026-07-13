@@ -1,0 +1,13 @@
+[
+  {
+    "id": "auto-level-0",
+    "number": 0,
+    "type": "hidden",
+    "buyout": 0,
+    "reward": 0,
+    "name": "Level 0",
+    "description": "Automatically generated hidden level",
+    "locked": true,
+    "disabled": true
+  }
+]
