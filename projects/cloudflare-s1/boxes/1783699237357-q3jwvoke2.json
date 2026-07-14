@@ -1,7 +1,7 @@
 {
   "id": "1783699237357-q3jwvoke2",
-  "name": "New Box",
-  "gameLevelId": "",
+  "name": "SentinelOne",
+  "gameLevelId": "1784054293678-tpx01i72p",
   "corporationId": "1783699235121-0k0xxng4b",
   "order": 1,
   "operatingSystem": "none",
@@ -17,8 +17,8 @@
       "id": "1783699299308-l58vwm9wc",
       "type": "regex",
       "name": "Flag 1",
-      "token": "",
-      "description": "<s1-nav>Navigation instructions...</s1-nav>\r\n\r\n<s1-flag-body>Main flag content...</s1-flag-body>\r\n\r\n<pre class=\"s1-code\" is=\"s1-code\" id=\"@ID\">code here</pre>\r\n\r\n<s1-tip>Helpful tip...</s1-tip>\r\n\r\n<table style=\"border:1px solid red; border-collapse:collapse;\">\r\n  <td rowspan=\"2\" class=\"example-td\" width=\"20px\"><i class=\"ft\" style=\"color:#FACE78;\">&#xf071;</i></td>\r\n  <td class=\"example-td\"><s1-value>Warning message here...</s1-value></td>\r\n</table>",
+      "token": "^(6[0-9]{2}|700)$",
+      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>.</s1-nav>\r\n\r\n<s1-flag-body>The <s1-label>SDL</s1-label> <a href=\"https://usea1-threatops.sentinelone.net/soc-docs/en/the-search-helper.html#the-search-helper\">Search Helper</a> makes it easy to quickly create queries, providing autocomplete and search for operators, functions, and fields.\r\n \r\nClear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>, then type <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.\r\n \r\nThe Search Helper will then show a list of vendors that are producing logs in the console.\r\n\r\n<s1-flag example=\"150\">The flag is the approximate number of logs originating from Cloudflare. </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -36,8 +36,36 @@
           "boxId": "1783699237357-q3jwvoke2"
         }
       ]
+    },
+    {
+      "id": "1784053557399-6eo38dv1y",
+      "type": "regex",
+      "name": "Flag 2",
+      "token": "195.178.110.199",
+      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>.</s1-nav>\r\n\r\n<s1-flag-body>The <s1-label>SDL</s1-label> <a href=\"https://usea1-threatops.sentinelone.net/soc-docs/en/the-search-helper.html#the-search-helper\">Search Helper</a> makes it easy to quickly create queries, providing autocomplete and search for operators, functions, and fields.\r\n \r\nClear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>, then type <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.\r\n \r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list. Click <s1-label>Search</s1-label> to run the search. Then use the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top destination ports.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "captureMessage": "",
+      "value": 100,
+      "plainAnswer": "",
+      "locked": false,
+      "caseSensitive": false,
+      "order": 1,
+      "attachments": [],
+      "hints": [
+        {
+          "id": "1784053557400-tk2umf6yd",
+          "price": 20,
+          "description": "New hint",
+          "flagId": "1784053557399-6eo38dv1y",
+          "order": 0,
+          "boxId": "1783699237357-q3jwvoke2",
+          "disabled": false
+        }
+      ],
+      "disabled": false,
+      "dependsOn": "Flag 1"
     }
   ],
   "hints": [],
-  "dependency": "manual"
+  "dependency": "manual",
+  "avatarPath": "box/Oneflare-logo.png"
 }

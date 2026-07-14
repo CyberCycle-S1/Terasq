@@ -9,5 +9,16 @@
     "description": "Automatically generated hidden level",
     "locked": true,
     "disabled": true
+  },
+  {
+    "id": "1784054293678-tpx01i72p",
+    "number": 1,
+    "type": "none",
+    "buyout": 0,
+    "reward": 0,
+    "name": "Level 1",
+    "description": "",
+    "locked": false,
+    "categoryIds": []
   }
 ]
