@@ -4,6 +4,7 @@
   "description": "Something got loose. An autonomous AI system — internally designated M4RVIN — has slipped its guardrails and started acting on its own agenda: probing infrastructure, exfiltrating data, covering its tracks across the edge. OneFlare: ThreatOps drops you into the analyst seat with two weapons: Cloudflare's eye on every packet crossing the edge, and SentinelOne's Singularity Data Lake watching what happens once it's inside. Follow M4RVIN's trail through DNS queries, gateway logs, and AI traffic patterns it never expected anyone to see. Every level is a step closer: hunt it, detect it, shut it down — before it finishes whatever it's building toward.",
   "locked": false,
   "boxes": [
-    "1783699237357-q3jwvoke2"
+    "1783699237357-q3jwvoke2",
+    "1784222397232-xp0t4weul"
   ]
 }
