@@ -1,23 +1,23 @@
 {
-  "id": "1784222397232-xp0t4weul",
-  "name": "Box 1",
+  "id": "1785360521872-cmbpqfpe3",
+  "name": "Box 3",
   "gameLevelId": "1784054293678-tpx01i72p",
   "corporationId": "1783699235121-0k0xxng4b",
-  "order": 0,
+  "order": 2,
   "operatingSystem": "none",
   "description": "",
   "captureMessage": "",
   "value": 0,
   "flagSubmissionType": "CLASSIC",
   "difficulty": "",
-  "garbage": "787f911f7f8ec918309ddf5592fcc40f",
+  "garbage": "e666b36a86f72f6a1a5ad388a039d057",
   "locked": false,
   "flags": [
     {
-      "id": "1785338938858-fm71bmgfn",
+      "id": "1785360537414-rigw7n4m4",
       "type": "static",
-      "name": "Flag 1 - CF Nav",
-      "token": "CTF{flag}",
+      "name": "Flag 1 - XSS",
+      "token": "CTF{example_flag}",
       "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -29,10 +29,10 @@
       "hints": []
     },
     {
-      "id": "1785338951045-g5c6wpriu",
+      "id": "1785360559687-fel8obcp5",
       "type": "static",
-      "name": "Flag 2 - CF Nav",
-      "token": "CTF{flag}",
+      "name": "Flag 2 - XSS",
+      "token": "CTF{example_flag}",
       "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -42,14 +42,14 @@
       "order": 1,
       "attachments": [],
       "hints": [],
-      "dependsOn": "Flag 1 - CF Nav"
+      "disabled": false
     },
     {
-      "id": "1784302979510-5bqfje1wn",
+      "id": "1785360562021-qm8xtf5cj",
       "type": "static",
-      "name": "Flag 3 - Analytics",
-      "token": "CTF{domain.soledrop.co}",
-      "description": "<s1-nav>On the left hand side navigate to Analytics. Select Account Analytics from the dropdown. Change the lookback window to see data from the last 30 days.</s1-nav>\n\nAccount Analytics shows you an overview of traffic for all domains under your Cloudflare account, such as requests and bandwidth by country, information related to security, cache, and errors, among others.\n \n<s1-flag example=\"United States\">The flag is the country with the 3rd highest number of requests?</s1-flag>",
+      "name": "Flag 3 - XSS - Workflow",
+      "token": "CTF{example_flag}",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -57,14 +57,15 @@
       "caseSensitive": false,
       "order": 2,
       "attachments": [],
-      "hints": []
+      "hints": [],
+      "disabled": false
     },
     {
-      "id": "1784303365739-hi9ouoy9b",
+      "id": "1785360564455-lrd2eg88e",
       "type": "static",
-      "name": "Flag 4 - Analytics",
-      "token": "CTF{Ransomware}",
-      "description": "<s1-nav>Go to the shop.soledrop.co website to find this flag.</s1-nav>\n\nThe targeted site has a status page. Let's find out why Cloudflare was logging so much activity for this site.\n\nThe HTTP Traffic page allows us to review incoming HTTP traffic for all domains connected to our Cloudflare site.\n \n<s1-flag example=\"Ransomware\">The flag is the attack pattern the site detected. </s1-flag>",
+      "name": "Flag 4 - CF Integration",
+      "token": "CTF{example_flag}",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -72,14 +73,15 @@
       "caseSensitive": false,
       "order": 3,
       "attachments": [],
-      "hints": []
+      "hints": [],
+      "disabled": false
     },
     {
-      "id": "1784303848387-2x2f5ad22",
-      "type": "regex",
-      "name": "Flag 5 - Soledrop",
-      "token": "^24$",
-      "description": "Cloudflare uses Bot Scores to measure the likelihood that an incoming web request is operated by an automated bot rather than a human. A bot score of 1 indicates the highest probability of bot activity, while a bot score of 99 indicates human activity.\n \n<s1-flag example=\"50\">The flag is bot score attributed to the activity on shop.soledrop.co. </s1-flag>",
+      "id": "1785360565750-vu31ukgju",
+      "type": "static",
+      "name": "Flag 5 - Workflow Conditional",
+      "token": "CTF{example_flag}",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -88,13 +90,13 @@
       "order": 4,
       "attachments": [],
       "hints": [],
-      "dependsOn": "Flag 2"
+      "disabled": false
     },
     {
-      "id": "1785340751216-gocd6hcvy",
+      "id": "1785360566870-jvc4ts91w",
       "type": "static",
-      "name": "Flag 6 - Bot score",
-      "token": "CTF{flag}",
+      "name": "Flag 6 - CF Block IP",
+      "token": "CTF{example_flag}",
       "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -107,10 +109,10 @@
       "disabled": false
     },
     {
-      "id": "1785340759944-dybfuo9n1",
+      "id": "1785360568037-hgvce8onz",
       "type": "static",
-      "name": "Flag 7 - Logpush",
-      "token": "CTF{flag}",
+      "name": "Flag 7 - Credential Stuffing",
+      "token": "CTF{example_flag}",
       "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -123,10 +125,10 @@
       "disabled": false
     },
     {
-      "id": "1785340761747-u4mbcj5lz",
+      "id": "1785360569179-xd5gqrhnq",
       "type": "static",
-      "name": "Flag 8 - Default time",
-      "token": "CTF{flag}",
+      "name": "Flag 8 - Credential Stuffing",
+      "token": "CTF{example_flag}",
       "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -139,10 +141,10 @@
       "disabled": false
     },
     {
-      "id": "1785340763306-9az0eoav7",
+      "id": "1785360570346-tlv59hvxt",
       "type": "static",
-      "name": "Flag 9 - Data ingest",
-      "token": "CTF{flag}",
+      "name": "Flag 9 - VirusTotal",
+      "token": "CTF{example_flag}",
       "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -155,10 +157,10 @@
       "disabled": false
     },
     {
-      "id": "1785340765990-3p2w16l7j",
+      "id": "1785360578280-mrtpp9p73",
       "type": "static",
-      "name": "Flag 10 - Detection",
-      "token": "CTF{flag}",
+      "name": "Flag 10 - URL of target Site",
+      "token": "CTF{example_flag}",
       "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -171,10 +173,10 @@
       "disabled": false
     },
     {
-      "id": "1785340775265-03xss86mr",
+      "id": "1785360580221-cwm12w0xx",
       "type": "static",
-      "name": "Flag 11 - Detection",
-      "token": "CTF{flag}",
+      "name": "Flag 11 - Rule JSON Body",
+      "token": "CTF{example_flag}",
       "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -187,10 +189,10 @@
       "disabled": false
     },
     {
-      "id": "1785340777240-95fyfow4d",
+      "id": "1785360817691-rfaam2wsr",
       "type": "static",
-      "name": "Flag 12 - Detection",
-      "token": "CTF{flag}",
+      "name": "Flag 12 - CF Firewall Rules",
+      "token": "CTF{example_flag}",
       "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -201,42 +203,8 @@
       "attachments": [],
       "hints": [],
       "disabled": false
-    },
-    {
-      "id": "1785340778702-yob1edtbp",
-      "type": "static",
-      "name": "Flag 13 - CF Filtering",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
-      "captureMessage": "",
-      "value": 100,
-      "plainAnswer": "",
-      "locked": false,
-      "caseSensitive": false,
-      "order": 12,
-      "attachments": [],
-      "hints": [],
-      "disabled": false
-    },
-    {
-      "id": "1785340780568-laft2hurh",
-      "type": "static",
-      "name": "Flag 14 - Event Search Evidence",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
-      "captureMessage": "",
-      "value": 100,
-      "plainAnswer": "",
-      "locked": false,
-      "caseSensitive": false,
-      "order": 13,
-      "attachments": [],
-      "hints": [],
-      "disabled": false
     }
   ],
   "hints": [],
-  "avatarPath": "",
-  "avatarData": "",
   "dependency": "manual"
 }
