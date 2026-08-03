@@ -120,8 +120,8 @@
       "id": "1785360329421-dxgp4c67s",
       "type": "regex",
       "name": "Flag 5 - Oneflare Custom Dashboad",
-      "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "token": "\\b(?:4[0-9]\\d|5[0-4]\\d|550)\\b",
+      "description": "<s1-nav>Dashboards → Custom dashboards → Cloudflare</s1-nav>\r\n<s1-flag-body>\r\nCustom dashboards are helpful because they allow analysts to display the information they think is most relevant. Dashboards allow this information to be readily accessible for threat analysis.\r\n\r\nAccording to the custom Cloudflare dashboard, how many WAF (Web Application Firewall) blocks have occurred\r\n</s1-flag-body>\r\n<s1-flag example=\"100\">The flag is the number of WAF blocks that have occurred.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -133,11 +133,19 @@
         {
           "id": "1785360329422-7lv2vywr9",
           "price": 20,
-          "description": "New hint",
+          "description": "*Screenshot of where to look*",
           "flagId": "1785360329421-dxgp4c67s",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2",
           "disabled": false
+        },
+        {
+          "id": "1785793366034-40lexhbv5",
+          "price": 10,
+          "description": "The flag is 411.",
+          "flagId": "1785360329421-dxgp4c67s",
+          "order": 0,
+          "boxId": "1783699237357-q3jwvoke2"
         }
       ],
       "disabled": false

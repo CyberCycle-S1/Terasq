@@ -15,25 +15,48 @@
   "flags": [
     {
       "id": "1785338938858-fm71bmgfn",
-      "type": "static",
+      "type": "choice",
       "name": "Flag 1 - CF Nav",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "IP List",
+      "description": "<s1-nav>Manage Account → Configurations → Lists</s1-nav>\n<s1-flag-body>\nA playbook adds a malicious IP to a reusable ____ that WAF and Gateway rules can reference. (IP List / Page Rule / Redirect List / Waiting Room)\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "IP List",
       "locked": false,
       "caseSensitive": false,
       "order": 0,
       "attachments": [],
-      "hints": []
+      "hints": [
+        {
+          "id": "1785776556532-5i0hkrifa",
+          "price": 20,
+          "description": "Look for the reusable object type under Lists.",
+          "flagId": "1785338938858-fm71bmgfn",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1785776596840-d5a4fyg68",
+          "price": 80,
+          "description": "The flag is IP List",
+          "flagId": "1785338938858-fm71bmgfn",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        }
+      ],
+      "choices": [
+        "IP List",
+        "Page Rule",
+        "Redirect List",
+        "Waiting Room"
+      ]
     },
     {
       "id": "1785338951045-g5c6wpriu",
       "type": "static",
       "name": "Flag 2 - CF Nav",
       "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "description": "<s1-nav>Security → WAF → Custom rules</s1-nav>\n<s1-flag-body>\nWhat is the name of a custom rule a SOAR playbook could toggle to block an attacker (or note that none exists yet)?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the name of a custom rule a SOAR playbook could taggle to block an attacker.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -41,30 +64,54 @@
       "caseSensitive": false,
       "order": 1,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1785777057139-o6yg7snfi",
+          "price": 20,
+          "description": "Read the custom-rules list; if empty, that's a finding.",
+          "flagId": "1785338951045-g5c6wpriu",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1785777077992-tgwn25vof",
+          "price": 10,
+          "description": "The flag is 'none configured'.",
+          "flagId": "1785338951045-g5c6wpriu",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        }
+      ],
       "dependsOn": "Flag 1 - CF Nav"
     },
     {
       "id": "1784302979510-5bqfje1wn",
-      "type": "static",
+      "type": "choice",
       "name": "Flag 3 - Analytics",
-      "token": "CTF{domain.soledrop.co}",
-      "description": "<s1-nav>On the left hand side navigate to Analytics. Select Account Analytics from the dropdown. Change the lookback window to see data from the last 30 days.</s1-nav>\n\nAccount Analytics shows you an overview of traffic for all domains under your Cloudflare account, such as requests and bandwidth by country, information related to security, cache, and errors, among others.\n \n<s1-flag example=\"United States\">The flag is the country with the 3rd highest number of requests?</s1-flag>",
+      "token": "France",
+      "description": "<s1-nav>On the left hand side navigate to Analytics. Select Account Analytics from the dropdown. Change the lookback window to see data from the last 30 days.</s1-nav>\n\nAccount Analytics shows you an overview of traffic for all domains under your Cloudflare account, such as requests and bandwidth by country, information related to security, cache, and errors, among others.\n \n<s1-flag>The flag is the country with the 3rd highest number of requests.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "France",
       "locked": false,
       "caseSensitive": false,
       "order": 2,
       "attachments": [],
-      "hints": []
+      "hints": [],
+      "dependsOn": "Flag 2 - CF Nav",
+      "choices": [
+        "India",
+        "Ireland",
+        "France",
+        "Germany"
+      ]
     },
     {
       "id": "1784303365739-hi9ouoy9b",
       "type": "static",
       "name": "Flag 4 - Analytics",
-      "token": "CTF{Ransomware}",
-      "description": "<s1-nav>Go to the shop.soledrop.co website to find this flag.</s1-nav>\n\nThe targeted site has a status page. Let's find out why Cloudflare was logging so much activity for this site.\n\nThe HTTP Traffic page allows us to review incoming HTTP traffic for all domains connected to our Cloudflare site.\n \n<s1-flag example=\"Ransomware\">The flag is the attack pattern the site detected. </s1-flag>",
+      "token": "CTF{shop.soledrop.co}",
+      "description": "<s1-nav>On the left hand side navigate to Analytics. Select HTTP Traffic from the dropdown.</s1-nav>\n\nIn the context of web traffic monitoring, a Referer is the webpage that linked to the resource being requested.\n\nIn other words, it is inbound traffic from a link. So if a visitor to example.com clicks a link to your site there, the request will include a Referer header saying they came via example.com.\n \n<s1-flag example=\"example.com\">The flag is the Referer with the highest request volume. </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -92,19 +139,24 @@
     },
     {
       "id": "1785340751216-gocd6hcvy",
-      "type": "static",
+      "type": "choice",
       "name": "Flag 6 - Bot score",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "higher",
+      "description": "<s1-nav>On the status page note the bot score. Go back to the Cloudflare console and find the Security Events page. Scroll down to the Sampled logs</s1-nav>\n<s1-flag-body>\nCloudflare uses Bot Scores to measure the likelihood that an incoming web request is operated by an automated bot rather than a human. A bot score of 1 indicates the highest probability of bot activity, while a bot score of 99 indicates human activity. See bot score calculation here for more info: http://developers.cloudflare.com/bots/concepts/bot-score/</s1-flag-body>\n<s1-flag>Is the bot score in Cloudflare higher, the same as, or lower than the one in Soledrop?</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "higher",
       "locked": false,
       "caseSensitive": false,
       "order": 5,
       "attachments": [],
       "hints": [],
-      "disabled": false
+      "disabled": false,
+      "choices": [
+        "higher",
+        "same",
+        "lower"
+      ]
     },
     {
       "id": "1785340759944-dybfuo9n1",
@@ -126,24 +178,41 @@
       "id": "1785340761747-u4mbcj5lz",
       "type": "static",
       "name": "Flag 8 - Default time",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "CTF{4 hours}",
+      "description": "<s1-nav>In the SentinelOne console, navigate over to Event Search.</s1-nav>\n<s1-flag-body>\nThe lookback window is the period of time Event Search will look back on and show logs for. A time of 24 hours means that Event Search will show you results for anything matching your query, but only from within the past 24 hours.\n\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default time range for Event Search.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "4 hours",
       "locked": false,
       "caseSensitive": false,
       "order": 7,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1785779053597-fdcqq8fxv",
+          "price": 20,
+          "description": "*Screenshot of Time Range input*",
+          "flagId": "1785340761747-u4mbcj5lz",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1785779054921-7943s9etw",
+          "price": 80,
+          "description": "The flag is 4 hours.",
+          "flagId": "1785340761747-u4mbcj5lz",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        }
+      ],
       "disabled": false
     },
     {
       "id": "1785340763306-9az0eoav7",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 9 - Data ingest",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "\\b(?:100,?000|[4-9]\\d,?\\d{3})\\b",
+      "description": "<s1-nav>In the SentinelOne console, navigate over to Event Search. Make sure the query is empty and the range is set to the last 72 hours. Type dataSource.vendor into the fields search bar and select Cloudflare.</s1-nav>\n<s1-flag-body>\nWith Logpush enabled, Cloudflare can send all the relevant logs to the SentinelOne console for triage and response. Logpush can be configured to handle all sorts of volumes to fit the specific needs of your SOC team.\n</s1-flag-body>\n<s1-flag example=\"10,000\">The flag is the approximate number of logs coming from Cloudflare.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -151,31 +220,53 @@
       "caseSensitive": false,
       "order": 8,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1785779720478-h98bzc1rp",
+          "price": 20,
+          "description": "*Screenshot of where to look*",
+          "flagId": "1785340763306-9az0eoav7",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1785779720671-mvrcytu60",
+          "price": 80,
+          "description": "The flag is 60,000",
+          "flagId": "1785340763306-9az0eoav7",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        }
+      ],
       "disabled": false
     },
     {
       "id": "1785340765990-3p2w16l7j",
-      "type": "static",
+      "type": "choice",
       "name": "Flag 10 - Detection",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "Scheduled",
+      "description": "<s1-nav>Navigate over to Detections. Find the detection associated with Credential stuffing</s1-nav>\n<s1-flag-body>\nDetections are a feature of SentinelOne that allow you to create queries that are applied to all incoming traffic. If a log or set of logs match the pattern they are aggregated into an alert for the SOC team to analyze.\n\nFind the detection associated with Credential Stuffing.\n</s1-flag-body>\n<s1-flag example=\"Single Event\">The flag is the Rule Type associated with this detection.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Scheduled",
       "locked": false,
       "caseSensitive": false,
       "order": 9,
       "attachments": [],
       "hints": [],
-      "disabled": false
+      "disabled": false,
+      "choices": [
+        "Single Event",
+        "Correlation",
+        "Scheduled"
+      ]
     },
     {
       "id": "1785340775265-03xss86mr",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 11 - Detection",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "\\b(?:4[5-9]\\d|5[0-4]\\d|550)\\b",
+      "description": "<s1-nav>Navigate over to Detections. Find the detection associated with Credential stuffing. Click on the Event Search button inside the detection window.</s1-nav>\n<s1-flag-body>\nWhen you use Event Search while inside a detection, the Event Search query is automatically populated with the query the detection was using. This allows analysts to save time and find the exact logs and events they are looking for.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is how many failed login attempts have occurred for the most recent event.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -183,15 +274,32 @@
       "caseSensitive": false,
       "order": 10,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1785785401239-zem7e5hoo",
+          "price": 20,
+          "description": "Make sure the lookback window is set to 72 hours and the Detection name is \"CF-Access-CredStuffing — Login Brute Force / Credential Stuffing on portal.soledrop.co\". The flag is under the failed_logins column.",
+          "flagId": "1785340775265-03xss86mr",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1785785401592-m6gnetd54",
+          "price": 80,
+          "description": "The flag is 529.",
+          "flagId": "1785340775265-03xss86mr",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        }
+      ],
       "disabled": false
     },
     {
       "id": "1785340777240-95fyfow4d",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 12 - Detection",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "30",
+      "description": "<s1-nav>Navigate over to Detections. Find the detection associated with WAF Traversal.</s1-nav>\n<s1-flag-body>\nUnder the 'raised alerts' column, you can see how many alerts a detection rule has raised since being activated.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the number of alerts that have been raised by the CF-WAF-Traversal detection rule.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -199,7 +307,24 @@
       "caseSensitive": false,
       "order": 11,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1785791338216-eb289kcnv",
+          "price": 20,
+          "description": "*Screenshot of where to look*",
+          "flagId": "1785340777240-95fyfow4d",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1785791338633-7kylb148g",
+          "price": 80,
+          "description": "The flag is 30.",
+          "flagId": "1785340777240-95fyfow4d",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        }
+      ],
       "disabled": false
     },
     {
@@ -220,10 +345,10 @@
     },
     {
       "id": "1785340780568-laft2hurh",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 14 - Event Search Evidence",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "^[a-z0-9]{55,63}\\.[a-z0-9]+\\.acmecorp-lab\\.workers\\.dev$",
+      "description": "<s1-nav>Navigate to Event Search. Clear the search and set the search window to 72 hours.</s1-nav>\n<s1-flag-body>\nPaste this DNS Tunneling search query into the event search.\n\nclass_uid=4003 dataSource.cloudflare_dataset='Gateway DNS' unmapped.QueryName=*\n| let fqdn        = lower(unmapped.QueryName)\n| let label       = replace(fqdn, '\\\\..*', '')\n| let zone        = replace(fqdn, '^.*\\\\.([^.]+\\\\.[^.]+\\\\.[^.]+)$', '$1')\n| let label_len   = len(label)\n| let digit_cnt   = len(replace(label, '[^0-9]', ''))\n| let digit_ratio = label_len > 0 ? digit_cnt / label_len : 0\n| let is_txt      = query.type in:anycase ('txt')\n| let src_ip      = src_endpoint.ip\n| let host        = device.name\n| group\n    total_queries = count(),\n    uniq_labels   = estimate_distinct(label),\n    max_label_len = max(label_len),\n    long_labels   = count(label_len >= 40),\n    txt_long      = count(is_txt AND label_len >= 20),\n    hi_entropy    = count(label_len >= 12 AND digit_ratio >= 0.15),\n    device_uid    = any(device.uid),\n    evidence      = max_by(unmapped.QueryName, label_len),\n    first_seen    = oldest(timestamp),\n    last_seen     = newest(timestamp)\n  by src_ip, host, zone\n| filter (hi_entropy >= 10 AND uniq_labels >= 10) OR (long_labels >= 5 AND uniq_labels >= 5) OR txt_long >= 3\n| let reason = txt_long >= 3 ? 'Data-in-DNS exfil (TXT long labels)' : ((long_labels >= 5 AND uniq_labels >= 5) ? 'Long-label DNS tunneling' : 'DGA / high-entropy beaconing')\n| let detection_time = simpledateformat(last_seen, 'yyyy-MM-dd HH:mm:ss z', 'America/Chicago')\n| sort -uniq_labels\n| columns detection_time, src_ip, host, zone, reason, total_queries, uniq_labels, long_labels, txt_long, hi_entropy, max_label_len, evidence, device_uid, first_seen\n| limit 100\n\nDetection queries can produce Evidence. Evidence is the key piece of data that caused the detection rule to fire. In this case the evidence is the DNS label, and it is indicative of a tunneling attack.\n\n</s1-flag-body>\n<s1-flag example=\"abcdefghijklmnopqrstuvwxyz1234567890c2tunnel.acmecorp-lab.workers.dev\">The flag is the string + domain that is cited as evidence. </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -231,7 +356,24 @@
       "caseSensitive": false,
       "order": 13,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1785792901150-zy1uofxkp",
+          "price": 20,
+          "description": "*Screenshot of Evidence column*",
+          "flagId": "1785340780568-laft2hurh",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1785792924505-370e9aco2",
+          "price": 80,
+          "description": "The flag is u4nxyfbeyqsqamjp6bjvbpcpmlpgx1s5qa3dmwwxkgp9yic9274m6chgnmia.beacon.acmecorp-lab.workers.dev\n",
+          "flagId": "1785340780568-laft2hurh",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        }
+      ],
       "disabled": false
     }
   ],
