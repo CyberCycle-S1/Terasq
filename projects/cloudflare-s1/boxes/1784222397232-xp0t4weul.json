@@ -18,7 +18,7 @@
       "type": "choice",
       "name": "Flag 1 - CF Nav",
       "token": "IP List",
-      "description": "<s1-nav>Manage Account → Configurations → Lists</s1-nav>\n<s1-flag-body>\nA playbook adds a malicious IP to a reusable ____ that WAF and Gateway rules can reference. (IP List / Page Rule / Redirect List / Waiting Room)\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, find the <s1-label>Manage Account</s1-label> menu on the left. From the <s1-label>Manage Account</s1-label> view find the <s1-label>Configurations</s1-label> page. From the <s1-label>Configurations</s1-label> page use the navigation bar at the top to find the <s1-label>Lists</s1-label> subpage.</s1-nav>\n<s1-flag-body>\nA playbook adds a malicious IP to a reusable ____ that WAF and Gateway rules can reference. (IP List / Page Rule / Redirect List / Waiting Room)\n</s1-flag-body>\n<s1-flag example=\"\">The flag is what malicious IPs can be added to in this specific context.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "IP List",
@@ -30,7 +30,7 @@
         {
           "id": "1785776556532-5i0hkrifa",
           "price": 20,
-          "description": "Look for the reusable object type under Lists.",
+          "description": "Look for the reusable object type under <s1-label>Lists</s1-label>.",
           "flagId": "1785338938858-fm71bmgfn",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
@@ -38,7 +38,7 @@
         {
           "id": "1785776596840-d5a4fyg68",
           "price": 80,
-          "description": "The flag is IP List",
+          "description": "The flag is <s1-answer>IP List</s1-answer>",
           "flagId": "1785338938858-fm71bmgfn",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
@@ -55,8 +55,8 @@
       "id": "1785338951045-g5c6wpriu",
       "type": "static",
       "name": "Flag 2 - CF Nav",
-      "token": "CTF{flag}",
-      "description": "<s1-nav>Security → WAF → Custom rules</s1-nav>\n<s1-flag-body>\nWhat is the name of a custom rule a SOAR playbook could toggle to block an attacker (or note that none exists yet)?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the name of a custom rule a SOAR playbook could taggle to block an attacker.</s1-flag>",
+      "token": "Mitigate definite bot traffic",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, find the <s1-label>Domains</s1-label> dropdown and select find the <s1-label>Overview</s1-label> page. From the <s1-label>Overview</s1-label> page, find the <s1-value>one-flare.com</s1-value> domain. Find the <s1-label>Security</s1-label> dropdown from the menus the left and go to <s1-label>Security Rules</s1-label>.</s1-nav>\n<s1-flag-body>\nWhat is the name of a <s1-label>Custom Rule</s1-label> a SOAR playbook could toggle to block an attacker?\n</s1-flag-body>\n<s1-flag example=\"Mitigate attacker\">The flag is the name of the <s1-label>Custom Rule</s1-label> in place that can block an attacker.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -89,7 +89,7 @@
       "type": "choice",
       "name": "Flag 3 - Analytics",
       "token": "France",
-      "description": "<s1-nav>On the left hand side navigate to Analytics. Select Account Analytics from the dropdown. Change the lookback window to see data from the last 30 days.</s1-nav>\n\nAccount Analytics shows you an overview of traffic for all domains under your Cloudflare account, such as requests and bandwidth by country, information related to security, cache, and errors, among others.\n \n<s1-flag>The flag is the country with the 3rd highest number of requests.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, on the left hand side find <s1-label>Analytics</s1-label>. Select <s1-label>Account Analytics</s1-label> from the dropdown. Change the <s1-label>Absolute time range</s1-label> to see data from the last 30 days.</s1-nav>\n\n<s1-label>Account Analytics</s1-label> shows you an overview of traffic for all domains under your <span style=\"color: #f38020;\">Cloudflare</span> account, such as requests and bandwidth by country, information related to security, cache, and errors, among others.\n \n<s1-flag example=\"United States\">The flag is the country with the 3rd highest number of requests.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "France",
@@ -97,7 +97,16 @@
       "caseSensitive": false,
       "order": 2,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1785962574035-s3rpg5rq9",
+          "price": 10,
+          "description": "Make sure the <s1-label>Absolute time range</s1-label> is set to 30 days.\n\nThe flag is the country with the highest request volume out of the 4 options (3rd highest overall).",
+          "flagId": "1784302979510-5bqfje1wn",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        }
+      ],
       "dependsOn": "Flag 2 - CF Nav",
       "choices": [
         "India",
