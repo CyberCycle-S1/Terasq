@@ -18,7 +18,7 @@
       "type": "regex",
       "name": "Flag 1 - CF Dashboard",
       "token": "^(6[0-9]{2}|700)$",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>.</s1-nav>\r\n\r\n<s1-flag-body>The <s1-label>SDL</s1-label> <a href=\"https://usea1-threatops.sentinelone.net/soc-docs/en/the-search-helper.html#the-search-helper\">Search Helper</a> makes it easy to quickly create queries, providing autocomplete and search for operators, functions, and fields.\r\n \r\nClear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>, then type <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.\r\n \r\nThe Search Helper will then show a list of vendors that are producing logs in the console.\r\n\r\n<s1-flag example=\"150\">The flag is the approximate number of logs originating from Cloudflare. </s1-flag>",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -42,7 +42,7 @@
       "type": "regex",
       "name": "Flag 2 - CF Dashboard",
       "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -69,7 +69,7 @@
       "type": "regex",
       "name": "Flag 3 - CF Investigation",
       "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -95,7 +95,7 @@
       "type": "regex",
       "name": "Flag 4 - CF Investigation",
       "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -155,7 +155,7 @@
       "type": "regex",
       "name": "Flag 6 - CF WAF Rule",
       "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -180,8 +180,8 @@
       "id": "1785360331495-pi75v06pg",
       "type": "regex",
       "name": "Flag 7 - Oneflare Custom Dashboard",
-      "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "token": "\\b(?:6\\d{3}|7000)\\b",
+      "description": "<s1-nav>Dashboards → Custom dashboards → Cloudflare. Set lookback window to 72 hours.</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"4000\">The flag is the number of HTTPS requests recieved within the last 72 hours.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -193,11 +193,19 @@
         {
           "id": "1785360331496-ut0isd618",
           "price": 20,
-          "description": "New hint",
+          "description": "*Screenshot of where to look*",
           "flagId": "1785360331495-pi75v06pg",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2",
           "disabled": false
+        },
+        {
+          "id": "1785794574312-l9fxv28yl",
+          "price": 10,
+          "description": "The flag is 6440.",
+          "flagId": "1785360331495-pi75v06pg",
+          "order": 0,
+          "boxId": "1783699237357-q3jwvoke2"
         }
       ],
       "disabled": false
@@ -207,7 +215,7 @@
       "type": "regex",
       "name": "Flag 8 - HTTP Traffic",
       "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is </s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -232,8 +240,8 @@
       "id": "1785360333333-axik2dzfr",
       "type": "regex",
       "name": "Flag 9 - DNS Tunneling",
-      "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "token": "^(?:[5-9]\\d|100)$",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left.</s1-nav>\r\n<s1-flag-body>\r\nFrom the Alerts view, locate the Alert cluster that has CF-Gateway-DNSTunnel — DNS Tunneling / C2 Beaconing (Gateway DNS) in the Alert name column.\r\n</s1-flag-body>\r\n<s1-flag example=\"30\">The flag is the number of alerts in this cluster.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -258,8 +266,8 @@
       "id": "1785360334216-7newhhgyk",
       "type": "regex",
       "name": "Flag 10 - DNS Tunneling",
-      "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "token": "^base32-encoded data exfiltration\\.?$",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \r\nFrom the Alerts view, locate the Alert cluster that has CF-Gateway-DNSTunnel — DNS Tunneling / C2 Beaconing (Gateway DNS) in the Alert name column. Click on any one of these alerts</s1-nav>\r\n\r\n<s1-flag-body>\r\nThe Purple AI Alert description will be in the popup on the right hand side.\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is what Purple AI says repeated long TXT queries are indicative of.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -282,10 +290,10 @@
     },
     {
       "id": "1785360335174-vanwhf6sg",
-      "type": "regex",
+      "type": "static",
       "name": "Flag 11 - DNS Tunneling",
-      "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "token": "T1048",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \r\nFrom the Alerts view, locate the Alert cluster that has CF-Gateway-DNSTunnel — DNS Tunneling / C2 Beaconing (Gateway DNS) in the Alert name column. Click on any one of these alerts.</s1-nav>\r\n<s1-flag-body>\r\nUse the Purple AI Alert Description to find the MITRE ATT&CK reference associated with Exfiltration Over Alternative Protocol.\r\n</s1-flag-body>\r\n<s1-flag example=\"T####\">The flag is the MITRE ATT&CK ID</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -295,26 +303,33 @@
       "attachments": [],
       "hints": [
         {
-          "id": "1785360335175-8ldyjwcpf",
-          "price": 20,
-          "description": "New hint",
+          "id": "1785956865170-8crveozo6",
+          "price": 10,
+          "description": "Read through the Purple AI Alert Description.\n\nFind the MITRE ATT&CK ID that comes right before (Exfiltration Over Alternative Protocol).\n\nThe code follows the following format: T####.",
           "flagId": "1785360335174-vanwhf6sg",
           "order": 0,
-          "boxId": "1783699237357-q3jwvoke2",
-          "disabled": false
+          "boxId": "1783699237357-q3jwvoke2"
+        },
+        {
+          "id": "1785956630843-pruujspo6",
+          "price": 100,
+          "description": "The flag is <s1-answer>T1048</s1-answer>.",
+          "flagId": "1785360335174-vanwhf6sg",
+          "order": 1,
+          "boxId": "1783699237357-q3jwvoke2"
         }
       ],
       "disabled": false
     },
     {
       "id": "1785360336308-vvrhpvjrm",
-      "type": "regex",
+      "type": "choice",
       "name": "Flag 12 - Mitigate",
-      "token": "195.178.110.199",
-      "description": "<s1-nav>From the <s1-label>Event Search</s1-label> view, set your <s1-label>time range</s1-label> <s1-number><mark class=\"number\">3</mark></s1-number> to <s1-value>72 hours</s1-value> and clear your <s1-label>search</s1-label> <s1-number><mark class=\"number\">2</mark></s1-number>. \r\n\r\nType <s1-value>dataSource</s1-value> into the search bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>dataSource.vendor</s1-value> to add the field to your query.</s1-nav>\r\n\r\nThe Search Helper will then show a list of <s1-label>comparison</s1-label> operators. Choose the = operator, then select <s1-value>Cloudflare</s1-value> from the list.\r\n\r\nType <s1-value>src</s1-value> into the field bar. You will see a list of <s1-label>fields</s1-label> that include this term. Click <s1-value>src_endpoint.ip</s1-value> to add the field to your query.\r\n \r\nUse the <s1-label>Fields</s1-label> <s1-number><mark class=\"number\">4</mark></s1-number> list to see the top source ip addresses.</s1-flag-body>\r\n\r\n<s1-flag example=\"165.225.10.87\">The flag is the source ip address with the most amount of Connections. </s1-flag>",
+      "token": "Suspicious / Malicious",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \r\nFrom the Alerts view, locate the Alert cluster that has CF-Gateway-DNSTunnel — DNS Tunneling / C2 Beaconing (Gateway DNS) in the Alert name column. Click on any one of these alerts.</s1-nav>\r\n<s1-flag-body>\r\nFind the Actions button towards the top right of the alert. Click on the Actions button and proceed to mark the alert as a threat.\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is the pair of threat policy options we have available to us.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Suspicious / Malicious",
       "locked": false,
       "caseSensitive": false,
       "order": 11,
@@ -322,15 +337,21 @@
       "hints": [
         {
           "id": "1785360336309-16q63th63",
-          "price": 20,
-          "description": "New hint",
+          "price": 100,
+          "description": "The flag is <s1-answer>Suspicious / Malicious</s1-answer>",
           "flagId": "1785360336308-vvrhpvjrm",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2",
           "disabled": false
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 11 - DNS Tunneling",
+      "choices": [
+        "Malicious / Benign",
+        "Benign / Suspicious",
+        "Suspicious / Malicious"
+      ]
     }
   ],
   "hints": [],
