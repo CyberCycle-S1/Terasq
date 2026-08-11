@@ -18,7 +18,7 @@
       "type": "static",
       "name": "Flag 1 - XSS",
       "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left.</s1-nav>\n<s1-flag-body>\nFrom the Alerts view, locate the Alert cluster that has CF-WAF-XSS — Cross-Site Scripting against shop.soledrop.co (WAF ML score) in the Alert name column.\n</s1-flag-body>\n<s1-flag example=\"30\">The flag is the number of alerts in this cluster.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -32,8 +32,8 @@
       "id": "1785360559687-fel8obcp5",
       "type": "static",
       "name": "Flag 2 - XSS",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "CTF{T1190}",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \nFrom the Alerts view, locate the Alert cluster that has CF-WAF-XSS — Cross-Site Scripting against shop.soledrop.co (WAF ML score) in the Alert name column. Click on any one of these alerts.</s1-nav>\n<s1-flag-body>\nUse the Purple AI Alert Description to find the MITRE ATT&CK reference associated with exploitation of public-facing applications.\n</s1-flag-body>\n<s1-flag example=\"T####\">The flag is the MITRE ATT&CK ID</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -41,15 +41,33 @@
       "caseSensitive": false,
       "order": 1,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786473492456-fvn3ekil8",
+          "price": 10,
+          "description": "Read through the Purple AI Alert Description.\n\nFind the MITRE ATT&CK ID that comes right before (exploitation of public-facing applications).\n\nThe code follows the following format: T####.",
+          "flagId": "1785360559687-fel8obcp5",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        },
+        {
+          "id": "1786473494338-rl45ui4zm",
+          "price": 90,
+          "description": "The flag is <s1-answer>T1190</s1-answer>.",
+          "flagId": "1785360559687-fel8obcp5",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
+      "dependsOn": "Flag 1 - XSS",
       "disabled": false
     },
     {
       "id": "1785360562021-qm8xtf5cj",
       "type": "static",
       "name": "Flag 3 - XSS - Workflow",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "CTF{CF-WAF-WebAttack}",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \nFrom the Alerts view, locate the Alert cluster that has CF-WAF-XSS — Cross-Site Scripting against shop.soledrop.co (WAF ML score) in the Alert name column. Click on any one of these alerts.</s1-nav>\n<s1-flag-body>\n\nClick on the Automate button in the top right of the Alert popup.\n\nHyperAutomation workflows allow Threat Hunters to enrich alerts, gather third-party threat intel, seek out determinitions from analysts, and conduct follow-up responses automatically whenever alerts are triggered.\n\n</s1-flag-body>\n<s1-flag example=\"S1-CNAPP-AppAttack\">The flag is the name of the workflow under 'Available Workflows'</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -57,7 +75,16 @@
       "caseSensitive": false,
       "order": 2,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786474721597-o4po8vt41",
+          "price": 10,
+          "description": "New hint",
+          "flagId": "1785360562021-qm8xtf5cj",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
       "disabled": false
     },
     {
