@@ -15,9 +15,9 @@
   "flags": [
     {
       "id": "1785360537414-rigw7n4m4",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 1 - XSS",
-      "token": "CTF{example_flag}",
+      "token": "^(?:[7-9]\\d|100)$",
       "description": "<s1-nav>Find the Alerts view from the menu on the left.</s1-nav>\n<s1-flag-body>\nFrom the Alerts view, locate the Alert cluster that has CF-WAF-XSS — Cross-Site Scripting against shop.soledrop.co (WAF ML score) in the Alert name column.\n</s1-flag-body>\n<s1-flag example=\"30\">The flag is the number of alerts in this cluster.</s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -26,7 +26,16 @@
       "caseSensitive": false,
       "order": 0,
       "attachments": [],
-      "hints": []
+      "hints": [
+        {
+          "id": "1786481597671-iq4l9a7yc",
+          "price": 100,
+          "description": "The flag is <s1-answer>71</s1-answer>.",
+          "flagId": "1785360537414-rigw7n4m4",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ]
     },
     {
       "id": "1785360559687-fel8obcp5",
@@ -78,8 +87,8 @@
       "hints": [
         {
           "id": "1786474721597-o4po8vt41",
-          "price": 10,
-          "description": "New hint",
+          "price": 100,
+          "description": "The flag is <s1-answer>CF-WAF-WebAttack</s1-answer>.",
           "flagId": "1785360562021-qm8xtf5cj",
           "order": 0,
           "boxId": "1785360521872-cmbpqfpe3"
@@ -92,7 +101,7 @@
       "type": "static",
       "name": "Flag 4 - CF Integration",
       "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \n  \nFrom the Alerts view, locate the Alert cluster that has CF-WAF-XSS — Cross-Site Scripting against shop.soledrop.co (WAF ML score) in the Alert name column. Click on any one of these alerts.\n\nFind the Available HyperAutomation workflow from the Automation tab.\n</s1-nav>\n<s1-flag-body>\n\nOpen the available HA workflow. Workflows fire actions in order from top to bottom. What is the first action that calls the Cloudflare API?\n\n</s1-flag-body>\n<s1-flag example=\"CF Create IP Rule\">The flag is the name of the Cloudflare integration.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -100,15 +109,32 @@
       "caseSensitive": false,
       "order": 3,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786480055013-uz5q05k5q",
+          "price": 10,
+          "description": "Starting at the top, scroll down to find the first action that displays 'Cloudflare' with their logo.",
+          "flagId": "1785360564455-lrd2eg88e",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        },
+        {
+          "id": "1786480180650-pzdjsk2ur",
+          "price": 90,
+          "description": "The flag is <s1-answer>CF JD Cloud IP Details</s1-answer>.",
+          "flagId": "1785360564455-lrd2eg88e",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
       "disabled": false
     },
     {
       "id": "1785360565750-vu31ukgju",
       "type": "static",
       "name": "Flag 5 - Workflow Conditional",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "CTF{block}",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \n  \nFrom the Alerts view, locate the Alert cluster that has CF-WAF-XSS — Cross-Site Scripting against shop.soledrop.co (WAF ML score) in the Alert name column. Click on any one of these alerts.\n\nFind the Available HyperAutomation workflow from the Automation tab.</s1-nav>\n<s1-flag-body>\nFind the action labeled CF Ruleset Host Block.\n\nThis action has already ran. Look in the Body section to see the JSON body that was returned. What action was taken?\n\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the value of the action field.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -116,15 +142,33 @@
       "caseSensitive": false,
       "order": 4,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786480705011-uuk8aewjg",
+          "price": 10,
+          "description": "The action field is the very first field in the JSON body.\n\nThe value of the action field is highlighted orange.",
+          "flagId": "1785360565750-vu31ukgju",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        },
+        {
+          "id": "1786480705161-3zxsmgq12",
+          "price": 90,
+          "description": "The flag is <s1-answer>block</s1-answer>.",
+          "flagId": "1785360565750-vu31ukgju",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
+      "dependsOn": "Flag 4 - CF Integration",
       "disabled": false
     },
     {
       "id": "1785360566870-jvc4ts91w",
       "type": "static",
       "name": "Flag 6 - CF Block IP",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "CTF{POST /client/v4/user/firewall/access_rules/rules}",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \n  \nFrom the Alerts view, locate the Alert cluster that has CF-WAF-XSS — Cross-Site Scripting against shop.soledrop.co (WAF ML score) in the Alert name column. Click on any one of these alerts.\n\nFind the Available HyperAutomation workflow from the Automation tab.</s1-nav>\n<s1-flag-body>\nUnder the Cloudflare Block IP action, what HTTP method and body are sent?\n</s1-flag-body>\n<s1-flag example=\"GET /api/body/etc\">The flag is the HTTP method and body sent by this action.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -132,15 +176,33 @@
       "caseSensitive": false,
       "order": 5,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786481185862-s57o2u2ki",
+          "price": 10,
+          "description": "Find the Cloudflare integrated action named Cloudflare Block IP action.\n\nThe flag is located in the description at the top of the popup.",
+          "flagId": "1785360566870-jvc4ts91w",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        },
+        {
+          "id": "1786481186879-juht5ktix",
+          "price": 90,
+          "description": "The flag is <s1-answer>POST /client/v4/user/firewall/access_rules/rules</s1-answer>.",
+          "flagId": "1785360566870-jvc4ts91w",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
+      "dependsOn": "Flag 5 - Workflow Conditional",
       "disabled": false
     },
     {
       "id": "1785360568037-hgvce8onz",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 7 - Credential Stuffing",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "^(?:[4-9]\\d|100)$",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left.</s1-nav>\n<s1-flag-body>\nFrom the Alerts view, locate the Alert cluster that has CF-Access-CredStuffing — Login Brute Force / Credential Stuffing on portal.soledrop.co in the Alert name column.\n</s1-flag-body>\n<s1-flag example=\"30\">The flag is the number of alerts in this cluster.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -148,15 +210,24 @@
       "caseSensitive": false,
       "order": 6,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786481745581-ur1clawks",
+          "price": 100,
+          "description": "The flag is <s1-answer>44</s1-answer>.",
+          "flagId": "1785360568037-hgvce8onz",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
       "disabled": false
     },
     {
       "id": "1785360569179-xd5gqrhnq",
       "type": "static",
       "name": "Flag 8 - Credential Stuffing",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "CTF{T1110.001}",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \nFrom the Alerts view, locate the Alert cluster that has CF-Access-CredStuffing — Login Brute Force / Credential Stuffing on portal.soledrop.co in the Alert name column. Click on any one of these alerts.</s1-nav>\n<s1-flag-body>\nUse the Purple AI Alert Description to find the MITRE ATT&CK reference associated with Password Guessing.\n</s1-flag-body>\n<s1-flag example=\"T####.###\">The flag is the MITRE ATT&CK ID</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -164,7 +235,16 @@
       "caseSensitive": false,
       "order": 7,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786482006615-yqvo4egk6",
+          "price": 100,
+          "description": "The flag is <s1-answer>T1110.001</s1-answer>.",
+          "flagId": "1785360569179-xd5gqrhnq",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
       "disabled": false
     },
     {
@@ -172,7 +252,7 @@
       "type": "static",
       "name": "Flag 9 - VirusTotal",
       "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \nFrom the Alerts view, locate the Alert cluster that has CF-Access-CredStuffing — Login Brute Force / Credential Stuffing on portal.soledrop.co in the Alert name column. Click on any one of these alerts.</s1-nav>\n<s1-flag-body>\nFind the alert in this cluster that has been marked as True Positive under the Analyst Verdict column.\n\nFind the Notes section of this alert.\n\nAccording to VirusTotal, how many security vendors have labeled this IP as malicious?\n</s1-flag-body>\n<s1-flag example=\"10\">The flag is the number of security vendors who've labeled this IP as malicious.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -180,15 +260,24 @@
       "caseSensitive": false,
       "order": 8,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786482307488-grzf54efk",
+          "price": 10,
+          "description": "The flag is <s1-answer>15</s1-answer>.",
+          "flagId": "1785360570346-tlv59hvxt",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
       "disabled": false
     },
     {
       "id": "1785360578280-mrtpp9p73",
       "type": "static",
       "name": "Flag 10 - URL of target Site",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "CTF{portal.soledrop.co}",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left.\n  \nFrom the Alerts view, locate the Alert cluster that has CF-Access-CredStuffing — Login Brute Force / Credential Stuffing on portal.soledrop.co in the Alert name column. Click on any one of these alerts.\n\nFind the alert in this cluster that has been marked as True Positive under the Analyst Verdict column.\n\nFind the Notes section of this alert.\n</s1-nav>\n<s1-flag-body>\n\nLook for the Source IP associated with this Brute Force attack. Where did this IP send the attack to?\n\n</s1-flag-body>\n<s1-flag example=\"____.soledrop.co\">The flag is URL of the site being targeted.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -196,15 +285,25 @@
       "caseSensitive": false,
       "order": 9,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786483317065-bse9z9slm",
+          "price": 10,
+          "description": "The flag is <s1-answer>portal.soledrop.co</s1-answer>.",
+          "flagId": "1785360578280-mrtpp9p73",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
+      "dependsOn": "Flag 9 - VirusTotal",
       "disabled": false
     },
     {
       "id": "1785360580221-cwm12w0xx",
       "type": "static",
       "name": "Flag 11 - Rule JSON Body",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "CTF{7d4da0650add48ceaf5859040fe50edd}",
+      "description": "<s1-nav>Navigate to HyperAutomation. Open the workflow designated 'See WAF Rule'. Click on the 'Get Firewall Rules' Actoon. Click the 'Test Action' button.</s1-nav>\n<s1-flag-body>\nLook at the Test Output.\n\nWhat is the id of the firewall rule that logs all Login attempts?\n</s1-flag-body>\n<s1-flag example=\"5668406f0a644a50bc9e86a561a72650\">The flag is the id value.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -212,7 +311,24 @@
       "caseSensitive": false,
       "order": 10,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786484868387-63ubttdcp",
+          "price": 10,
+          "description": "Use Ctrl-F or the magnifying glass to find the section of the output pertaining logins.\n\nThe id is the very first field in that respective JSON body.",
+          "flagId": "1785360580221-cwm12w0xx",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        },
+        {
+          "id": "1786484869805-oj9a4861h",
+          "price": 90,
+          "description": "The flag is <s1-answer>7d4da0650add48ceaf5859040fe50edd</s1-answer>.",
+          "flagId": "1785360580221-cwm12w0xx",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
       "disabled": false
     },
     {

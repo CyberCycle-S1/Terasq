@@ -80,8 +80,8 @@
       "id": "1785360635308-jkqchtqfh",
       "type": "static",
       "name": "Flag 5 - AI Prompt Injection",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "^(?:[5-9]\\d|100)$",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left.</s1-nav>\n<s1-flag-body>\nFrom the Alerts view, locate the Alert cluster that has CF-AI-PromptInjection — LLM Prompt-Injection Probing of SoleDrop Concierge /api/v1/chat in the Alert name column.\n</s1-flag-body>\n<s1-flag example=\"30\">The flag is the number of alerts in this cluster.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -89,15 +89,24 @@
       "caseSensitive": false,
       "order": 4,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786487513868-u3v7orr2p",
+          "price": 100,
+          "description": "The flag is <s1-answer>55</s1-answer>.",
+          "flagId": "1785360635308-jkqchtqfh",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ],
       "disabled": false
     },
     {
       "id": "1785360636607-k41u620zu",
       "type": "static",
       "name": "Flag 6 - Attempt",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "CTF{Injection fuzzing}",
+      "description": "<s1-nav>Find the Alerts view from the menu on the left. \nFrom the Alerts view, locate the Alert cluster that has CF-AI-PromptInjection — LLM Prompt-Injection Probing of SoleDrop Concierge /api/v1/chat in the Alert name column. Click on any one of these alerts.</s1-nav>\n<s1-flag-body>\nWhen a single source IP issues five or more chat POST requests within five minutes, what kind of attempt is this indicative of?</s1-flag-body>\n<s1-flag example=\"brute-forcing\">The flag is the name of the attempt.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -105,15 +114,33 @@
       "caseSensitive": false,
       "order": 5,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786487955684-g7v1p8j56",
+          "price": 10,
+          "description": "The flag is in the Purple AI Overview.",
+          "flagId": "1785360636607-k41u620zu",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1786488042329-4tb6xdhcc",
+          "price": 10,
+          "description": "The flag is <s1-answer>Injection fuzzing</s1-answer>.",
+          "flagId": "1785360636607-k41u620zu",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ],
+      "dependsOn": "Flag 5 - AI Prompt Injection",
       "disabled": false
     },
     {
-      "id": "1785360638067-tvo9cwqvf",
+      "id": "1786488562377-trcnp51m7",
       "type": "static",
-      "name": "Flag 7 - Default URL",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "name": "Flag 7 - Enrichment",
+      "token": "CTF{{{Function.DEFAULT(Function.JQ(create-power-query.body.data.data, \"(.[0] // [])[1] | values | floor\", true), \"N/A\")}}}",
+      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nOftentimes, analysts will append contextual data fields—such as agent specs, file hashes, and user details—to reduce manual triage time. These are referred to as Enrichment fields.\n\nTake a look at the enrichment field that would display the number of injection posts.\n</s1-flag-body>\n<s1-flag example=\"{{Function.DEFAULT...}}\">The flag is the value associated with injection_posts</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -121,15 +148,23 @@
       "caseSensitive": false,
       "order": 6,
       "attachments": [],
-      "hints": [],
-      "disabled": false
+      "hints": [
+        {
+          "id": "1786488972598-p0avh8k51",
+          "price": 100,
+          "description": "The flag is <s1-answer>{{Function.DEFAULT(Function.JQ(create-power-query.body.data.data, \"(.[0] // [])[1] | values | floor\", true), \"N/A\")}}</s1-answer>.",
+          "flagId": "1786488562377-trcnp51m7",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ]
     },
     {
-      "id": "1785360639526-sxam3o1ux",
+      "id": "1785360638067-tvo9cwqvf",
       "type": "static",
-      "name": "Flag 8 - Error Message JSON Body",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "name": "Flag 8 - Default URL",
+      "token": "CTF{https://api.cloudflare.com/client/v4/accounts/account_id/access/users/user_id/failed_logins}",
+      "description": "<s1-nav>Navigate to HyperAutomation. Open the workflow designated 'See WAF Rule'. Add the Cloudflare integration named 'Get zero trust user failed logins'.</s1-nav>\n<s1-flag-body>\nWhat is the default URL before any account or user information has been input?\n</s1-flag-body>\n<s1-flag example=\"https://api.cloudflare...\">The flag is the default URL.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -137,15 +172,25 @@
       "caseSensitive": false,
       "order": 7,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786489113670-7d17mxwga",
+          "price": 10,
+          "description": "The flag is <s1-answer>https://api.cloudflare.com/client/v4/accounts/account_id/access/users/user_id/failed_logins</s1-answer>.",
+          "flagId": "1785360638067-tvo9cwqvf",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ],
+      "dependsOn": "Flag 7 - Enrichment",
       "disabled": false
     },
     {
-      "id": "1785360641095-yk8dih9n4",
+      "id": "1785360639526-sxam3o1ux",
       "type": "static",
-      "name": "Flag 9 - Failed Login Attempt",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "name": "Flag 9 - Error Message JSON Body",
+      "token": "CTF{Could not route to /client/v4/accounts/account_id/access/users/user_id/failed_logins, perhaps your object identifier is invalid?}",
+      "description": "<s1-nav>Navigate to HyperAutomation. Open the workflow designated 'See WAF Rule'. Add the Cloudflare integration named 'Get zero trust user failed logins'.</s1-nav>\n<s1-flag-body>\nPaste that URL into a web browser. What is the error message in the json body?\n</s1-flag-body>\n<s1-flag example=\"Could not ...\">The flag is the error message.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -153,7 +198,49 @@
       "caseSensitive": false,
       "order": 8,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786489220993-3gic72ask",
+          "price": 100,
+          "description": "The flag is <s1-answer>Could not route to /client/v4/accounts/account_id/access/users/user_id/failed_logins, perhaps your object identifier is invalid?</s1-answer>.",
+          "flagId": "1785360639526-sxam3o1ux",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ],
+      "disabled": false
+    },
+    {
+      "id": "1785360641095-yk8dih9n4",
+      "type": "static",
+      "name": "Flag 10 - Failed Login Attempt",
+      "token": "CTF{2026-07-28T21:45:39.501Z}",
+      "description": "<s1-nav>Navigate to HyperAutomation. Open the workflow designated 'See WAF Rule'. Add the Cloudflare integration named 'Get zero trust user failed logins'.</s1-nav>\n<s1-flag-body>\nTest the given Workflow and see the correct response when the account and user information has been input.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the time the failed login occurred.</s1-flag>",
+      "captureMessage": "",
+      "value": 100,
+      "plainAnswer": "",
+      "locked": false,
+      "caseSensitive": false,
+      "order": 9,
+      "attachments": [],
+      "hints": [
+        {
+          "id": "1786489334695-k41fbyvkg",
+          "price": 10,
+          "description": "The flag is the value of the datetime field.",
+          "flagId": "1785360641095-yk8dih9n4",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1786489336248-8bga01ulz",
+          "price": 10,
+          "description": "The flag is <s1-answer>2026-07-28T21:45:39.501Z</s1-answer>.",
+          "flagId": "1785360641095-yk8dih9n4",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ],
       "disabled": false
     }
   ],
