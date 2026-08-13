@@ -17,8 +17,8 @@
       "id": "1785360611630-7240g6lhg",
       "type": "static",
       "name": "Flag 1 - CF Bot Management",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "403",
+      "description": "<s1-nav>From the soledrop.co button at the top of the page, swap over to the one-flare.com Security Rules page. Click on the Mitigate Definite Bot Traffic rule.</s1-nav>\n<s1-flag-body>\nCloudflare allows users to customize their security rules. For this specific rule, what is the response code sent after blocking?\n</s1-flag-body>\n<s1-flag example=\"400\">The flag is the response code</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -26,14 +26,23 @@
       "caseSensitive": false,
       "order": 0,
       "attachments": [],
-      "hints": []
+      "hints": [
+        {
+          "id": "1786660109424-4uyq1gc9i",
+          "price": 100,
+          "description": "The flag is <s1-answer>403</s1-answer>.",
+          "flagId": "1785360611630-7240g6lhg",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ]
     },
     {
       "id": "1785360631466-rdodl90ks",
       "type": "static",
       "name": "Flag 2 - CF Security Insight",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "Load balancing",
+      "description": "<s1-nav>Go back to Security rules. Find the Traffic Sequence button next to Documentation.</s1-nav>\n<s1-flag-body>\nTraffic Sequence shows the simplified journey of a request as it proxies through a Cloudflare configuration. \n\nLooking at the flow, what feature is used right before a request reaches the origin server? </s1-flag-body>\n<s1-flag example=\"Rate limiting\">The flag is the name of the box preceding Origin server</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -41,15 +50,32 @@
       "caseSensitive": false,
       "order": 1,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786660586129-0jb2jb12p",
+          "price": 10,
+          "description": "*Screenshot of where to look*",
+          "flagId": "1785360631466-rdodl90ks",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1786660586279-8u50ngxa5",
+          "price": 90,
+          "description": "The flag is <s1-answer>Load balancing</s1-answer>.",
+          "flagId": "1785360631466-rdodl90ks",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ],
       "disabled": false
     },
     {
       "id": "1785360632867-jjd223kgt",
       "type": "static",
       "name": "Flag 3 - Security Insight",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "Denver",
+      "description": "<s1-nav>While in the Traffic Sequence window, click on Workers. Select the shop-soledrop-worker from any row. Select Metrics from the nav bar at the top. Set the event window to the last 30 days.</s1-nav>\n<s1-flag-body>\nCloudflare Workers is a serverless platform for building, deploying, and scaling apps across Cloudflare's global network without needing complex configuration. The shop.soledrop.co site from before was deployed using a custom worker. Under Request Distribution we can see the locations where a Worker ran to handle an incoming request.\n\nFind the city where this worker was deployed the most.</s1-flag-body>\n<s1-flag example=\"Dallas\">The flag is the name of the city</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -57,7 +83,24 @@
       "caseSensitive": false,
       "order": 2,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786662240573-7s9yxlnnl",
+          "price": 10,
+          "description": "*Screenshot of where to look*",
+          "flagId": "1785360632867-jjd223kgt",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1786662247737-fmgv2sfo4",
+          "price": 90,
+          "description": "The flag is <s1-answer>Denver</s1-answer>.",
+          "flagId": "1785360632867-jjd223kgt",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ],
       "disabled": false
     },
     {
@@ -65,7 +108,7 @@
       "type": "static",
       "name": "Flag 4 - CF HA Equivalent",
       "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "description": "<s1-nav>From the menu on the left navigate to Build. From the dropdown select AI then open Workers AI.</s1-nav>\n<s1-flag-body>\nLike standard Cloudflare Workers. Workers AI allow users to deploy LLMs and AI agents across Cloudflare's global network.\n\nFrom the model catalog, what is the name of the model that can perform Automatic Speech Recognition?</s1-flag-body>\n<s1-flag example=\"anthropic/...\">The flag is the name of the model</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",

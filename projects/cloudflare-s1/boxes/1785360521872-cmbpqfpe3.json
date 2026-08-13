@@ -335,8 +335,8 @@
       "id": "1785360817691-rfaam2wsr",
       "type": "static",
       "name": "Flag 12 - CF Firewall Rules",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nMain flag content here...\n</s1-flag-body>\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "WAF-LoginLog: Log all login POSTs",
+      "description": "<s1-nav>In the Cloudflare console, find the Domains dropdown and select find the Overview page. From the Overview page, find the soledrop.co domain. Find the Security dropdown from the menus the left and go to Security Rules.</s1-nav>\n<s1-flag-body>\nOn the Cloudflare side, what is the name of the security rule that logs all Login attempts?\n</s1-flag-body>\n<s1-flag example=\"WAF-Recon-Log: Log scanner\">The flag is the name of the security rule.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -344,7 +344,24 @@
       "caseSensitive": false,
       "order": 11,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786659361715-4vwrq2rd3",
+          "price": 10,
+          "description": "The description of this rule says: <s1-value>URI Path contains /login and Request Method equals POST</s1-value>",
+          "flagId": "1785360817691-rfaam2wsr",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        },
+        {
+          "id": "1786659361997-kd22xhny4",
+          "price": 90,
+          "description": "The flag is <s1-answer>WAF-LoginLog: Log all login POSTs</s1-answer>.",
+          "flagId": "1785360817691-rfaam2wsr",
+          "order": 0,
+          "boxId": "1785360521872-cmbpqfpe3"
+        }
+      ],
       "disabled": false
     }
   ],
