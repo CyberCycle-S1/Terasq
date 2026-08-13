@@ -128,7 +128,7 @@
           "price": 10,
           "description": "The flag is <s1-answer>Injection fuzzing</s1-answer>.",
           "flagId": "1785360636607-k41u620zu",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
@@ -237,7 +237,7 @@
           "price": 10,
           "description": "The flag is <s1-answer>2026-07-28T21:45:39.501Z</s1-answer>.",
           "flagId": "1785360641095-yk8dih9n4",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360586323-rs0gm544e"
         }
       ],

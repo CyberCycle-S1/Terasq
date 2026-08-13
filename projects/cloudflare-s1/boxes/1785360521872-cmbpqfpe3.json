@@ -64,7 +64,7 @@
           "price": 90,
           "description": "The flag is <s1-answer>T1190</s1-answer>.",
           "flagId": "1785360559687-fel8obcp5",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -123,7 +123,7 @@
           "price": 90,
           "description": "The flag is <s1-answer>CF JD Cloud IP Details</s1-answer>.",
           "flagId": "1785360564455-lrd2eg88e",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -156,7 +156,7 @@
           "price": 90,
           "description": "The flag is <s1-answer>block</s1-answer>.",
           "flagId": "1785360565750-vu31ukgju",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -190,7 +190,7 @@
           "price": 90,
           "description": "The flag is <s1-answer>POST /client/v4/user/firewall/access_rules/rules</s1-answer>.",
           "flagId": "1785360566870-jvc4ts91w",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -325,7 +325,7 @@
           "price": 90,
           "description": "The flag is <s1-answer>7d4da0650add48ceaf5859040fe50edd</s1-answer>.",
           "flagId": "1785360580221-cwm12w0xx",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
