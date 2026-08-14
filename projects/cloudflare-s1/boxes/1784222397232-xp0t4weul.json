@@ -153,7 +153,8 @@
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         }
-      ]
+      ],
+      "dependsOn": "Flag 3 - Analytics"
     },
     {
       "id": "1784303848387-2x2f5ad22",
@@ -186,7 +187,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 2"
+      "dependsOn": "Flag 4 - Analytics"
     },
     {
       "id": "1785340751216-gocd6hcvy",
@@ -292,6 +293,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
+      "dependsOn": "Flag 7 - Logpush",
       "disabled": false
     },
     {
@@ -325,6 +327,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
+      "dependsOn": "Flag 8 - Default time",
       "disabled": false
     },
     {
@@ -350,6 +353,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
+      "dependsOn": "Flag 9 - Data ingest",
       "disabled": false,
       "choices": [
         "Single Event",
@@ -388,6 +392,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
+      "dependsOn": "Flag 10 - Detection",
       "disabled": false
     },
     {
@@ -421,6 +426,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
+      "dependsOn": "Flag 11 - Detection",
       "disabled": false
     },
     {
@@ -446,6 +452,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
+      "dependsOn": "Flag 12 - Detection",
       "disabled": false,
       "choices": [
         "Capture all events",
@@ -485,11 +492,13 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
+      "dependsOn": "Flag 13 - CF Filtering",
       "disabled": false
     }
   ],
   "hints": [],
   "avatarPath": "",
   "avatarData": "",
-  "dependency": "manual"
+  "dependency": "linear",
+  "linearDependencies": true
 }

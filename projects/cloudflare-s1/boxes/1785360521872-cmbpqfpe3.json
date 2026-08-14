@@ -94,6 +94,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
+      "dependsOn": "Flag 2 - XSS",
       "disabled": false
     },
     {
@@ -127,6 +128,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
+      "dependsOn": "Flag 3 - XSS - Workflow",
       "disabled": false
     },
     {
@@ -220,6 +222,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
+      "dependsOn": "Flag 6 - CF Block IP",
       "disabled": false
     },
     {
@@ -245,6 +248,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
+      "dependsOn": "Flag 7 - Credential Stuffing",
       "disabled": false
     },
     {
@@ -270,6 +274,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
+      "dependsOn": "Flag 8 - Credential Stuffing",
       "disabled": false
     },
     {
@@ -329,6 +334,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
+      "dependsOn": "Flag 10 - URL of target Site",
       "disabled": false
     },
     {
@@ -362,9 +368,11 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
+      "dependsOn": "Flag 11 - Rule JSON Body",
       "disabled": false
     }
   ],
   "hints": [],
-  "dependency": "manual"
+  "dependency": "linear",
+  "linearDependencies": true
 }

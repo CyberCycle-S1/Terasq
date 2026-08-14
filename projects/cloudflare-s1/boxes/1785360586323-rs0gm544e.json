@@ -68,6 +68,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
+      "dependsOn": "Flag 1 - CF Bot Management",
       "disabled": false
     },
     {
@@ -101,6 +102,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
+      "dependsOn": "Flag 2 - CF Security Insight",
       "disabled": false
     },
     {
@@ -117,6 +119,7 @@
       "order": 3,
       "attachments": [],
       "hints": [],
+      "dependsOn": "Flag 3 - Security Insight",
       "disabled": false
     },
     {
@@ -142,6 +145,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
+      "dependsOn": "Flag 4 - CF HA Equivalent",
       "disabled": false
     },
     {
@@ -200,7 +204,8 @@
           "order": 0,
           "boxId": "1785360586323-rs0gm544e"
         }
-      ]
+      ],
+      "dependsOn": "Flag 6 - Attempt"
     },
     {
       "id": "1785360638067-tvo9cwqvf",
@@ -251,6 +256,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
+      "dependsOn": "Flag 8 - Default URL",
       "disabled": false
     },
     {
@@ -284,9 +290,11 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
+      "dependsOn": "Flag 9 - Error Message JSON Body",
       "disabled": false
     }
   ],
   "hints": [],
-  "dependency": "manual"
+  "dependency": "linear",
+  "linearDependencies": true
 }

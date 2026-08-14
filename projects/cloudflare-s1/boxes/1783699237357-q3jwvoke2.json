@@ -70,7 +70,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 1"
+      "dependsOn": "Flag 1 - CF Dashboard"
     },
     {
       "id": "1785360324338-0wugoug7f",
@@ -104,7 +104,8 @@
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 2 - CF Dashboard"
     },
     {
       "id": "1785360327963-qplb7kluq",
@@ -130,7 +131,8 @@
           "disabled": false
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 3 - CF Investigation"
     },
     {
       "id": "1785360329421-dxgp4c67s",
@@ -164,7 +166,8 @@
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 4 - CF Investigation"
     },
     {
       "id": "1785360330487-x4itwk4g4",
@@ -198,7 +201,8 @@
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 5 - Oneflare Custom Dashboad"
     },
     {
       "id": "1785360331495-pi75v06pg",
@@ -232,7 +236,8 @@
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 6 - CF WAF Rule"
     },
     {
       "id": "1785360332466-8f9ljg6sq",
@@ -258,7 +263,8 @@
           "disabled": false
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 7 - Oneflare Custom Dashboard"
     },
     {
       "id": "1785360333333-axik2dzfr",
@@ -284,7 +290,8 @@
           "disabled": false
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 8 - HTTP Traffic"
     },
     {
       "id": "1785360334216-7newhhgyk",
@@ -310,7 +317,8 @@
           "disabled": false
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 9 - DNS Tunneling"
     },
     {
       "id": "1785360335174-vanwhf6sg",
@@ -343,7 +351,8 @@
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
-      "disabled": false
+      "disabled": false,
+      "dependsOn": "Flag 10 - DNS Tunneling"
     },
     {
       "id": "1785360336308-vvrhpvjrm",
@@ -379,6 +388,7 @@
     }
   ],
   "hints": [],
-  "dependency": "manual",
+  "dependency": "linear",
+  "linearDependencies": true,
   "avatarPath": "box/Oneflare-logo.png"
 }
