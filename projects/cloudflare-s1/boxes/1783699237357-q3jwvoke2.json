@@ -137,7 +137,7 @@
       "type": "regex",
       "name": "Flag 5 - Oneflare Custom Dashboad",
       "token": "\\b(?:4[0-9]\\d|5[0-4]\\d|550)\\b",
-      "description": "<s1-nav>Dashboards → Custom dashboards → Cloudflare</s1-nav>\r\n<s1-flag-body>\r\nCustom dashboards are helpful because they allow analysts to display the information they think is most relevant. Dashboards allow this information to be readily accessible for threat analysis.\r\n\r\nAccording to the custom Cloudflare dashboard, how many WAF (Web Application Firewall) blocks have occurred\r\n</s1-flag-body>\r\n<s1-flag example=\"100\">The flag is the number of WAF blocks that have occurred.</s1-flag>",
+      "description": "<s1-nav>Navigate to Dashboards on the SentinelOne console. Select Custom dashboards, then the Cloudflare dashboard. Set lookback window to 72 hours.</s1-nav>\r\n<s1-flag-body>\r\nCustom dashboards are helpful because they allow analysts to display the information they think is most relevant. Dashboards allow this information to be readily accessible for threat analysis.\r\n\r\nAccording to the custom Cloudflare dashboard, how many WAF (Web Application Firewall) blocks have occurred\r\n</s1-flag-body>\r\n<s1-flag example=\"100\">The flag is the number of WAF blocks that have occurred.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -148,7 +148,7 @@
       "hints": [
         {
           "id": "1785360329422-7lv2vywr9",
-          "price": 20,
+          "price": 10,
           "description": "*Screenshot of where to look*",
           "flagId": "1785360329421-dxgp4c67s",
           "order": 0,
@@ -157,7 +157,7 @@
         },
         {
           "id": "1785793366034-40lexhbv5",
-          "price": 10,
+          "price": 90,
           "description": "The flag is 411.",
           "flagId": "1785360329421-dxgp4c67s",
           "order": 1,
@@ -170,8 +170,8 @@
       "id": "1785360330487-x4itwk4g4",
       "type": "regex",
       "name": "Flag 6 - CF WAF Rule",
-      "token": "195.178.110.199",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "7",
+      "description": "<s1-nav>Navigate back to Security rules for the soledrop.co domain. </s1-nav>\r\n<s1-flag-body>\r\nNow let's take a look at what is causing all those blocks.\r\n\r\nIn Cloudflare, how many WAF rules are in place AND active?\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is the number of active WAF rules</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -182,12 +182,20 @@
       "hints": [
         {
           "id": "1785360330487-eerggfhli",
-          "price": 20,
-          "description": "New hint",
+          "price": 10,
+          "description": "While looking at custom security rules, count how many are involving WAF.",
           "flagId": "1785360330487-x4itwk4g4",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2",
           "disabled": false
+        },
+        {
+          "id": "1786724835484-cz09guymj",
+          "price": 90,
+          "description": "The flag is <s1-answer>7</s1-answer>.",
+          "flagId": "1785360330487-x4itwk4g4",
+          "order": 0,
+          "boxId": "1783699237357-q3jwvoke2"
         }
       ],
       "disabled": false
@@ -197,7 +205,7 @@
       "type": "regex",
       "name": "Flag 7 - Oneflare Custom Dashboard",
       "token": "\\b(?:6\\d{3}|7000)\\b",
-      "description": "<s1-nav>Dashboards → Custom dashboards → Cloudflare. Set lookback window to 72 hours.</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"4000\">The flag is the number of HTTPS requests recieved within the last 72 hours.</s1-flag>",
+      "description": "<s1-nav>Navigate to Dashboards on the SentinelOne console. Select Custom dashboards, then the Cloudflare dashboard. Set lookback window to 72 hours.</s1-nav>\r\n<s1-flag-body>\r\nAccording to the custom Oneflare dashboard, how many HTTP requests have we recieved within the last 72 hours\r\n</s1-flag-body>\r\n<s1-flag example=\"4000\">The flag is the number of HTTPS requests recieved within the last 72 hours.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -208,7 +216,7 @@
       "hints": [
         {
           "id": "1785360331496-ut0isd618",
-          "price": 20,
+          "price": 10,
           "description": "*Screenshot of where to look*",
           "flagId": "1785360331495-pi75v06pg",
           "order": 0,
@@ -217,7 +225,7 @@
         },
         {
           "id": "1785794574312-l9fxv28yl",
-          "price": 10,
+          "price": 90,
           "description": "The flag is 6440.",
           "flagId": "1785360331495-pi75v06pg",
           "order": 1,
@@ -230,8 +238,8 @@
       "id": "1785360332466-8f9ljg6sq",
       "type": "regex",
       "name": "Flag 8 - HTTP Traffic",
-      "token": "195.178.110.199",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\r\n<s1-flag-body>\r\nMain flag content here...\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is </s1-flag>",
+      "token": "^(2[5-9]\\d?,?\\d{3}|[3][0-9]\\d?,?\\d{3}|400,?000)$",
+      "description": "<s1-nav>On the left hand side navigate to Analytics. Select HTTP Traffic from the dropdown. Set the event window to 30 days.</s1-nav>\r\n<s1-flag-body>\r\nIn HTTP Traffic, how many HTTP requests are going through CF?</s1-flag-body>\r\n<s1-flag example=\"100,000\">The flag is the total number of HTTP requests</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -242,8 +250,8 @@
       "hints": [
         {
           "id": "1785360332466-n36qw90b2",
-          "price": 20,
-          "description": "New hint",
+          "price": 100,
+          "description": "The flag is <s1-answer>300,000</s1-answer>.",
           "flagId": "1785360332466-8f9ljg6sq",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2",
@@ -294,8 +302,8 @@
       "hints": [
         {
           "id": "1785360334217-aq7h71jbi",
-          "price": 20,
-          "description": "New hint",
+          "price": 100,
+          "description": "The flag is <s1-answer>base32-encoded data exfiltration</s1-answer>.",
           "flagId": "1785360334216-7newhhgyk",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2",
@@ -328,7 +336,7 @@
         },
         {
           "id": "1785956630843-pruujspo6",
-          "price": 100,
+          "price": 90,
           "description": "The flag is <s1-answer>T1048</s1-answer>.",
           "flagId": "1785360335174-vanwhf6sg",
           "order": 1,

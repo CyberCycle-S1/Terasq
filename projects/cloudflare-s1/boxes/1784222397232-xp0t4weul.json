@@ -29,7 +29,7 @@
       "hints": [
         {
           "id": "1785776556532-5i0hkrifa",
-          "price": 20,
+          "price": 10,
           "description": "Look for the reusable object type under <s1-label>Lists</s1-label>.",
           "flagId": "1785338938858-fm71bmgfn",
           "order": 0,
@@ -37,7 +37,7 @@
         },
         {
           "id": "1785776596840-d5a4fyg68",
-          "price": 80,
+          "price": 90,
           "description": "The flag is <s1-answer>IP List</s1-answer>",
           "flagId": "1785338938858-fm71bmgfn",
           "order": 1,
@@ -67,7 +67,7 @@
       "hints": [
         {
           "id": "1785777057139-o6yg7snfi",
-          "price": 20,
+          "price": 10,
           "description": "Read the custom-rules list; if empty, that's a finding.",
           "flagId": "1785338951045-g5c6wpriu",
           "order": 0,
@@ -75,8 +75,8 @@
         },
         {
           "id": "1785777077992-tgwn25vof",
-          "price": 10,
-          "description": "The flag is 'none configured'.",
+          "price": 90,
+          "description": "The flag is <s1-answer>Mitigate definite bot traffic</s1-answer>.",
           "flagId": "1785338951045-g5c6wpriu",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
@@ -147,7 +147,7 @@
         },
         {
           "id": "1785963035530-c02ampzm9",
-          "price": 10,
+          "price": 90,
           "description": "The flag is <s1-answer>shop.soledrop.co</s1-answer>.",
           "flagId": "1784303365739-hi9ouoy9b",
           "order": 1,
@@ -179,7 +179,7 @@
         },
         {
           "id": "1785963429691-8plkoqekl",
-          "price": 10,
+          "price": 90,
           "description": "The flag is <s1-answer>24</s1-answer>.",
           "flagId": "1784303848387-2x2f5ad22",
           "order": 1,
@@ -286,7 +286,7 @@
         {
           "id": "1785779054921-7943s9etw",
           "price": 80,
-          "description": "The flag is 4 hours.",
+          "description": "The flag is <s1-answer>4 hours</s1-answer>.",
           "flagId": "1785340761747-u4mbcj5lz",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
@@ -310,7 +310,7 @@
       "hints": [
         {
           "id": "1785779720478-h98bzc1rp",
-          "price": 20,
+          "price": 10,
           "description": "*Screenshot of where to look*",
           "flagId": "1785340763306-9az0eoav7",
           "order": 0,
@@ -318,8 +318,8 @@
         },
         {
           "id": "1785779720671-mvrcytu60",
-          "price": 80,
-          "description": "The flag is 60,000",
+          "price": 90,
+          "description": "The flag is <s1-answer>60,000</s1-answer>.",
           "flagId": "1785340763306-9az0eoav7",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
@@ -340,7 +340,16 @@
       "caseSensitive": false,
       "order": 9,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1786725424746-8m0nx7111",
+          "price": 100,
+          "description": "The flag is <s1-answer>Scheduled</s1-answer>.",
+          "flagId": "1785340765990-3p2w16l7j",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        }
+      ],
       "disabled": false,
       "choices": [
         "Single Event",
@@ -364,7 +373,7 @@
       "hints": [
         {
           "id": "1785785401239-zem7e5hoo",
-          "price": 20,
+          "price": 10,
           "description": "Make sure the lookback window is set to 72 hours and the Detection name is \"CF-Access-CredStuffing — Login Brute Force / Credential Stuffing on portal.soledrop.co\". The flag is under the failed_logins column.",
           "flagId": "1785340775265-03xss86mr",
           "order": 0,
@@ -372,8 +381,8 @@
         },
         {
           "id": "1785785401592-m6gnetd54",
-          "price": 80,
-          "description": "The flag is 529.",
+          "price": 90,
+          "description": "The flag is <s1-answer>529</s1-answer>.",
           "flagId": "1785340775265-03xss86mr",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
@@ -397,7 +406,7 @@
       "hints": [
         {
           "id": "1785791338216-eb289kcnv",
-          "price": 20,
+          "price": 10,
           "description": "*Screenshot of where to look*",
           "flagId": "1785340777240-95fyfow4d",
           "order": 0,
@@ -405,8 +414,8 @@
         },
         {
           "id": "1785791338633-7kylb148g",
-          "price": 80,
-          "description": "The flag is 30.",
+          "price": 90,
+          "description": "The flag is <s1-answer>30</s1-answer>.",
           "flagId": "1785340777240-95fyfow4d",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
@@ -461,7 +470,7 @@
       "hints": [
         {
           "id": "1785792901150-zy1uofxkp",
-          "price": 20,
+          "price": 10,
           "description": "*Screenshot of Evidence column*",
           "flagId": "1785340780568-laft2hurh",
           "order": 0,
@@ -469,8 +478,8 @@
         },
         {
           "id": "1785792924505-370e9aco2",
-          "price": 80,
-          "description": "The flag is u4nxyfbeyqsqamjp6bjvbpcpmlpgx1s5qa3dmwwxkgp9yic9274m6chgnmia.beacon.acmecorp-lab.workers.dev\n",
+          "price": 90,
+          "description": "The flag is <s1-answer>u4nxyfbeyqsqamjp6bjvbpcpmlpgx1s5qa3dmwwxkgp9yic9274m6chgnmia.beacon.acmecorp-lab.workers.dev</s1-answer>.\n",
           "flagId": "1785340780568-laft2hurh",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
