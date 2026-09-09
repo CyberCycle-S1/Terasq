@@ -59,7 +59,7 @@
       "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, click <s1-label>Domains</s1-label> from the left-hand navigation and select the <s1-value>one-flare.com</s1-value> zone. From that domain's <s1-label>Overview</s1-label> page, open the <s1-label>Security</s1-label> dropdown in the left-hand menu and choose <s1-label>Security Rules</s1-label>.</s1-nav>\n<s1-flag-body>\nWhat is the name of a <s1-label>Custom Rule</s1-label> a SOAR playbook could toggle to block an attacker?\n</s1-flag-body>\n<s1-flag example=\"Mitigate attacker\">The flag is the name of the <s1-label>Custom Rule</s1-label> in place that can block an attacker.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Mitigate definite bot traffic",
       "locked": false,
       "caseSensitive": false,
       "order": 1,
@@ -147,7 +147,7 @@
       "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, click <s1-label>Analytics</s1-label> from the left-hand navigation and select <s1-label>HTTP Traffic</s1-label> from the dropdown at the top of the page. Scroll down to the <s1-label>Referers</s1-label> panel. Change the <s1-label>Absolute time range</s1-label> to see data from the last 30 days.</s1-nav>\n\nIn the context of web traffic monitoring, a <s1-label>Referer</s1-label> is the webpage that linked to the resource being requested.\n\nIn other words, it is inbound traffic from a link. So if a visitor to <s1-value>example.com</s1-value> clicks a link to your site there, the request will include a <s1-label>Referer</s1-label> header saying they came via <s1-value>example.com</s1-value>.\n \n<s1-flag example=\"example.com\">The flag is the most prevalent<s1-label>Referer</s1-label>.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "shop.soledrop.co",
       "locked": false,
       "caseSensitive": true,
       "order": 3,
@@ -188,7 +188,7 @@
       "description": "<s1-nav>Open a new browser tab and navigate to <s1-value>https://shop.soledrop.co/status</s1-value> to view the store's public status page.</s1-nav>\n\nThe store is publishing an active incident. What is the operation called?\n \n<s1-flag example=\"50\">The flag is the name of the operation <s1-value>shop.soledrop.co</s1-value> is under attack by.</s1-value></s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Drop-day Bot Swarm",
       "locked": false,
       "caseSensitive": false,
       "order": 4,
@@ -304,10 +304,10 @@
     },
     {
       "id": "1785340761747-u4mbcj5lz",
-      "type": "static",
+      "type": "choice",
       "name": "Flag 8 - Default time",
       "token": "4 hours",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Event Search</s1-label> from the left-hand menu. Without changing anything, look at the time-range dropdown next to the purple Search button to see its default value.</s1-nav>\n<s1-flag-body>\nThe lookback window is the period of time Event Search will look back on and show logs for. A time of 24 hours means that Event Search will show you results for anything matching your query, but only from within the past 24 hours.\n\n</s1-flag-body>\n<s1-flag example=\"# minutes/hours/days\">The flag is the default time range for Event Search.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Event Search</s1-label> from the left-hand menu. Without changing anything, look at the time-range dropdown next to the purple Search button to see its default value.</s1-nav>\n<s1-flag-body>\nThe lookback window is the period of time <s1-label>Event Search</s1-label> will look back on and show logs for. A time of 24 hours means that <s1-label>Event Search</s1-label> will show you results for anything matching your query, but only from within the past 24 hours.\n\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default time range for Event Search.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "4 hours",
@@ -319,14 +319,22 @@
         {
           "id": "1785779053597-fdcqq8fxv",
           "price": 20,
-          "description": "*Screenshot of Time Range input*",
+          "description": "The format for the time range is 'Last __ days/hours/minutes'",
+          "flagId": "1785340761747-u4mbcj5lz",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1788990757272-bwp9liewo",
+          "price": 30,
+          "description": "It is measured in hours, and it is a single digit.",
           "flagId": "1785340761747-u4mbcj5lz",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
           "id": "1785779054921-7943s9etw",
-          "price": 80,
+          "price": 50,
           "description": "The flag is <s1-answer>4 hours</s1-answer>.",
           "flagId": "1785340761747-u4mbcj5lz",
           "order": 1,
@@ -334,17 +342,23 @@
         }
       ],
       "dependsOn": "Flag 7 - Logpush",
-      "disabled": false
+      "disabled": false,
+      "choices": [
+        "1 hour",
+        "4 hours",
+        "24 hours",
+        "7 days"
+      ]
     },
     {
       "id": "1785340763306-9az0eoav7",
       "type": "regex",
       "name": "Flag 9 - Data ingest",
       "token": "\\b(?:100,?000|[4-9]\\d,?\\d{3})\\b",
-      "description": "<s1-nav>In the SentinelOne console, navigate over to Event Search. Make sure the query is empty and the range is set to the last 72 hours. Type dataSource.vendor into the fields search bar and select Cloudflare.</s1-nav>\n<s1-flag-body>\nWith Logpush enabled, Cloudflare can send all the relevant logs to the SentinelOne console for triage and response. Logpush can be configured to handle all sorts of volumes to fit the specific needs of your SOC team.\n</s1-flag-body>\n<s1-flag example=\"10,000\">The flag is the approximate number of logs coming from Cloudflare.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Event Search</s1-label>. Clear any existing query and set the time range to the last <s1-value>72 hours</s1-value>. Open the field browser, filter on <s1-value>dataSource.vendor</s1-value>, select <span style=\"color: #f38020;\">Cloudflare</span>, and click into <s1-value>dataSource.cloudflare_dataset</s1-value> to see the values it holds.</s1-nav>\n<s1-flag-body>\nWith <s1-label>Logpush</s1-label> enabled, <span style=\"color: #f38020;\">Cloudflare</span> can send all the relevant logs to the <span style=\"color: #A220F3;\">SentinelOne</span> console for triage and response. <s1-label>Logpush</s1-label> can be configured to handle all sorts of volumes to fit the specific needs of your SOC team.\n</s1-flag-body>\n<s1-flag example=\"10,000\">The flag is the approximate number of logs coming from <span style=\"color: #f38020;\">Cloudflare</span>.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "100,000",
       "locked": false,
       "caseSensitive": false,
       "order": 8,
@@ -352,16 +366,16 @@
       "hints": [
         {
           "id": "1785779720478-h98bzc1rp",
-          "price": 10,
-          "description": "*Screenshot of where to look*",
+          "price": 20,
+          "description": "After finding the <s1-value>dataVender.source</s1-value> field, clicking on it will show the number of logs coming from <span style=\"color: #A220F3;\">SentinelOne</span> internally, and <span style=\"color: #f38020;\">Cloudflare</span> externally.",
           "flagId": "1785340763306-9az0eoav7",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
           "id": "1785779720671-mvrcytu60",
-          "price": 90,
-          "description": "The flag is <s1-answer>60,000</s1-answer>.",
+          "price": 80,
+          "description": "The flag is <s1-answer>100,000</s1-answer>.",
           "flagId": "1785340763306-9az0eoav7",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
