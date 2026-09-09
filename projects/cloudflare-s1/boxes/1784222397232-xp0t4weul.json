@@ -29,7 +29,7 @@
       "hints": [
         {
           "id": "1785776556532-5i0hkrifa",
-          "price": 10,
+          "price": 20,
           "description": "Look for the reusable object type under <s1-label>Lists</s1-label>.",
           "flagId": "1785338938858-fm71bmgfn",
           "order": 0,
@@ -37,7 +37,7 @@
         },
         {
           "id": "1785776596840-d5a4fyg68",
-          "price": 90,
+          "price": 80,
           "description": "The flag is <s1-answer>IP List</s1-answer>",
           "flagId": "1785338938858-fm71bmgfn",
           "order": 1,
@@ -279,7 +279,7 @@
         {
           "id": "1786637812949-bgzg8m3nw",
           "price": 20,
-          "description": "HTTP request logs record every request. Security decisions are a different dataset.",
+          "description": "HTTP request logs record every request. Security decisions, Load balancing, and Workers are different datasets.",
           "flagId": "1785340759944-dybfuo9n1",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
@@ -306,8 +306,8 @@
       "id": "1785340761747-u4mbcj5lz",
       "type": "static",
       "name": "Flag 8 - Default time",
-      "token": "CTF{4 hours}",
-      "description": "<s1-nav>In the <span style=\"color: #6b0aea;\">SentinelOne</span> console, navigate over to Event Search.</s1-nav>\n<s1-flag-body>\nThe lookback window is the period of time Event Search will look back on and show logs for. A time of 24 hours means that Event Search will show you results for anything matching your query, but only from within the past 24 hours.\n\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default time range for Event Search.</s1-flag>",
+      "token": "4 hours",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Event Search</s1-label> from the left-hand menu. Without changing anything, look at the time-range dropdown next to the purple Search button to see its default value.</s1-nav>\n<s1-flag-body>\nThe lookback window is the period of time Event Search will look back on and show logs for. A time of 24 hours means that Event Search will show you results for anything matching your query, but only from within the past 24 hours.\n\n</s1-flag-body>\n<s1-flag example=\"# minutes/hours/days\">The flag is the default time range for Event Search.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "4 hours",
