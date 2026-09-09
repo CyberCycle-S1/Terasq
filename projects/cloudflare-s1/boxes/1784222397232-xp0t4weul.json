@@ -18,7 +18,7 @@
       "type": "choice",
       "name": "Flag 1 - CF Nav",
       "token": "IP List",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, find the <s1-label>Manage Account</s1-label> menu on the left. From the <s1-label>Manage Account</s1-label> view find the <s1-label>Configurations</s1-label> page. From the <s1-label>Configurations</s1-label> page use the navigation bar at the top to find the <s1-label>Lists</s1-label> subpage.</s1-nav>\n<s1-flag-body>\nA playbook adds a malicious IP to a reusable ____ that WAF and Gateway rules can reference. (IP List / Page Rule / Redirect List / Waiting Room)\n</s1-flag-body>\n<s1-flag example=\"\">The flag is what malicious IPs can be added to in this specific context.</s1-flag>",
+      "description": "<s1-nav>Go to the <span style=\"color: #f38020;\">Cloudflare</span> console and click <s1-label>Manage Account</s1-label> from the options on the left-hand navigation. Select <s1-label>Configurations</s1-label> from the dropdown, then click <s1-label>Lists</s1-label> from the nav bar at the top of the page.</s1-nav>\n<s1-flag-body>\nA playbook adds a malicious IP to a reusable ____ that WAF and Gateway rules can reference.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is what malicious IPs can be added to in this specific context.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "IP List",
@@ -45,8 +45,8 @@
         }
       ],
       "choices": [
-        "IP List",
         "Page Rule",
+        "IP List",
         "Redirect List",
         "Waiting Room"
       ]
@@ -56,7 +56,7 @@
       "type": "static",
       "name": "Flag 2 - CF Nav",
       "token": "Mitigate definite bot traffic",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, find the <s1-label>Domains</s1-label> dropdown and select find the <s1-label>Overview</s1-label> page. From the <s1-label>Overview</s1-label> page, find the <s1-value>one-flare.com</s1-value> domain. Find the <s1-label>Security</s1-label> dropdown from the menus the left and go to <s1-label>Security Rules</s1-label>.</s1-nav>\n<s1-flag-body>\nWhat is the name of a <s1-label>Custom Rule</s1-label> a SOAR playbook could toggle to block an attacker?\n</s1-flag-body>\n<s1-flag example=\"Mitigate attacker\">The flag is the name of the <s1-label>Custom Rule</s1-label> in place that can block an attacker.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, click <s1-label>Domains</s1-label> from the left-hand navigation and select the <s1-value>one-flare.com</s1-value> zone. From that domain's <s1-label>Overview</s1-label> page, open the <s1-label>Security</s1-label> dropdown in the left-hand menu and choose <s1-label>Security Rules</s1-label>.</s1-nav>\n<s1-flag-body>\nWhat is the name of a <s1-label>Custom Rule</s1-label> a SOAR playbook could toggle to block an attacker?\n</s1-flag-body>\n<s1-flag example=\"Mitigate attacker\">The flag is the name of the <s1-label>Custom Rule</s1-label> in place that can block an attacker.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -67,18 +67,26 @@
       "hints": [
         {
           "id": "1785777057139-o6yg7snfi",
-          "price": 10,
-          "description": "Read the custom-rules list; if empty, that's a finding.",
+          "price": 20,
+          "description": "The flag is in the custom-rules list.",
           "flagId": "1785338951045-g5c6wpriu",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
-          "id": "1785777077992-tgwn25vof",
-          "price": 90,
-          "description": "The flag is <s1-answer>Mitigate definite bot traffic</s1-answer>.",
+          "id": "1788985165517-yy8d1cd6j",
+          "price": 30,
+          "description": "The flag is the only security rule for <s1-value>one-flare.com</s1-value> that has the <s1-value>block</s1-value> action enabled.",
           "flagId": "1785338951045-g5c6wpriu",
           "order": 1,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1785777077992-tgwn25vof",
+          "price": 50,
+          "description": "The flag is <s1-answer>Mitigate definite bot traffic</s1-answer>.",
+          "flagId": "1785338951045-g5c6wpriu",
+          "order": 2,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
@@ -88,11 +96,11 @@
       "id": "1784302979510-5bqfje1wn",
       "type": "choice",
       "name": "Flag 3 - Analytics",
-      "token": "France",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, on the left hand side find <s1-label>Analytics</s1-label>. Select <s1-label>Account Analytics</s1-label> from the dropdown. Change the <s1-label>Absolute time range</s1-label> to see data from the last 30 days.</s1-nav>\n\n<s1-label>Account Analytics</s1-label> shows you an overview of traffic for all domains under your <span style=\"color: #f38020;\">Cloudflare</span> account, such as requests and bandwidth by country, information related to security, cache, and errors, among others.\n \n<s1-flag example=\"United States\">The flag is the country with the 3rd highest number of requests.</s1-flag>",
+      "token": "Almost certainly an attack",
+      "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> documentation on the WAF attack score at <s1-value>https://developers.cloudflare.com/waf/about/waf-attack-score/</s1-value> and read how the numeric scale is calculated and what the range represents.</s1-nav>\n\nA request is scored 3 out of 99 by the WAF attack score. What does that tell you?\n \n<s1-flag example=\"No Bot Traffic\">The flag is the finding based on a score of 3.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "France",
+      "plainAnswer": "Almost certainly an attack",
       "locked": false,
       "caseSensitive": false,
       "order": 2,
@@ -100,57 +108,73 @@
       "hints": [
         {
           "id": "1785962574035-s3rpg5rq9",
-          "price": 10,
-          "description": "Make sure the <s1-label>Absolute time range</s1-label> is set to 30 days.\n\nThe flag is the country with the highest request volume out of the 4 options (3rd highest overall).",
+          "price": 20,
+          "description": "The scale is counter-intuitive — most people guess it backwards.",
           "flagId": "1784302979510-5bqfje1wn",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
           "id": "1785962917436-qoae3sxwu",
-          "price": 90,
-          "description": "The flag is <s1-answer>France</s1-answer>.",
+          "price": 30,
+          "description": "1 means the WAF is most confident it IS an attack; 99 means clean.",
           "flagId": "1784302979510-5bqfje1wn",
           "order": 1,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1788986594052-72qxkm78c",
+          "price": 50,
+          "description": "The flag is <s1-answer>Almost certainly an attack</s1-answer>.",
+          "flagId": "1784302979510-5bqfje1wn",
+          "order": 2,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
       "dependsOn": "Flag 2 - CF Nav",
       "choices": [
-        "India",
-        "Ireland",
-        "France",
-        "Germany"
+        "Almost certainly an attack",
+        "Almost certainly clean",
+        "Inconclusive",
+        "Bot traffic"
       ]
     },
     {
       "id": "1784303365739-hi9ouoy9b",
       "type": "static",
       "name": "Flag 4 - Analytics",
-      "token": "CTF{shop.soledrop.co}",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, on the left hand side find <s1-label>Analytics</s1-label>. Select <s1-label>HTTP Traffic</s1-label> from the dropdown. Change the <s1-label>Absolute time range</s1-label> to see data from the last 30 days.</s1-nav>\n\nIn the context of web traffic monitoring, a <s1-label>Referer</s1-label> is the webpage that linked to the resource being requested.\n\nIn other words, it is inbound traffic from a link. So if a visitor to <s1-value>example.com</s1-value> clicks a link to your site there, the request will include a <s1-label>Referer</s1-label> header saying they came via <s1-value>example.com</s1-value>.\n \n<s1-flag example=\"example.com\">The flag is the <s1-label>Referer</s1-label> with the highest request volume. </s1-flag>",
+      "token": "shop.soledrop.co",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, click <s1-label>Analytics</s1-label> from the left-hand navigation and select <s1-label>HTTP Traffic</s1-label> from the dropdown at the top of the page. Scroll down to the <s1-label>Referers</s1-label> panel. Change the <s1-label>Absolute time range</s1-label> to see data from the last 30 days.</s1-nav>\n\nIn the context of web traffic monitoring, a <s1-label>Referer</s1-label> is the webpage that linked to the resource being requested.\n\nIn other words, it is inbound traffic from a link. So if a visitor to <s1-value>example.com</s1-value> clicks a link to your site there, the request will include a <s1-label>Referer</s1-label> header saying they came via <s1-value>example.com</s1-value>.\n \n<s1-flag example=\"example.com\">The flag is the most prevalent<s1-label>Referer</s1-label>.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
       "locked": false,
-      "caseSensitive": false,
+      "caseSensitive": true,
       "order": 3,
       "attachments": [],
       "hints": [
         {
           "id": "1785963034536-e02isj0io",
-          "price": 10,
+          "price": 20,
           "description": "The flag is under the <s1-label>Requests by volume source</s1-label> section of the page, under <s1-label>Referers</s1-label>.",
           "flagId": "1784303365739-hi9ouoy9b",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
-          "id": "1785963035530-c02ampzm9",
-          "price": 90,
-          "description": "The flag is <s1-answer>shop.soledrop.co</s1-answer>.",
+          "id": "1788987025056-jzeeozqsb",
+          "price": 30,
+          "description": "The store front is 'shop'; the employee portal is 'portal'; the REST gateway is 'api'.",
           "flagId": "1784303365739-hi9ouoy9b",
           "order": 1,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1785963035530-c02ampzm9",
+          "price": 50,
+          "description": "The flag is <s1-answer>shop.soledrop.co</s1-answer>.",
+          "flagId": "1784303365739-hi9ouoy9b",
+          "order": 2,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
@@ -160,8 +184,8 @@
       "id": "1784303848387-2x2f5ad22",
       "type": "static",
       "name": "Flag 5 - Soledrop",
-      "token": "24",
-      "description": "<s1-nav>Enter <s1-value>shop.soledrop.co</s1-value> into a web browser. Once there, find the <s1-label>Status</s1-label> page.</s1-nav>\n\n<span style=\"color: #f38020;\">Cloudflare</span> uses <s1-label>Bot Scores</s1-label> to measure the likelihood that an incoming web request is operated by an automated bot rather than a human. A bot score of 1 indicates the highest probability of bot activity, while a bot score of 99 indicates human activity.\n \n<s1-flag example=\"50\">The flag is the bot score attributed to the activity on <s1-value>shop.soledrop.co</s1-value>. </s1-flag>",
+      "token": "Drop-day Bot Swarm",
+      "description": "<s1-nav>Open a new browser tab and navigate to <s1-value>https://shop.soledrop.co/status</s1-value> to view the store's public status page.</s1-nav>\n\nThe store is publishing an active incident. What is the operation called?\n \n<s1-flag example=\"50\">The flag is the name of the operation <s1-value>shop.soledrop.co</s1-value> is under attack by.</s1-value></s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -172,18 +196,26 @@
       "hints": [
         {
           "id": "1785963428989-yjo949m7z",
-          "price": 10,
-          "description": "On Soledrop's <s1-label>Status</s1-label> page, the <s1-value>bot score</s1-value> is detailed under the 1st section of the <s1-label>Attack Timeline</s1-label>.",
+          "price": 20,
+          "description": "The banner names the operation currently hitting the store.",
           "flagId": "1784303848387-2x2f5ad22",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
           "id": "1785963429691-8plkoqekl",
-          "price": 90,
-          "description": "The flag is <s1-answer>24</s1-answer>.",
+          "price": 30,
+          "description": "Two words after the hyphenated day name — it is a swarm of something automated.",
           "flagId": "1784303848387-2x2f5ad22",
           "order": 1,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1788987533444-u2xqgkix1",
+          "price": 50,
+          "description": "The flag is <s1-answer>Drop-Day Bot Swarm</s1-answer>.",
+          "flagId": "1784303848387-2x2f5ad22",
+          "order": 2,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
@@ -194,7 +226,7 @@
       "type": "choice",
       "name": "Flag 6 - Bot score",
       "token": "Likely automated",
-      "description": "<s1-nav>Go to Cloudflare's documentation on bot scores here: <s1-value>http://developers.cloudflare.com/bots/concepts/bot-score/</s1-value></s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> uses <s1-label>Bot Scores</s1-label> to measure the likelihood that an incoming web request is operated by an automated bot rather than a human. A bot score of 1 indicates the highest probability of bot activity, while a bot score of 99 indicates human activity.\n\nSee bot score calculation here for more info: <s1-value>http://developers.cloudflare.com/bots/concepts/bot-score/</s1-value>.\n</s1-flag-body>\n\n<s1-flag example=\"\">The flag is the category a bot score of 24 would fall under.</s1-flag>",
+      "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> bot score documentation at <s1-value>http://developers.cloudflare.com/bots/concepts/bot-score/ </s1-value>and read the <s1-label>Bot Groupings</s1-label> subsection to see how score ranges map to bot-likelihood bands.</s1-value></s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> uses <s1-label>Bot Scores</s1-label> to measure the likelihood that an incoming web request is operated by an automated bot rather than a human. A bot score of 1 indicates the highest probability of bot activity, while a bot score of 99 indicates human activity.\n</s1-flag-body>\n\n<s1-flag example=\"\">The flag is the band a bot score of 24 would fall into.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Likely automated",
@@ -205,15 +237,15 @@
       "hints": [
         {
           "id": "1785964617835-i02ohjjo0",
-          "price": 10,
-          "description": "*Insert screenshot of bot score categories from doc page*",
+          "price": 20,
+          "description": "Scores 30-99 are in the likely human band. The flag is the band covering scores 2-29.",
           "flagId": "1785340751216-gocd6hcvy",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
           "id": "1785964618620-a6s8xxr7v",
-          "price": 90,
+          "price": 80,
           "description": "The flag is <s1-answer>Likely automated</s1-answer>.",
           "flagId": "1785340751216-gocd6hcvy",
           "order": 1,
@@ -223,11 +255,11 @@
       "dependsOn": "Flag 5 - Soledrop",
       "disabled": false,
       "choices": [
-        "Not computed",
+        "Verified bot",
         "Automated",
         "Likely automated",
         "Likely human",
-        "Verified bot"
+        "Human"
       ]
     },
     {
@@ -235,7 +267,7 @@
       "type": "choice",
       "name": "Flag 7 - Logpush",
       "token": "Firewall",
-      "description": "<s1-nav>Navigate to Cloudflare's documentation of the Logpush feature: \n\nhttps://developers.cloudflare.com/logs/logpush/</s1-nav>\n<s1-flag-body>\nLogpush allows Cloudflare to send large volumes of specified traffic logs to storage services, log management providers and SIEMs like SentinelOne.\n\nWhich dataset would add log volume separately?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the name of the dataset.</s1-flag>",
+      "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> <s1-label>Logpush</s1-label> documentation at <s1-value>https://developers.cloudflare.com/logs/logpush/</s1-value> and review the list of available datasets <s1-label>Logpush</s1-label> can export.</s1-nav>\n<s1-flag-body>\n<s1-label>Logpush</s1-label> allows <span style=\"color: #f38020;\">Cloudflare</span> to send large volumes of specified traffic logs to storage services, log management providers and SIEMs like <span style=\"color: #A220F3;\">SentinelOne</span>.\n\nWhich dataset carries WAF block and challenge decisions, separately from the HTTP request log?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the name of the dataset.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Firewall",
@@ -246,10 +278,18 @@
       "hints": [
         {
           "id": "1786637812949-bgzg8m3nw",
-          "price": 100,
-          "description": "The flag is <s1-answer>Firewall</s1-answer>.",
+          "price": 20,
+          "description": "HTTP request logs record every request. Security decisions are a different dataset.",
           "flagId": "1785340759944-dybfuo9n1",
           "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1788989501018-6nt7x66nw",
+          "price": 80,
+          "description": "The flag is <s1-answer>Firewall</s1-answer>.",
+          "flagId": "1785340759944-dybfuo9n1",
+          "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
@@ -267,7 +307,7 @@
       "type": "static",
       "name": "Flag 8 - Default time",
       "token": "CTF{4 hours}",
-      "description": "<s1-nav>In the SentinelOne console, navigate over to Event Search.</s1-nav>\n<s1-flag-body>\nThe lookback window is the period of time Event Search will look back on and show logs for. A time of 24 hours means that Event Search will show you results for anything matching your query, but only from within the past 24 hours.\n\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default time range for Event Search.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #6b0aea;\">SentinelOne</span> console, navigate over to Event Search.</s1-nav>\n<s1-flag-body>\nThe lookback window is the period of time Event Search will look back on and show logs for. A time of 24 hours means that Event Search will show you results for anything matching your query, but only from within the past 24 hours.\n\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default time range for Event Search.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "4 hours",

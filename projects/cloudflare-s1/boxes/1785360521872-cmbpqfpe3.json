@@ -364,7 +364,7 @@
           "price": 90,
           "description": "The flag is <s1-answer>WAF-LoginLog: Log all login POSTs</s1-answer>.",
           "flagId": "1785360817691-rfaam2wsr",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],

@@ -64,7 +64,7 @@
           "price": 90,
           "description": "The flag is <s1-answer>Load balancing</s1-answer>.",
           "flagId": "1785360631466-rdodl90ks",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
@@ -98,7 +98,7 @@
           "price": 90,
           "description": "The flag is <s1-answer>Denver</s1-answer>.",
           "flagId": "1785360632867-jjd223kgt",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
