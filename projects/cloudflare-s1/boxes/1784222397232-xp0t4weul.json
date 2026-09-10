@@ -389,7 +389,7 @@
       "type": "choice",
       "name": "Flag 10 - Detection",
       "token": "Scheduled",
-      "description": "<s1-nav>Navigate over to Detections. Find the detection associated with Credential stuffing</s1-nav>\n<s1-flag-body>\nDetections are a feature of SentinelOne that allow you to create queries that are applied to all incoming traffic. If a log or set of logs match the pattern they are aggregated into an alert for the SOC team to analyze.\n\nFind the detection associated with Credential Stuffing.\n</s1-flag-body>\n<s1-flag example=\"Single Event\">The flag is the Rule Type associated with this detection.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the detection rule for <s1-value>Credential Stuffing</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nDetections are a feature of SentinelOne that allow you to create queries that are applied to all incoming traffic. If a log or set of logs match the pattern they are aggregated into an alert for the SOC team to analyze.\n\nFind the detection associated with Credential Stuffing.\n</s1-flag-body>\n<s1-flag example=\"Single Event\">The flag is the Rule Type associated with this detection.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Scheduled",
