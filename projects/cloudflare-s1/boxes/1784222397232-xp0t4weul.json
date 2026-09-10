@@ -389,7 +389,7 @@
       "type": "choice",
       "name": "Flag 10 - Detection",
       "token": "Scheduled",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the detection rule for <s1-value>Credential Stuffing</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nDetections are a feature of SentinelOne that allow you to create queries that are applied to all incoming traffic. If a log or set of logs match the pattern they are aggregated into an alert for the SOC team to analyze.\n\nFind the detection associated with Credential Stuffing.\n</s1-flag-body>\n<s1-flag example=\"Single Event\">The flag is the Rule Type associated with this detection.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the detection rule for <s1-value>Credential Stuffing</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nDetections are a feature of <span style=\"color: #A220F3;\">SentinelOne</span> that allow you to create queries that are applied to all incoming traffic. If a log or set of logs match the pattern they are aggregated into an alert for the SOC team to analyze.\n\nFind the detection associated with <s1-value>Credential Stuffing</s1-value>.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the Rule Type associated with this detection.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Scheduled",
@@ -399,31 +399,40 @@
       "attachments": [],
       "hints": [
         {
-          "id": "1786725424746-8m0nx7111",
-          "price": 100,
-          "description": "The flag is <s1-answer>Scheduled</s1-answer>.",
+          "id": "1789061440004-rzui1qeiy",
+          "price": 20,
+          "description": "In the detection rule, scroll down to find the <s1-label>Detection logic conditions</s1-label> subsection which contains the <s1-label>Rule Type</s1-label>.",
           "flagId": "1785340765990-3p2w16l7j",
           "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1786725424746-8m0nx7111",
+          "price": 80,
+          "description": "The flag is <s1-answer>Scheduled</s1-answer>.",
+          "flagId": "1785340765990-3p2w16l7j",
+          "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
       "dependsOn": "Flag 9 - Data ingest",
       "disabled": false,
       "choices": [
-        "Single Event",
+        "Single Event (STAR)",
         "Correlation",
+        "Watchlist",
         "Scheduled"
       ]
     },
     {
       "id": "1785340775265-03xss86mr",
-      "type": "regex",
+      "type": "choice",
       "name": "Flag 11 - Detection",
-      "token": "\\b(?:4[5-9]\\d|5[0-4]\\d|550)\\b",
-      "description": "<s1-nav>Navigate over to Detections. Find the detection associated with Credential stuffing. Click on the Event Search button inside the detection window.</s1-nav>\n<s1-flag-body>\nWhen you use Event Search while inside a detection, the Event Search query is automatically populated with the query the detection was using. This allows analysts to save time and find the exact logs and events they are looking for.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is how many failed login attempts have occurred for the most recent event.</s1-flag>",
+      "token": "401, 403, 429",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label>, open the <s1-value>Credential Stuffing</s1-value> rule, and read the <s1-value>filter status in (...)</s1-value> line of its scheduled <s1-label>PowerQuery</s1-label> body.</s1-nav>\n<s1-flag-body>\n<s1-label>PowerQuery</s1-label> in <span style=\"color: #A220F3;\">SentinelOne</span> (also referred to as S1QL 2.0) is an advanced query interface designed for the <s1-label>Singularity XDR</s1-label> and <s1-label>SentinelOne Data Lake</s1-label> platforms. Originally derived from <s1-label>SentinelOne's DataSet</s1-label> (formerly Scalyr) engine, <s1-label>PowerQuery</s1-label> goes beyond simple keyword filtering to allow security teams to transform, manipulate, group, and summarize vast amounts of telemetry data on the fly.\n\nThe rule only counts login requests that failed. Which set of HTTP status codes does its query treat as a failed login?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the error code or codes.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "401, 403, 429",
       "locked": false,
       "caseSensitive": false,
       "order": 10,
@@ -431,33 +440,47 @@
       "hints": [
         {
           "id": "1785785401239-zem7e5hoo",
-          "price": 10,
-          "description": "Make sure the lookback window is set to 72 hours and the Detection name is \"CF-Access-CredStuffing — Login Brute Force / Credential Stuffing on portal.soledrop.co\". The flag is under the failed_logins column.",
+          "price": 20,
+          "description": "The query has a <s1-value>filter status in (...)</s1-value> line — read it literally.",
+          "flagId": "1785340775265-03xss86mr",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1789067106831-u6cmico4r",
+          "price": 30,
+          "description": "Unauthorized and Forbidden are two of the three. The third is a rate-limit code.",
           "flagId": "1785340775265-03xss86mr",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
           "id": "1785785401592-m6gnetd54",
-          "price": 90,
-          "description": "The flag is <s1-answer>529</s1-answer>.",
+          "price": 50,
+          "description": "The flag is <s1-answer>401, 403, 429</s1-answer>.",
           "flagId": "1785340775265-03xss86mr",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
       "dependsOn": "Flag 10 - Detection",
-      "disabled": false
+      "disabled": false,
+      "choices": [
+        "401, 403, 429",
+        "400, 401, 500",
+        "403 only",
+        "401, 404, 502"
+      ]
     },
     {
       "id": "1785340777240-95fyfow4d",
-      "type": "regex",
+      "type": "choice",
       "name": "Flag 12 - Detection",
-      "token": "30",
-      "description": "<s1-nav>Navigate over to Detections. Find the detection associated with WAF Traversal.</s1-nav>\n<s1-flag-body>\nUnder the 'raised alerts' column, you can see how many alerts a detection rule has raised since being activated.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the number of alerts that have been raised by the CF-WAF-Traversal detection rule.</s1-flag>",
+      "token": "High ",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the rule whose name contains <s1-value>CF-WAF-Traversal</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nWhat severity is this detection rule configured with?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the severity level.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "High ",
       "locked": false,
       "caseSensitive": false,
       "order": 11,
@@ -465,65 +488,87 @@
       "hints": [
         {
           "id": "1785791338216-eb289kcnv",
-          "price": 10,
-          "description": "*Screenshot of where to look*",
+          "price": 20,
+          "description": "Read the <s1-label>Severity</s1-label> field on the rule itself, not the alert.",
+          "flagId": "1785340777240-95fyfow4d",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1789067666312-j9lwqtd4h",
+          "price": 30,
+          "description": "It is one step below <s1-value>Critical</s1-value>.",
           "flagId": "1785340777240-95fyfow4d",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
           "id": "1785791338633-7kylb148g",
-          "price": 90,
-          "description": "The flag is <s1-answer>30</s1-answer>.",
+          "price": 50,
+          "description": "The flag is <s1-answer>High</s1-answer>.",
           "flagId": "1785340777240-95fyfow4d",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
       "dependsOn": "Flag 11 - Detection",
-      "disabled": false
+      "disabled": false,
+      "choices": [
+        "Low",
+        "Medium",
+        "High ",
+        "Critical"
+      ]
     },
     {
       "id": "1785340778702-yob1edtbp",
       "type": "choice",
       "name": "Flag 13 - CF Filtering",
-      "token": "Capture all events",
-      "description": "<s1-nav>Navigate to Traffic policies from the left menu. Go to the Traffic settings page from the dropdown. Scroll down to Traffic logging.</s1-nav>\n<s1-flag-body>\nCloudflare allows users to configure what events actually get logged. \n\nWhat is the default scope that Gateway uses when capturing events?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default scope</s1-flag>",
+      "token": "Capture all",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Zero Trust</s1-label> from the left-hand menu. Navigate to the <s1-label>Traffic Policies</s1-label> from the new left-hand menu and select <s1-label>Traffic Settings</s1-label> from the dropdown. Scroll down to the <s1-label>Traffic Logging</s1-label> section.</s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> allows users to configure what events actually get logged. \n\nWhat is the default scope that Gateway uses when capturing events?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default scope.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "Capture all events",
+      "plainAnswer": "Capture all",
       "locked": false,
       "caseSensitive": false,
       "order": 12,
       "attachments": [],
       "hints": [
         {
-          "id": "1786643517004-xg0ywfwb8",
-          "price": 100,
-          "description": "The flag is <s1-answer>Capture all events</s1-answer>.",
+          "id": "1789068200722-3wjdojgnp",
+          "price": 20,
+          "description": "It is the most permissive of the options.",
           "flagId": "1785340778702-yob1edtbp",
           "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1786643517004-xg0ywfwb8",
+          "price": 80,
+          "description": "The flag is <s1-answer>Capture all</s1-answer>.",
+          "flagId": "1785340778702-yob1edtbp",
+          "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
       "dependsOn": "Flag 12 - Detection",
       "disabled": false,
       "choices": [
-        "Capture all events",
-        "Capture only blocked events",
-        "Capture only allowed events",
+        "Capture all",
+        "Capture only blocked",
+        "Capture only allowed",
         "Don't capture"
       ]
     },
     {
       "id": "1785340780568-laft2hurh",
-      "type": "regex",
+      "type": "static",
       "name": "Flag 14 - Event Search Evidence",
-      "token": "^[a-z0-9]{55,63}\\.[a-z0-9]+\\.acmecorp-lab\\.workers\\.dev$",
-      "description": "<s1-nav>Navigate to Event Search. Clear the search and set the search window to 72 hours.</s1-nav>\n<s1-flag-body>\nPaste this DNS Tunneling search query into the event search.\n\n<s1-value>class_uid=4003 dataSource.cloudflare_dataset='Gateway DNS' unmapped.QueryName=*\n| let fqdn        = lower(unmapped.QueryName)\n| let label       = replace(fqdn, '\\\\..*', '')\n| let zone        = replace(fqdn, '^.*\\\\.([^.]+\\\\.[^.]+\\\\.[^.]+)$', '$1')\n| let label_len   = len(label)\n| let digit_cnt   = len(replace(label, '[^0-9]', ''))\n| let digit_ratio = label_len > 0 ? digit_cnt / label_len : 0\n| let is_txt      = query.type in:anycase ('txt')\n| let src_ip      = src_endpoint.ip\n| let host        = device.name\n| group\n    total_queries = count(),\n    uniq_labels   = estimate_distinct(label),\n    max_label_len = max(label_len),\n    long_labels   = count(label_len >= 40),\n    txt_long      = count(is_txt AND label_len >= 20),\n    hi_entropy    = count(label_len >= 12 AND digit_ratio >= 0.15),\n    device_uid    = any(device.uid),\n    evidence      = max_by(unmapped.QueryName, label_len),\n    first_seen    = oldest(timestamp),\n    last_seen     = newest(timestamp)\n  by src_ip, host, zone\n| filter (hi_entropy >= 10 AND uniq_labels >= 10) OR (long_labels >= 5 AND uniq_labels >= 5) OR txt_long >= 3\n| let reason = txt_long >= 3 ? 'Data-in-DNS exfil (TXT long labels)' : ((long_labels >= 5 AND uniq_labels >= 5) ? 'Long-label DNS tunneling' : 'DGA / high-entropy beaconing')\n| let detection_time = simpledateformat(last_seen, 'yyyy-MM-dd HH:mm:ss z', 'America/Chicago')\n| sort -uniq_labels\n| columns detection_time, src_ip, host, zone, reason, total_queries, uniq_labels, long_labels, txt_long, hi_entropy, max_label_len, evidence, device_uid, first_seen\n| limit 100</s1-value>\n\nDetection queries can produce Evidence. Evidence is the key piece of data that caused the detection rule to fire. In this case the evidence is the DNS label, and it is indicative of a tunneling attack.\n\n</s1-flag-body>\n<s1-flag example=\"abcdefghijklmnopqrstuvwxyz1234567890c2tunnel.acmecorp-lab.workers.dev\">The flag is the string + domain that is cited as evidence. </s1-flag>",
+      "token": "1048576",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> and open the <s1-value>Bulk Data Exfiltration</s1-value> rule (CF-API-Exfil). Read the <s1-value>filter</s1-value> line at the end of its <s1-label>PowerQuery</s1-label> body.</s1-nav>\n<s1-flag-body>\nThis rule fires on either of two conditions. One of them is a response-size floor — a single response body larger than N bytes. What is N?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the string + domain that is cited as evidence. </s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "1048576",
       "locked": false,
       "caseSensitive": false,
       "order": 13,
@@ -531,16 +576,24 @@
       "hints": [
         {
           "id": "1785792901150-zy1uofxkp",
-          "price": 10,
-          "description": "*Screenshot of Evidence column*",
+          "price": 20,
+          "description": "The query ends with <s1-value>filter sensitive_hits >= 10 OR max_bytes >= N</s1-value>.",
+          "flagId": "1785340780568-laft2hurh",
+          "order": 0,
+          "boxId": "1784222397232-xp0t4weul"
+        },
+        {
+          "id": "1789068510547-jp03gweon",
+          "price": 30,
+          "description": "It is one binary megabyte, written out in full.",
           "flagId": "1785340780568-laft2hurh",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
           "id": "1785792924505-370e9aco2",
-          "price": 90,
-          "description": "The flag is <s1-answer>u4nxyfbeyqsqamjp6bjvbpcpmlpgx1s5qa3dmwwxkgp9yic9274m6chgnmia.beacon.acmecorp-lab.workers.dev</s1-answer>.\n",
+          "price": 50,
+          "description": "The flag is <s1-answer>1048576</s1-answer>.\n",
           "flagId": "1785340780568-laft2hurh",
           "order": 1,
           "boxId": "1784222397232-xp0t4weul"
