@@ -15,34 +15,56 @@
   "flags": [
     {
       "id": "1783699299308-l58vwm9wc",
-      "type": "static",
+      "type": "choice",
       "name": "Flag 1 - CF Dashboard",
-      "token": "CTF{SSO}",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Zero Trust</s1-label> from the left-hand menu. Navigate to <s1-label>Insights and Logs</s1-label> from the new left-hand menu and select <s1-label>Dashboards</s1-label> from the dropdown. Open the <s1-label>Access</s1-label> dashboard, set the event window to <s1-value>30 days</s1-value>, and review the <s1-label>Access Events by Type</s1-label> panel.</s1-nav>\r\n<s1-flag-body>\r\nThe Cloudflare dashboards provide a catalog of saved analytics views for reporting and investigation. Analytics Dashboards provide visualizations of your log data.\r\n\r\nThe Access event analytics dashboard lets users review login attempts to the applications they protected behind Access.\r\n\r\nSet the event window to 30 days. Pay attention to Access events by type. What is the least common type?\r\n\r\n</s1-flag-body>\r\n<s1-flag example=\"login\">The flag is the type of access event.</s1-flag>",
+      "token": "SSO",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Zero Trust</s1-label> from the left-hand menu. Navigate to <s1-label>Insights and Logs</s1-label> from the new left-hand menu and select <s1-label>Dashboards</s1-label> from the dropdown. Open the <s1-label>Access</s1-label> dashboard, set the event window to <s1-value>30 days</s1-value>, and review the <s1-label>Access Events by Type</s1-label> panel.</s1-nav>\r\n<s1-flag-body>\r\nThe <span style=\"color: #f38020;\">Cloudflare</span> dashboards provide a catalog of saved analytics views for reporting and investigation. <s1-label>Analytics Dashboards</s1-label> provide visualizations of your log data.\r\n\r\nThe <s1-label>Access event analytics</s1-label> dashboard lets users review login attempts to the applications they protected behind Access.\r\n\r\nSet the event window to <s1-value>30 days</s1-value>. Pay attention to <s1-label>Access events by type</s1-label>. What is the least common type?\r\n\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is the type of access event.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "SSO",
       "locked": false,
       "caseSensitive": false,
       "order": 0,
       "attachments": [],
       "hints": [
         {
-          "id": "1783704560827-7869tz1x2",
-          "price": 100,
-          "description": "The flag is <s1-answer>SSO</s1-answer>.",
+          "id": "1789151271363-t9pp4ypb2",
+          "price": 20,
+          "description": "Two of the four types are the obvious pair; you want one of remaining two.",
           "flagId": "1783699299308-l58vwm9wc",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2"
+        },
+        {
+          "id": "1789151272296-7pcmutajm",
+          "price": 30,
+          "description": "Three letters. It is the handoff to your IdP.",
+          "flagId": "1783699299308-l58vwm9wc",
+          "order": 1,
+          "boxId": "1783699237357-q3jwvoke2"
+        },
+        {
+          "id": "1783704560827-7869tz1x2",
+          "price": 50,
+          "description": "The flag is <s1-answer>SSO</s1-answer>.",
+          "flagId": "1783699299308-l58vwm9wc",
+          "order": 2,
+          "boxId": "1783699237357-q3jwvoke2"
         }
+      ],
+      "choices": [
+        "SSO",
+        "Login",
+        "Logout",
+        "Device posture"
       ]
     },
     {
       "id": "1784053557399-6eo38dv1y",
       "type": "regex",
       "name": "Flag 2 - CF Dashboard",
-      "token": "^(1\\d{3}|2\\d{3}|3000)$",
-      "description": "<s1-nav>Navigate to the Insights and Logs tab from the left hand menu. From the dropdown select Dashboards.</s1-nav>\r\n<s1-flag-body>\r\nThe Cloudflare dashboards provide a catalog of saved analytics views for reporting and investigation. Analytics Dashboards provide visualizations of your log data.\r\n\r\nThe DNS query analytics dashboard lets users review queries handled by Gateway based on their DNS policies.\r\n\r\nSet the event window to 30 days. Pay attention to the Gateway insights for DNS queries section.\r\n\r\n</s1-flag-body>\r\n<s1-flag example=\"300\">The flag is the number of DNS actions allowed by rule.</s1-flag>",
+      "token": "^([1-9]\\d{2}|1\\d{3}|2\\d{3}|3000)$",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Zero Trust</s1-label> from the left-hand menu. Navigate to <s1-label>Insights and Logs</s1-label> from the new left-hand menu and select <s1-label>Dashboards</s1-label> from the dropdown. Open the <s1-label>DNS query analytics</s1-label> dashboard, set the event window to <s1-value>30 days</s1-value>, and review the <s1-label>Gateway insights for DNS queries</s1-label> section.</s1-nav>\r\n<s1-flag-body>\r\nThe <span style=\"color: #f38020;\">Cloudflare</span> dashboards provide a catalog of saved analytics views for reporting and investigation. <s1-label>Analytics Dashboards</s1-label> provide visualizations of your log data.\r\n\r\nThe <s1-label>DNS query analytics</s1-label> dashboard lets users review queries handled by Gateway based on their DNS policies.\r\n\r\nSet the event window to <s1-value>30 days</s1-value>. Pay attention to the <s1-label>Gateway insights for DNS queries</s1-label> section.\r\n\r\n</s1-flag-body>\r\n<s1-flag example=\"100\">The flag is the number of DNS actions allowed by rule.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "",
@@ -53,7 +75,7 @@
       "hints": [
         {
           "id": "1784053557400-tk2umf6yd",
-          "price": 10,
+          "price": 20,
           "description": "The flag is displayed under the DNS Action subsection.",
           "flagId": "1784053557399-6eo38dv1y",
           "order": 0,
@@ -62,7 +84,7 @@
         },
         {
           "id": "1786649112263-hjgy8a4cl",
-          "price": 90,
+          "price": 80,
           "description": "The flag is <s1-answer>1420</s1-answer>.",
           "flagId": "1784053557399-6eo38dv1y",
           "order": 1,
@@ -77,10 +99,10 @@
       "type": "static",
       "name": "Flag 3 - CF Investigation",
       "token": "/api/incident",
-      "description": "<s1-nav>Navigate to the soledrop.co domain. Find the Security page from the menu on the left. Select Web Assets from the dropdown. From the nav bar go to Upgrade.</s1-nav>\r\n<s1-flag-body>\r\nThe API Shield preview tells users what endpoints need protecting, and can offer valuable analytics to help with incident prevention.\r\n\r\nWhat is the endpoint destination for the top 5 discovered endpoints?\r\n</s1-flag-body>\r\n<s1-flag example=\"/api/...\">The flag is the endpoint destination.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, select the <s1-value>soledrop.co</s1-value> domain, open the <s1-label>Security</s1-label> dropdown from the left-hand menu, and choose <s1-label>Web Assets</s1-label>. From the nav bar at the top, select the <s1-label>Upgrade</s1-label> tab and review the <s1-label>discovered endpoints</s1-label> panel.</s1-nav>\r\n<s1-flag-body>\r\nThe <s1-label>API Shield</s1-label> preview tells users what endpoints need protecting, and can offer valuable analytics to help with incident prevention.\r\n\r\nWhat is the endpoint destination for the top discovered endpoints?\r\n</s1-flag-body>\r\n<s1-flag example=\"/api/...\">The flag is the endpoint destination.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "/api/incident",
       "locked": false,
       "caseSensitive": false,
       "order": 2,
@@ -88,7 +110,7 @@
       "hints": [
         {
           "id": "1785360324339-2eczr6h6d",
-          "price": 10,
+          "price": 20,
           "description": "The flag is in the Endpoint column of the specified section.",
           "flagId": "1785360324338-0wugoug7f",
           "order": 0,
@@ -96,8 +118,16 @@
           "disabled": false
         },
         {
+          "id": "1789154275096-paydqpeer",
+          "price": 30,
+          "description": "It is the API path the status page polls for the live incident state.",
+          "flagId": "1785360324338-0wugoug7f",
+          "order": 0,
+          "boxId": "1783699237357-q3jwvoke2"
+        },
+        {
           "id": "1786652068239-2cva92v8l",
-          "price": 90,
+          "price": 50,
           "description": "The flag is <s1-answer>/api/incident</s1-answer>.",
           "flagId": "1785360324338-0wugoug7f",
           "order": 1,
@@ -112,21 +142,37 @@
       "type": "static",
       "name": "Flag 4 - CF Investigation",
       "token": "Likely account takeover attacks detected in login requests",
-      "description": "<s1-nav>Navigate to the soledrop.co domain. Find the Security page from the menu on the left. \r\n  \r\nSelect Analytics from the dropdown.</s1-nav>\r\n<s1-flag-body>\r\nUnder the Suspicious Acitvity section, what is the activity that has the highest number of related requests.\r\n</s1-flag-body>\r\n<s1-flag example=\"Traffic scored as attacks are reaching your origin\">The flag is the name of the activity.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, select the <s1-value>soledrop.co</s1-value> domain, open the <s1-label>Security</s1-label> dropdown from the left-hand menu, and choose <s1-label>Analytics</s1-label>. Scroll to the <s1-label>Suspicious Activity</s1-label> panel and read the top finding.</s1-nav>\r\n<s1-flag-body>\r\nWhat does the top <s1-label>Suspicious Activity</s1-label> finding say is happening?\r\n</s1-flag-body>\r\n<s1-flag example=\"Malicious behavior detected/scored ...\">The flag is the name of the activity.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Likely account takeover attacks detected in login requests",
       "locked": false,
       "caseSensitive": false,
       "order": 3,
       "attachments": [],
       "hints": [
         {
-          "id": "1785360327964-5wcfem2q4",
-          "price": 100,
-          "description": "The flag is <s1-answer>Likely account takeover attacks detected in login requests</s1-answer>.",
+          "id": "1789155986318-rf1taotvh",
+          "price": 20,
+          "description": "Read the headline of the top finding, not the request counts beside it.",
           "flagId": "1785360327963-qplb7kluq",
           "order": 0,
+          "boxId": "1783699237357-q3jwvoke2"
+        },
+        {
+          "id": "1789155986474-ibst3tf68",
+          "price": 30,
+          "description": "It is about likely malicious activity related to user accounts.",
+          "flagId": "1785360327963-qplb7kluq",
+          "order": 1,
+          "boxId": "1783699237357-q3jwvoke2"
+        },
+        {
+          "id": "1785360327964-5wcfem2q4",
+          "price": 50,
+          "description": "The flag is <s1-answer>Likely account takeover attacks detected in login requests</s1-answer>.",
+          "flagId": "1785360327963-qplb7kluq",
+          "order": 2,
           "boxId": "1783699237357-q3jwvoke2",
           "disabled": false
         }
@@ -136,13 +182,13 @@
     },
     {
       "id": "1785360329421-dxgp4c67s",
-      "type": "regex",
+      "type": "static",
       "name": "Flag 5 - Oneflare Custom Dashboad",
-      "token": "\\b(?:4[0-9]\\d|5[0-4]\\d|550)\\b",
-      "description": "<s1-nav>Navigate to Dashboards on the SentinelOne console. Select Custom dashboards, then the Cloudflare dashboard. Set lookback window to 72 hours.</s1-nav>\r\n<s1-flag-body>\r\nCustom dashboards are helpful because they allow analysts to display the information they think is most relevant. Dashboards allow this information to be readily accessible for threat analysis.\r\n\r\nAccording to the custom Cloudflare dashboard, how many WAF (Web Application Firewall) blocks have occurred\r\n</s1-flag-body>\r\n<s1-flag example=\"100\">The flag is the number of WAF blocks that have occurred.</s1-flag>",
+      "token": "20",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Dashboards</s1-label> from the left-hand menu and open the <s1-value>OneFlare 'Cloudflare Threat Detection'</s1-value> custom dashboard. Find the <s1-label>Attack Types</s1-label> panel and read its title/description.</s1-nav>\r\n<s1-flag-body>\r\nCustom dashboards are helpful because they allow analysts to display the information they think is most relevant. Dashboards allow this information to be readily accessible for threat analysis.\r\n\r\nThe <s1-label>Attack Types</s1-label> panel filters on a <s1-value>WAF ML attack score</s1-value> at or below a threshold. What is that threshold?\r\n</s1-flag-body>\r\n<s1-flag example=\"50\">The flag is the number of WAF blocks that have occurred.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "20",
       "locked": false,
       "caseSensitive": false,
       "order": 4,
@@ -150,17 +196,25 @@
       "hints": [
         {
           "id": "1785360329422-7lv2vywr9",
-          "price": 10,
-          "description": "*Screenshot of where to look*",
+          "price": 20,
+          "description": "The flag is found in the description of the <s1-label>Web Application Firewall (WAF)</s1-label> subsection.",
           "flagId": "1785360329421-dxgp4c67s",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2",
           "disabled": false
         },
         {
+          "id": "1789156704063-e4iqa64df",
+          "price": 30,
+          "description": "Remember low = malicious. The band is 1 to this number.",
+          "flagId": "1785360329421-dxgp4c67s",
+          "order": 0,
+          "boxId": "1783699237357-q3jwvoke2"
+        },
+        {
           "id": "1785793366034-40lexhbv5",
           "price": 90,
-          "description": "The flag is 411.",
+          "description": "The flag is <s1-answer>20</s1-answer>.",
           "flagId": "1785360329421-dxgp4c67s",
           "order": 1,
           "boxId": "1783699237357-q3jwvoke2"
@@ -171,13 +225,13 @@
     },
     {
       "id": "1785360330487-x4itwk4g4",
-      "type": "regex",
+      "type": "choice",
       "name": "Flag 6 - CF WAF Rule",
-      "token": "7",
-      "description": "<s1-nav>Navigate back to Security rules for the soledrop.co domain. </s1-nav>\r\n<s1-flag-body>\r\nNow let's take a look at what is causing all those blocks.\r\n\r\nIn Cloudflare, how many WAF rules are in place AND active?\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is the number of active WAF rules</s1-flag>",
+      "token": "Log",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, select the <s1-value>soledrop.co</s1-value> domain, open the <s1-label>Security</s1-label> dropdown from the left-hand menu, and choose <s1-label>Security Rules</s1-label>. Read down the <s1-label>Action</s1-label> column.</s1-nav>\r\n<s1-flag-body>\r\nOne rule on this zone deliberately does not block — it only records matches so the SOC can see them. What action is it set to?</s1-flag-body>\r\n<s1-flag example=\"\">The flag is the action.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Log",
       "locked": false,
       "caseSensitive": false,
       "order": 5,
@@ -185,24 +239,38 @@
       "hints": [
         {
           "id": "1785360330487-eerggfhli",
-          "price": 10,
-          "description": "While looking at custom security rules, count how many are involving WAF.",
+          "price": 20,
+          "description": "Read the <s1-label>Action</s1-label> column top to bottom; one value is not an enforcement action at all.",
           "flagId": "1785360330487-x4itwk4g4",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2",
           "disabled": false
         },
         {
+          "id": "1789157024009-vgp6ledw6",
+          "price": 30,
+          "description": "It produces evidence without changing what the visitor experiences.",
+          "flagId": "1785360330487-x4itwk4g4",
+          "order": 0,
+          "boxId": "1783699237357-q3jwvoke2"
+        },
+        {
           "id": "1786724835484-cz09guymj",
-          "price": 90,
-          "description": "The flag is <s1-answer>7</s1-answer>.",
+          "price": 50,
+          "description": "The flag is <s1-answer>Log</s1-answer>.",
           "flagId": "1785360330487-x4itwk4g4",
           "order": 1,
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 5 - Oneflare Custom Dashboad"
+      "dependsOn": "Flag 5 - Oneflare Custom Dashboad",
+      "choices": [
+        "Block",
+        "Skip",
+        "Log",
+        "Archive"
+      ]
     },
     {
       "id": "1785360331495-pi75v06pg",
