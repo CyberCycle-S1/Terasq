@@ -329,7 +329,7 @@
           "price": 30,
           "description": "It is measured in hours, and it is a single digit.",
           "flagId": "1785340761747-u4mbcj5lz",
-          "order": 0,
+          "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
@@ -337,7 +337,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>4 hours</s1-answer>.",
           "flagId": "1785340761747-u4mbcj5lz",
-          "order": 1,
+          "order": 2,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
@@ -451,7 +451,7 @@
           "price": 30,
           "description": "Unauthorized and Forbidden are two of the three. The third is a rate-limit code.",
           "flagId": "1785340775265-03xss86mr",
-          "order": 0,
+          "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
@@ -459,7 +459,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>401, 403, 429</s1-answer>.",
           "flagId": "1785340775265-03xss86mr",
-          "order": 1,
+          "order": 2,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
@@ -499,7 +499,7 @@
           "price": 30,
           "description": "It is one step below <s1-value>Critical</s1-value>.",
           "flagId": "1785340777240-95fyfow4d",
-          "order": 0,
+          "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
@@ -507,7 +507,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>High</s1-answer>.",
           "flagId": "1785340777240-95fyfow4d",
-          "order": 1,
+          "order": 2,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
@@ -587,7 +587,7 @@
           "price": 30,
           "description": "It is one binary megabyte, written out in full.",
           "flagId": "1785340780568-laft2hurh",
-          "order": 0,
+          "order": 1,
           "boxId": "1784222397232-xp0t4weul"
         },
         {
@@ -595,7 +595,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>1048576</s1-answer>.\n",
           "flagId": "1785340780568-laft2hurh",
-          "order": 1,
+          "order": 2,
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
