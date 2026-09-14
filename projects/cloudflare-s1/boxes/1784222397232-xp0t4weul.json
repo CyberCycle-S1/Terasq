@@ -16,7 +16,7 @@
     {
       "id": "1785338938858-fm71bmgfn",
       "type": "choice",
-      "name": "Flag 1 - CF Nav",
+      "name": "Flag 1 - CF Configurations",
       "token": "IP List",
       "description": "<s1-nav>Go to the <span style=\"color: #f38020;\">Cloudflare</span> console and click <s1-label>Manage Account</s1-label> from the options on the left-hand navigation. Select <s1-label>Configurations</s1-label> from the dropdown, then click <s1-label>Lists</s1-label> from the nav bar at the top of the page.</s1-nav>\n<s1-flag-body>\nA playbook adds a malicious IP to a reusable ____ that WAF and Gateway rules can reference.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is what malicious IPs can be added to in this specific context.</s1-flag>",
       "captureMessage": "",
@@ -54,7 +54,7 @@
     {
       "id": "1785338951045-g5c6wpriu",
       "type": "static",
-      "name": "Flag 2 - CF Nav",
+      "name": "Flag 2 - CF Security Rules",
       "token": "Mitigate definite bot traffic",
       "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, click <s1-label>Domains</s1-label> from the left-hand navigation and select the <s1-value>one-flare.com</s1-value> zone. From that domain's <s1-label>Overview</s1-label> page, open the <s1-label>Security</s1-label> dropdown in the left-hand menu and choose <s1-label>Security Rules</s1-label>.</s1-nav>\n<s1-flag-body>\nWhat is the name of a <s1-label>Custom Rule</s1-label> a SOAR playbook could toggle to block an attacker?\n</s1-flag-body>\n<s1-flag example=\"Mitigate attacker\">The flag is the name of the <s1-label>Custom Rule</s1-label> in place that can block an attacker.</s1-flag>",
       "captureMessage": "",
@@ -95,7 +95,7 @@
     {
       "id": "1784302979510-5bqfje1wn",
       "type": "choice",
-      "name": "Flag 3 - Analytics",
+      "name": "Flag 3 - CF WAF Score",
       "token": "Almost certainly an attack",
       "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> documentation on the WAF attack score at <s1-value>https://developers.cloudflare.com/waf/about/waf-attack-score/</s1-value> and read how the numeric scale is calculated and what the range represents.</s1-nav>\n\nA request is scored 3 out of 99 by the WAF attack score. What does that tell you?\n \n<s1-flag example=\"No Bot Traffic\">The flag is the finding based on a score of 3.</s1-flag>",
       "captureMessage": "",
@@ -142,7 +142,7 @@
     {
       "id": "1784303365739-hi9ouoy9b",
       "type": "static",
-      "name": "Flag 4 - Analytics",
+      "name": "Flag 4 - CF Referers",
       "token": "shop.soledrop.co",
       "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, click <s1-label>Analytics</s1-label> from the left-hand navigation and select <s1-label>HTTP Traffic</s1-label> from the dropdown at the top of the page. Scroll down to the <s1-label>Referers</s1-label> panel. Change the <s1-label>Absolute time range</s1-label> to see data from the last 30 days.</s1-nav>\n\nIn the context of web traffic monitoring, a <s1-label>Referer</s1-label> is the webpage that linked to the resource being requested.\n\nIn other words, it is inbound traffic from a link. So if a visitor to <s1-value>example.com</s1-value> clicks a link to your site there, the request will include a <s1-label>Referer</s1-label> header saying they came via <s1-value>example.com</s1-value>.\n \n<s1-flag example=\"example.com\">The flag is the most prevalent<s1-label>Referer</s1-label>.</s1-flag>",
       "captureMessage": "",
@@ -224,7 +224,7 @@
     {
       "id": "1785340751216-gocd6hcvy",
       "type": "choice",
-      "name": "Flag 6 - Bot score",
+      "name": "Flag 6 - CF Bot score",
       "token": "Likely automated",
       "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> bot score documentation at <s1-value>http://developers.cloudflare.com/bots/concepts/bot-score/ </s1-value>and read the <s1-label>Bot Groupings</s1-label> subsection to see how score ranges map to bot-likelihood bands.</s1-value></s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> uses <s1-label>Bot Scores</s1-label> to measure the likelihood that an incoming web request is operated by an automated bot rather than a human. A bot score of 1 indicates the highest probability of bot activity, while a bot score of 99 indicates human activity.\n</s1-flag-body>\n\n<s1-flag example=\"\">The flag is the band a bot score of 24 would fall into.</s1-flag>",
       "captureMessage": "",
@@ -265,7 +265,7 @@
     {
       "id": "1785340759944-dybfuo9n1",
       "type": "choice",
-      "name": "Flag 7 - Logpush",
+      "name": "Flag 7 - Cf Logpush",
       "token": "Firewall",
       "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> <s1-label>Logpush</s1-label> documentation at <s1-value>https://developers.cloudflare.com/logs/logpush/</s1-value> and review the list of available datasets <s1-label>Logpush</s1-label> can export.</s1-nav>\n<s1-flag-body>\n<s1-label>Logpush</s1-label> allows <span style=\"color: #f38020;\">Cloudflare</span> to send large volumes of specified traffic logs to storage services, log management providers and SIEMs like <span style=\"color: #A220F3;\">SentinelOne</span>.\n\nWhich dataset carries WAF block and challenge decisions, separately from the HTTP request log?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the name of the dataset.</s1-flag>",
       "captureMessage": "",
@@ -305,7 +305,7 @@
     {
       "id": "1785340761747-u4mbcj5lz",
       "type": "choice",
-      "name": "Flag 8 - Default time",
+      "name": "Flag 8 - S1 Default time",
       "token": "4 hours",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Event Search</s1-label> from the left-hand menu. Without changing anything, look at the time-range dropdown next to the purple Search button to see its default value.</s1-nav>\n<s1-flag-body>\nThe lookback window is the period of time <s1-label>Event Search</s1-label> will look back on and show logs for. A time of 24 hours means that <s1-label>Event Search</s1-label> will show you results for anything matching your query, but only from within the past 24 hours.\n\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default time range for Event Search.</s1-flag>",
       "captureMessage": "",
@@ -353,7 +353,7 @@
     {
       "id": "1785340763306-9az0eoav7",
       "type": "regex",
-      "name": "Flag 9 - Data ingest",
+      "name": "Flag 9 - S1 Data ingest",
       "token": "\\b(?:100,?000|[4-9]\\d,?\\d{3})\\b",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Event Search</s1-label>. Clear any existing query and set the time range to the last <s1-value>72 hours</s1-value>. Open the field browser, filter on <s1-value>dataSource.vendor</s1-value>, select <span style=\"color: #f38020;\">Cloudflare</span>, and click into <s1-value>dataSource.cloudflare_dataset</s1-value> to see the values it holds.</s1-nav>\n<s1-flag-body>\nWith <s1-label>Logpush</s1-label> enabled, <span style=\"color: #f38020;\">Cloudflare</span> can send all the relevant logs to the <span style=\"color: #A220F3;\">SentinelOne</span> console for triage and response. <s1-label>Logpush</s1-label> can be configured to handle all sorts of volumes to fit the specific needs of your SOC team.\n</s1-flag-body>\n<s1-flag example=\"10,000\">The flag is the approximate number of logs coming from <span style=\"color: #f38020;\">Cloudflare</span>.</s1-flag>",
       "captureMessage": "",
@@ -387,7 +387,7 @@
     {
       "id": "1785340765990-3p2w16l7j",
       "type": "choice",
-      "name": "Flag 10 - Detection",
+      "name": "Flag 10 - S1 Detection",
       "token": "Scheduled",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the detection rule for <s1-value>Credential Stuffing</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nDetections are a feature of <span style=\"color: #A220F3;\">SentinelOne</span> that allow you to create queries that are applied to all incoming traffic. If a log or set of logs match the pattern they are aggregated into an alert for the SOC team to analyze.\n\nFind the detection associated with <s1-value>Credential Stuffing</s1-value>.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the Rule Type associated with this detection.</s1-flag>",
       "captureMessage": "",
@@ -427,7 +427,7 @@
     {
       "id": "1785340775265-03xss86mr",
       "type": "choice",
-      "name": "Flag 11 - Detection",
+      "name": "Flag 11 - S1 Detection",
       "token": "401, 403, 429",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label>, open the <s1-value>Credential Stuffing</s1-value> rule, and read the <s1-value>filter status in (...)</s1-value> line of its scheduled <s1-label>PowerQuery</s1-label> body.</s1-nav>\n<s1-flag-body>\n<s1-label>PowerQuery</s1-label> in <span style=\"color: #A220F3;\">SentinelOne</span> (also referred to as S1QL 2.0) is an advanced query interface designed for the <s1-label>Singularity XDR</s1-label> and <s1-label>SentinelOne Data Lake</s1-label> platforms. Originally derived from <s1-label>SentinelOne's DataSet</s1-label> (formerly Scalyr) engine, <s1-label>PowerQuery</s1-label> goes beyond simple keyword filtering to allow security teams to transform, manipulate, group, and summarize vast amounts of telemetry data on the fly.\n\nThe rule only counts login requests that failed. Which set of HTTP status codes does its query treat as a failed login?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the error code or codes.</s1-flag>",
       "captureMessage": "",
@@ -475,7 +475,7 @@
     {
       "id": "1785340777240-95fyfow4d",
       "type": "choice",
-      "name": "Flag 12 - Detection",
+      "name": "Flag 12 - S1 Detection",
       "token": "High ",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the rule whose name contains <s1-value>CF-WAF-Traversal</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nWhat severity is this detection rule configured with?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the severity level.</s1-flag>",
       "captureMessage": "",
@@ -523,7 +523,7 @@
     {
       "id": "1785340778702-yob1edtbp",
       "type": "choice",
-      "name": "Flag 13 - CF Filtering",
+      "name": "Flag 13 - CF Traffic Loggin",
       "token": "Capture all",
       "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Zero Trust</s1-label> from the left-hand menu. Navigate to the <s1-label>Traffic Policies</s1-label> from the new left-hand menu and select <s1-label>Traffic Settings</s1-label> from the dropdown. Scroll down to the <s1-label>Traffic Logging</s1-label> section.</s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> allows users to configure what events actually get logged. \n\nWhat is the default scope that Gateway uses when capturing events?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default scope.</s1-flag>",
       "captureMessage": "",
@@ -563,7 +563,7 @@
     {
       "id": "1785340780568-laft2hurh",
       "type": "static",
-      "name": "Flag 14 - Event Search Evidence",
+      "name": "Flag 14 - S1 PowerQuery",
       "token": "1048576",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> and open the <s1-value>Bulk Data Exfiltration</s1-value> rule (CF-API-Exfil). Read the <s1-value>filter</s1-value> line at the end of its <s1-label>PowerQuery</s1-label> body.</s1-nav>\n<s1-flag-body>\nThis rule fires on either of two conditions. One of them is a response-size floor — a single response body larger than N bytes. What is N?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the string + domain that is cited as evidence. </s1-flag>",
       "captureMessage": "",
