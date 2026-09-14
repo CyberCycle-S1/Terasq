@@ -16,7 +16,7 @@
     {
       "id": "1785360537414-rigw7n4m4",
       "type": "regex",
-      "name": "Flag 1 - XSS",
+      "name": "Flag 1 - S1 XSS",
       "token": "^CF-WAF-XSS.*$",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, use the search bar to filter for <s1-value>XSS</s1-value>, and open any matching alert to read the name of the detection rule that raised it.</s1-nav>\n<s1-flag-body>\nOpen an <s1-value>XSS</s1-value> alert. What is the name of the detection rule that raised it? The CF- prefix code is enough.\n</s1-flag-body>\n<s1-flag example=\"CF-...\">The flag is the name of the detection rule.</s1-flag>",
       "captureMessage": "",
@@ -56,7 +56,7 @@
     {
       "id": "1785360559687-fel8obcp5",
       "type": "static",
-      "name": "Flag 2 - XSS",
+      "name": "Flag 2 - S1 XSS",
       "token": "T1059.007",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open a <s1-value>CF-WAF-XSS</s1-value> alert, and read the <s1-label>Purple AI Overview</s1-label> panel.</s1-nav>\n<s1-flag-body>\nWhich <s1-value>MITRE ATT&CK ID</s1-value> does this detection map to the Execution tactic?\n</s1-flag-body>\n<s1-flag example=\"T####.###\">The flag is the <s1-value>MITRE ATT&CK ID</s1-value></s1-flag>",
       "captureMessage": "",
@@ -98,7 +98,7 @@
     {
       "id": "1785360562021-qm8xtf5cj",
       "type": "static",
-      "name": "Flag 3 - XSS - Workflow",
+      "name": "Flag 3 - S1 XSS Workflow",
       "token": "CF-WAF-WebAttack",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open an <s1-value>XSS</s1-value> alert, and click the <s1-label>Automate</s1-label> button in the top right of the alert panel.</s1-nav>\n<s1-flag-body>\n<s1-label>HyperAutomation</s1-label> workflows allow Threat Hunters to enrich alerts, gather third-party threat intel, seek out determinitions from analysts, and conduct follow-up responses automatically whenever alerts are triggered.\n\nWhat is the name of the available workflow?\n</s1-flag-body>\n<s1-flag example=\"S1-CNAPP-AppAttack\">The flag is the name of the workflow under <s1-label>Available Workflows</s1-label></s1-flag>",
       "captureMessage": "",
@@ -140,7 +140,7 @@
     {
       "id": "1785360564455-lrd2eg88e",
       "type": "static",
-      "name": "Flag 4 - CF Integration",
+      "name": "Flag 4 - S1 CF Integration",
       "token": "CF JD Cloud IP Details",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Hyperautomation</s1-label> and open the <s1-value>CF-WAF-WebAttack</s1-value> workflow. Its actions run top to bottom, in order — scroll through them to find the first block that uses a <span style=\"color: #f38020;\">Cloudflare</span> integration.\n</s1-nav>\n<s1-flag-body>\nWhat is the name of the first block that uses the <span style=\"color: #f38020;\">Cloudflare</span> integration?\n</s1-flag-body>\n<s1-flag example=\"CF Create IP Rule\">The flag is the name of the Cloudflare integration.</s1-flag>",
       "captureMessage": "",
@@ -182,7 +182,7 @@
     {
       "id": "1785360565750-vu31ukgju",
       "type": "static",
-      "name": "Flag 5 - Workflow Conditional",
+      "name": "Flag 5 - S1 CF Integration",
       "token": "Block",
       "description": "<s1-nav>Still in that same workflow, find the <span style=\"color: #f38020;\">Cloudflare</span> action named <s1-value>CF Ruleset Host Block</s1-value>, which sits immediately before the <s1-value>Response Had Failure</s1-value> condition, open it, and read its JSON request body.</s1-nav>\n<s1-flag-body>\nFind the action labeled <s1-value>CF Ruleset Host Block</s1-value>.\n\nThis action has already ran. Look in the <s1-label>Body</s1-label> section to see the JSON body that was returned. What action was taken?\n\n</s1-flag-body>\n<s1-flag example=\"skip\">The flag is the value of the action field.</s1-flag>",
       "captureMessage": "",
@@ -224,7 +224,7 @@
     {
       "id": "1785360566870-jvc4ts91w",
       "type": "choice",
-      "name": "Flag 6 - CF Block IP",
+      "name": "Flag 6 - S1 CF Block IP",
       "token": "Zone",
       "description": "<s1-nav>Still in the same workflow, open the <s1-value>Cloudflare Block IP</s1-value> action and read the URL it calls.</s1-nav>\n<s1-flag-body>\nThe access rule it creates — is it scoped to the whole account/user, or to a single zone?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the scope of the access rule.</s1-flag>",
       "captureMessage": "",
@@ -272,7 +272,7 @@
     {
       "id": "1785360568037-hgvce8onz",
       "type": "static",
-      "name": "Flag 7 - Credential Stuffing",
+      "name": "Flag 7 - S1 Credential Stuffing",
       "token": "src_ip",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, filter for <s1-value>Credential Stuffing</s1-value>, open an alert, scroll down to <s1-label>Rule Details</s1-label>, and read the <s1-value>group ... by</s1-value> clause at the end of the underlying PowerQuery.</s1-nav>\n<s1-flag-body>\nEach alert represents one attacker, not one request. Which field does the rule group by to make that true?\n</s1-flag-body>\n<s1-flag example=\"type_name\">The flag is the field.</s1-flag>",
       "captureMessage": "",
@@ -314,7 +314,7 @@
     {
       "id": "1785360569179-xd5gqrhnq",
       "type": "static",
-      "name": "Flag 8 - Credential Stuffing",
+      "name": "Flag 8 - S1 Credential Stuffing",
       "token": "T1110.001",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open a <s1-value>CF-Access-CredStuffing</s1-value> alert, and read the <s1-label>Purple AI Overview</s1-label> panel.</s1-nav>\n<s1-flag-body>\nWhich <s1-value>MITRE ATT&CK ID</s1-value> does this detection associate with <s1-value>Password Guessing</s1-value> activity?\n</s1-flag-body>\n<s1-flag example=\"T####.###\">The flag is the <s1-value>MITRE ATT&CK ID</s1-value></s1-flag>",
       "captureMessage": "",
@@ -356,7 +356,7 @@
     {
       "id": "1785360570346-tlv59hvxt",
       "type": "static",
-      "name": "Flag 9 - VirusTotal",
+      "name": "Flag 9 - S1 VirusTotal",
       "token": "AbuseIPDB",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, filter for <s1-value>Credential Stuffing</s1-value>, and sort by the <s1-value>Analyst Verdict</s1-value> column — the playbook's enrichment note only exists on an alert an analyst has already judged. Open one with a verdict, then open its <s1-label>Notes</s1-label> tab.</s1-nav>\n<s1-flag-body>\nThe response playbook enriched the attacker IP against two reputation services. <s1-value>VirusTotal</s1-value> is one. What is the other?\n</s1-flag-body>\n<s1-flag example=\"Gartner\">The flag is the other reputation service.</s1-flag>",
       "captureMessage": "",
@@ -398,7 +398,7 @@
     {
       "id": "1785360578280-mrtpp9p73",
       "type": "static",
-      "name": "Flag 10 - URL of target Site",
+      "name": "Flag 10 - S1 Destination URL",
       "token": "portal.soledrop.co",
       "description": "<s1-nav>Stay on the <s1-label>Notes</s1-label> panel from the previous question and read the destination URL the playbook recorded.\n</s1-nav>\n<s1-flag-body>\n\nWhat is the URL of the site being targeted?\n\n</s1-flag-body>\n<s1-flag example=\"____.soledrop.co\">The flag is URL of the site being targeted.</s1-flag>",
       "captureMessage": "",
@@ -440,7 +440,7 @@
     {
       "id": "1785360580221-cwm12w0xx",
       "type": "static",
-      "name": "Flag 11 - Rule JSON Body",
+      "name": "Flag 11 - S1 Rule JSON Body",
       "token": "7d4da0650add48ceaf5859040fe50edd",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Hyperautomation</s1-label>, open the workflow called <s1-value>See WAF Rule</s1-value>, click its <span style=\"color: #f38020;\">Cloudflare</span> action, and click <s1-label>Test Action</s1-label>. Use the magnifying glass in the output panel to search for <s1-value>Login</s1-value>.</s1-nav>\n<s1-flag-body>\nLook at the <s1-label>Test Output</s1-label>.\n\nWhat is the id of the firewall rule that logs all Login attempts?\n</s1-flag-body>\n<s1-flag example=\"5668406f0a644a50bc9e86a561a72650\">The flag is the id value.</s1-flag>",
       "captureMessage": "",

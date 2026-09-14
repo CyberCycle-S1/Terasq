@@ -96,7 +96,7 @@
     {
       "id": "1785360632867-jjd223kgt",
       "type": "static",
-      "name": "Flag 3 - Security Insight",
+      "name": "Flag 3 - CF Workers",
       "token": "Denver",
       "description": "<s1-nav>While still in the <s1-label>Traffic Sequence</s1-label> window, click on <s1-label>Workers</s1-label>, select the <s1-value>shop-soledrop-worker</s1-value> from any row, choose <s1-label>Metrics</s1-label> from the nav bar at the top, and set the <s1-label>event window</s1-label> to the last <s1-value>30 days</s1-value>. Review the <s1-label>Request Distribution</s1-label> map.</s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> <s1-label>Workers</s1-label> is a serverless platform for building, deploying, and scaling apps across <span style=\"color: #f38020;\">Cloudflare's</span> global network without needing complex configuration. The <s1-value>shop.soledrop.co</s1-value> site from before was deployed using a custom worker. Under <s1-label>Request Distribution</s1-label> we can see the locations where a <s1-label>Worker</s1-label> ran to handle an incoming request.\n\nFind the city where this worker was deployed the most.</s1-flag-body>\n<s1-flag example=\"Dallas\">The flag is the name of the city.</s1-flag>",
       "captureMessage": "",
@@ -130,7 +130,7 @@
     {
       "id": "1785360634001-p2l9t6mym",
       "type": "regex",
-      "name": "Flag 4 - CF HA Equivalent",
+      "name": "Flag 4 - CF Workers AI",
       "token": "^assemblyai/universal.*$",
       "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Build</s1-label> from the left-hand menu, select <s1-label>AI</s1-label> from the dropdown, and open <s1-label>Workers AI</s1-label>. In the model catalog, filter for <s1-value>Automatic Speech Recognition</s1-value>.</s1-nav>\n<s1-flag-body>\nLike standard <span style=\"color: #f38020;\">Cloudflare</span> <s1-label>Workers</s1-label>, <s1-label>Workers AI</s1-label> allow users to deploy LLMs and AI agents across <span style=\"color: #f38020;\">Cloudflare's</span> global network.\n\nFrom the model catalog, what is the name of the model that can perform <s1-value>Automatic Speech Recognition</s1-value>?</s1-flag-body>\n<s1-flag example=\"anthropic/...\">The flag is the name of the model</s1-flag>",
       "captureMessage": "",
@@ -172,7 +172,7 @@
     {
       "id": "1785360635308-jkqchtqfh",
       "type": "static",
-      "name": "Flag 5 - AI Prompt Injection",
+      "name": "Flag 5 - S1 AI Prompt Injection",
       "token": "/api/v1/chat",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, filter for <s1-value>AI Prompt Injection</s1-value>, and open any matching alert to read the full name of the detection rule that raised it.</s1-nav>\n<s1-flag-body>\nOpen an <s1-value>AI Prompt Injection</s1-value> alert. The detection rule's name calls out the exact API route it watches. What is that route?\n</s1-flag-body>\n<s1-flag example=\"/api/...\">The flag is the API route.</s1-flag>",
       "captureMessage": "",
@@ -214,7 +214,7 @@
     {
       "id": "1785360636607-k41u620zu",
       "type": "choice",
-      "name": "Flag 6 - Attempt",
+      "name": "Flag 6 - S1 AI Prompt Injection",
       "token": "Injection fuzzing",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open an <s1-value>AI Prompt Injection</s1-value> alert, and read the <s1-label>Purple AI</s1-label> overview panel.</s1-nav>\n<s1-flag-body>\nA single source sending many chat POSTs in a short window is characteristic of what?</s1-flag-body>\n<s1-flag example=\"brute-forcing\">The flag is the name of the attempt.</s1-flag>",
       "captureMessage": "",
@@ -262,7 +262,7 @@
     {
       "id": "1786488562377-trcnp51m7",
       "type": "static",
-      "name": "Flag 7 - Enrichment",
+      "name": "Flag 7 - S1 See WAF Rule",
       "token": "failed_logins",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Hyperautomation</s1-label>, open the <s1-value>See WAF Rule</s1-value> workflow, and add the <span style=\"color: #f38020;\">Cloudflare</span> action named <s1-value>Get zero trust user failed logins</s1-value>. Read its default URL before filling in any values.</s1-nav>\n<s1-flag-body>\nWhat is the LAST path segment of that default URL?\n</s1-flag-body>\n<s1-flag example=\"waf_rules\">The flag is the segment.</s1-flag>",
       "captureMessage": "",
@@ -303,7 +303,7 @@
     {
       "id": "1785360638067-tvo9cwqvf",
       "type": "regex",
-      "name": "Flag 8 - Default URL",
+      "name": "Flag 8 - S1 Default URL",
       "token": "^Could not route to.*$",
       "description": "<s1-nav>Copy the default URL from the previous question, paste it into a browser address bar exactly as-is with the placeholders still in it, and press enter.</s1-nav>\n<s1-flag-body>\nPaste that default URL into a browser — what is the error message in the JSON body?\n</s1-flag-body>\n<s1-flag example=\"Could not ...\">The flag is the error message.</s1-flag>",
       "captureMessage": "",
@@ -345,7 +345,7 @@
     {
       "id": "1785360641095-yk8dih9n4",
       "type": "static",
-      "name": "Flag 9 - Failed Login Attempt",
+      "name": "Flag 9 - S1 Failed Login Attempt",
       "token": "datetime",
       "description": "<s1-nav>In that same <s1-label>Hyperautomation</s1-label> action, fill in the <s1-value>account ID</s1-value> and <s1-value>user ID</s1-value> your facilitator reads out, click <s1-label>Test Action</s1-label>, and read the response.</s1-nav>\n<s1-flag-body>\nTest the given <s1-label>Workflow</s1-label> and see the correct response when the account and user information has been input.\n\nWhich JSON key holds the time of the failed login?\n</s1-flag-body>\n<s1-flag example=\"timestamp\">The flag is the JSON key.</s1-flag>",
       "captureMessage": "",
