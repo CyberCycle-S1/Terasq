@@ -80,7 +80,7 @@
           "price": 30,
           "description": "It is the JavaScript sub-technique of <s1-value>Command and Scripting Interpreter</s1-value>.",
           "flagId": "1785360559687-fel8obcp5",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         },
         {
@@ -88,7 +88,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>T1059.007</s1-answer>.",
           "flagId": "1785360559687-fel8obcp5",
-          "order": 1,
+          "order": 2,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -122,7 +122,7 @@
           "price": 30,
           "description": "It handles all three WAF web attacks — SQLi, XSS and traversal — from one playbook.",
           "flagId": "1785360562021-qm8xtf5cj",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         },
         {
@@ -130,7 +130,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>CF-WAF-WebAttack</s1-answer>.",
           "flagId": "1785360562021-qm8xtf5cj",
-          "order": 1,
+          "order": 2,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -164,7 +164,7 @@
           "price": 30,
           "description": "It is a best-effort enrichment read that fetches <span style=\"color: #f38020;\">Cloudflare's</span> own IP ranges.",
           "flagId": "1785360564455-lrd2eg88e",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         },
         {
@@ -172,7 +172,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>CF JD Cloud IP Details</s1-answer>.",
           "flagId": "1785360564455-lrd2eg88e",
-          "order": 1,
+          "order": 2,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -206,7 +206,7 @@
           "price": 30,
           "description": "The body is a small JSON object with <s1-value>action</s1-value>, <s1-value>expression</s1-value>, <s1-value>description</s1-value> and <s1-value>enabled</s1-value> — and it is the most decisive thing a WAF rule can do.",
           "flagId": "1785360565750-vu31ukgju",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         },
         {
@@ -214,7 +214,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>Block</s1-answer>.",
           "flagId": "1785360565750-vu31ukgju",
-          "order": 1,
+          "order": 2,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -248,7 +248,7 @@
           "price": 30,
           "description": "The path contains /zones/id/ — an account-scoped rule would say /user/ instead.",
           "flagId": "1785360566870-jvc4ts91w",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         },
         {
@@ -256,7 +256,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>Zone</s1-answer>.",
           "flagId": "1785360566870-jvc4ts91w",
-          "order": 1,
+          "order": 2,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -380,7 +380,7 @@
           "price": 30,
           "description": "The second one reports an abuse confidence score rather than a vendor ratio.",
           "flagId": "1785360570346-tlv59hvxt",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         },
         {
@@ -388,7 +388,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>AbuseIPDB</s1-answer>.",
           "flagId": "1785360570346-tlv59hvxt",
-          "order": 0,
+          "order": 2,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -464,7 +464,7 @@
           "price": 30,
           "description": "The rule's description mentions login POSTs; you want its id field, a 32-character hex string.",
           "flagId": "1785360580221-cwm12w0xx",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         },
         {
@@ -472,7 +472,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>7d4da0650add48ceaf5859040fe50edd</s1-answer>.",
           "flagId": "1785360580221-cwm12w0xx",
-          "order": 1,
+          "order": 2,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -506,7 +506,7 @@
           "price": 30,
           "description": "It is two conditions joined by 'and': one on the path, one on the method.",
           "flagId": "1785360817691-rfaam2wsr",
-          "order": 0,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         },
         {
@@ -514,7 +514,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>URI Path contains /login and Request Method equals POST</s1-answer>.",
           "flagId": "1785360817691-rfaam2wsr",
-          "order": 1,
+          "order": 2,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],

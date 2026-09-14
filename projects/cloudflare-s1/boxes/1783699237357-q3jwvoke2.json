@@ -122,7 +122,7 @@
           "price": 30,
           "description": "It is the API path the status page polls for the live incident state.",
           "flagId": "1785360324338-0wugoug7f",
-          "order": 0,
+          "order": 1,
           "boxId": "1783699237357-q3jwvoke2"
         },
         {
@@ -130,7 +130,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>/api/incident</s1-answer>.",
           "flagId": "1785360324338-0wugoug7f",
-          "order": 1,
+          "order": 2,
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
@@ -208,7 +208,7 @@
           "price": 30,
           "description": "Remember low = malicious. The band is 1 to this number.",
           "flagId": "1785360329421-dxgp4c67s",
-          "order": 0,
+          "order": 1,
           "boxId": "1783699237357-q3jwvoke2"
         },
         {
@@ -216,7 +216,7 @@
           "price": 90,
           "description": "The flag is <s1-answer>20</s1-answer>.",
           "flagId": "1785360329421-dxgp4c67s",
-          "order": 1,
+          "order": 2,
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
@@ -251,7 +251,7 @@
           "price": 30,
           "description": "It produces evidence without changing what the visitor experiences.",
           "flagId": "1785360330487-x4itwk4g4",
-          "order": 0,
+          "order": 1,
           "boxId": "1783699237357-q3jwvoke2"
         },
         {
@@ -259,7 +259,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>Log</s1-answer>.",
           "flagId": "1785360330487-x4itwk4g4",
-          "order": 1,
+          "order": 2,
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
@@ -447,7 +447,7 @@
           "price": 10,
           "description": "They cover <s1-value>Data from Cloud Storage</s1-value>, <s1-value>Automated Collection</s1-value> and <s1-value>Exfiltration Over Web Service</s1-value>. Any one counts.",
           "flagId": "1785360335174-vanwhf6sg",
-          "order": 0,
+          "order": 1,
           "boxId": "1783699237357-q3jwvoke2"
         },
         {
@@ -455,7 +455,7 @@
           "price": 30,
           "description": "The flag is <s1-answer>T1530</s1-answer>.",
           "flagId": "1785360335174-vanwhf6sg",
-          "order": 1,
+          "order": 2,
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
@@ -489,7 +489,7 @@
           "price": 30,
           "description": "One is Malicious. The other is a weaker form of the same judgement.",
           "flagId": "1785360336308-vvrhpvjrm",
-          "order": 0,
+          "order": 1,
           "boxId": "1783699237357-q3jwvoke2"
         },
         {
@@ -497,7 +497,7 @@
           "price": 50,
           "description": "The flag is <s1-answer>Suspicious</s1-answer>",
           "flagId": "1785360336308-vvrhpvjrm",
-          "order": 1,
+          "order": 2,
           "boxId": "1783699237357-q3jwvoke2",
           "disabled": false
         }

@@ -18,34 +18,50 @@
       "type": "static",
       "name": "Flag 1 - CF Bot Management",
       "token": "403",
-      "description": "<s1-nav>From the soledrop.co button at the top of the page, swap over to the one-flare.com Security Rules page. Click on the Mitigate Definite Bot Traffic rule.</s1-nav>\n<s1-flag-body>\nCloudflare allows users to customize their security rules. For this specific rule, what is the response code sent after blocking?\n</s1-flag-body>\n<s1-flag example=\"400\">The flag is the response code</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, select the <s1-value>one-flare.com</s1-value> domain, navigate to <s1-label>Security Rules</s1-label>, and open the <s1-value>Mitigate definite bot traffic</s1-value> rule.</s1-nav>\n<s1-flag-body>\nCloudflare allows users to customize their security rules. For this specific rule, what is the response code sent after blocking?\n</s1-flag-body>\n<s1-flag example=\"400\">The flag is the response code</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "403",
       "locked": false,
       "caseSensitive": false,
       "order": 0,
       "attachments": [],
       "hints": [
         {
-          "id": "1786660109424-4uyq1gc9i",
-          "price": 100,
-          "description": "The flag is <s1-answer>403</s1-answer>.",
+          "id": "1789401566998-tocjt6qpn",
+          "price": 20,
+          "description": "Custom block responses let you choose the status code.",
           "flagId": "1785360611630-7240g6lhg",
           "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1789401583231-ixjfkuxs7",
+          "price": 30,
+          "description": "It is the standard 'you are not allowed' code.",
+          "flagId": "1785360611630-7240g6lhg",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1786660109424-4uyq1gc9i",
+          "price": 50,
+          "description": "The flag is <s1-answer>403</s1-answer>.",
+          "flagId": "1785360611630-7240g6lhg",
+          "order": 1,
           "boxId": "1785360586323-rs0gm544e"
         }
       ]
     },
     {
       "id": "1785360631466-rdodl90ks",
-      "type": "static",
+      "type": "choice",
       "name": "Flag 2 - CF Security Insight",
-      "token": "Load balancing",
-      "description": "<s1-nav>Go back to Security rules. Find the Traffic Sequence button next to Documentation.</s1-nav>\n<s1-flag-body>\nTraffic Sequence shows the simplified journey of a request as it proxies through a Cloudflare configuration. \n\nLooking at the flow, what feature is used right before a request reaches the origin server? </s1-flag-body>\n<s1-flag example=\"Rate limiting\">The flag is the name of the box preceding Origin server</s1-flag>",
+      "token": "Load Balancing",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, select the <s1-value>soledrop.co</s1-value> domain, open the <s1-label>Security</s1-label> dropdown and choose <s1-label>Security Rules</s1-label>, then click the <s1-label>Traffic Sequence</s1-label> button in the top right, next to <s1-label>Documentation</s1-label>.</s1-nav>\n<s1-flag-body>\n<s1-label>Traffic Sequence</s1-label> shows the simplified journey of a request as it proxies through a <span style=\"color: #f38020;\">Cloudflare</span> configuration. \n\nLooking at the flow, what feature is used right before a request reaches the origin server? </s1-flag-body>\n<s1-flag example=\"Rate limiting\">The flag is the name of the box preceding Origin server</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Load Balancing",
       "locked": false,
       "caseSensitive": false,
       "order": 1,
@@ -53,15 +69,15 @@
       "hints": [
         {
           "id": "1786660586129-0jb2jb12p",
-          "price": 10,
-          "description": "*Screenshot of where to look*",
+          "price": 20,
+          "description": "The description of the rule is: to help distribute traffic between origins",
           "flagId": "1785360631466-rdodl90ks",
           "order": 0,
           "boxId": "1785360586323-rs0gm544e"
         },
         {
           "id": "1786660586279-8u50ngxa5",
-          "price": 90,
+          "price": 80,
           "description": "The flag is <s1-answer>Load balancing</s1-answer>.",
           "flagId": "1785360631466-rdodl90ks",
           "order": 1,
@@ -69,17 +85,23 @@
         }
       ],
       "dependsOn": "Flag 1 - CF Bot Management",
-      "disabled": false
+      "disabled": false,
+      "choices": [
+        "WAF",
+        "Workers",
+        "Cache",
+        "Load Balancing"
+      ]
     },
     {
       "id": "1785360632867-jjd223kgt",
       "type": "static",
       "name": "Flag 3 - Security Insight",
       "token": "Denver",
-      "description": "<s1-nav>While in the Traffic Sequence window, click on Workers. Select the shop-soledrop-worker from any row. Select Metrics from the nav bar at the top. Set the event window to the last 30 days.</s1-nav>\n<s1-flag-body>\nCloudflare Workers is a serverless platform for building, deploying, and scaling apps across Cloudflare's global network without needing complex configuration. The shop.soledrop.co site from before was deployed using a custom worker. Under Request Distribution we can see the locations where a Worker ran to handle an incoming request.\n\nFind the city where this worker was deployed the most.</s1-flag-body>\n<s1-flag example=\"Dallas\">The flag is the name of the city</s1-flag>",
+      "description": "<s1-nav>While still in the <s1-label>Traffic Sequence</s1-label> window, click on <s1-label>Workers</s1-label>, select the <s1-value>shop-soledrop-worker</s1-value> from any row, choose <s1-label>Metrics</s1-label> from the nav bar at the top, and set the <s1-label>event window</s1-label> to the last <s1-value>30 days</s1-value>. Review the <s1-label>Request Distribution</s1-label> map.</s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> <s1-label>Workers</s1-label> is a serverless platform for building, deploying, and scaling apps across <span style=\"color: #f38020;\">Cloudflare's</span> global network without needing complex configuration. The <s1-value>shop.soledrop.co</s1-value> site from before was deployed using a custom worker. Under <s1-label>Request Distribution</s1-label> we can see the locations where a <s1-label>Worker</s1-label> ran to handle an incoming request.\n\nFind the city where this worker was deployed the most.</s1-flag-body>\n<s1-flag example=\"Dallas\">The flag is the name of the city.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Denver",
       "locked": false,
       "caseSensitive": false,
       "order": 2,
@@ -87,15 +109,15 @@
       "hints": [
         {
           "id": "1786662240573-7s9yxlnnl",
-          "price": 10,
-          "description": "*Screenshot of where to look*",
+          "price": 20,
+          "description": "The <s1-label>Request Distribution</s1-label> section will have an interactable globe with pins in the locations. The flag will be the top city in the list to the right of the globe.",
           "flagId": "1785360632867-jjd223kgt",
           "order": 0,
           "boxId": "1785360586323-rs0gm544e"
         },
         {
           "id": "1786662247737-fmgv2sfo4",
-          "price": 90,
+          "price": 80,
           "description": "The flag is <s1-answer>Denver</s1-answer>.",
           "flagId": "1785360632867-jjd223kgt",
           "order": 1,
@@ -107,18 +129,43 @@
     },
     {
       "id": "1785360634001-p2l9t6mym",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 4 - CF HA Equivalent",
-      "token": "CTF{example_flag}",
-      "description": "<s1-nav>From the menu on the left navigate to Build. From the dropdown select AI then open Workers AI.</s1-nav>\n<s1-flag-body>\nLike standard Cloudflare Workers. Workers AI allow users to deploy LLMs and AI agents across Cloudflare's global network.\n\nFrom the model catalog, what is the name of the model that can perform Automatic Speech Recognition?</s1-flag-body>\n<s1-flag example=\"anthropic/...\">The flag is the name of the model</s1-flag>",
+      "token": "^assemblyai/universal.*$",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Build</s1-label> from the left-hand menu, select <s1-label>AI</s1-label> from the dropdown, and open <s1-label>Workers AI</s1-label>. In the model catalog, filter for <s1-value>Automatic Speech Recognition</s1-value>.</s1-nav>\n<s1-flag-body>\nLike standard <span style=\"color: #f38020;\">Cloudflare</span> <s1-label>Workers</s1-label>, <s1-label>Workers AI</s1-label> allow users to deploy LLMs and AI agents across <span style=\"color: #f38020;\">Cloudflare's</span> global network.\n\nFrom the model catalog, what is the name of the model that can perform <s1-value>Automatic Speech Recognition</s1-value>?</s1-flag-body>\n<s1-flag example=\"anthropic/...\">The flag is the name of the model</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "assemblyai/universal-3-pro",
       "locked": false,
       "caseSensitive": false,
       "order": 3,
       "attachments": [],
-      "hints": [],
+      "hints": [
+        {
+          "id": "1789404762798-qsoctnr08",
+          "price": 20,
+          "description": "There are 6 models listed on the page. The flag is the name of either of the models associated with <s1-value>Automatic Speech Recognition</s1-value>.",
+          "flagId": "1785360634001-p2l9t6mym",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1789404776747-xas2mcdhg",
+          "price": 30,
+          "description": "The flag will begin with <s1-value>assemblyai/</s1-value>...",
+          "flagId": "1785360634001-p2l9t6mym",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1789404818103-buhdln265",
+          "price": 50,
+          "description": "The flag is <s1-answer>assemblyai/universal-3-pro</s1-answer>.",
+          "flagId": "1785360634001-p2l9t6mym",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        }
+      ],
       "dependsOn": "Flag 3 - Security Insight",
       "disabled": false
     },
@@ -126,22 +173,38 @@
       "id": "1785360635308-jkqchtqfh",
       "type": "static",
       "name": "Flag 5 - AI Prompt Injection",
-      "token": "^(?:[5-9]\\d|100)$",
-      "description": "<s1-nav>Find the Alerts view from the menu on the left.</s1-nav>\n<s1-flag-body>\nFrom the Alerts view, locate the Alert cluster that has CF-AI-PromptInjection — LLM Prompt-Injection Probing of SoleDrop Concierge /api/v1/chat in the Alert name column.\n</s1-flag-body>\n<s1-flag example=\"30\">The flag is the number of alerts in this cluster.</s1-flag>",
+      "token": "/api/v1/chat",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, filter for <s1-value>AI Prompt Injection</s1-value>, and open any matching alert to read the full name of the detection rule that raised it.</s1-nav>\n<s1-flag-body>\nOpen an <s1-value>AI Prompt Injection</s1-value> alert. The detection rule's name calls out the exact API route it watches. What is that route?\n</s1-flag-body>\n<s1-flag example=\"/api/...\">The flag is the API route.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "/api/v1/chat",
       "locked": false,
       "caseSensitive": false,
       "order": 4,
       "attachments": [],
       "hints": [
         {
-          "id": "1786487513868-u3v7orr2p",
-          "price": 100,
-          "description": "The flag is <s1-answer>55</s1-answer>.",
+          "id": "1789404991614-u2cmzjsts",
+          "price": 20,
+          "description": "The rule name ends with the route, after the words <s1-value>SoleDrop Concierge</s1-value>.",
           "flagId": "1785360635308-jkqchtqfh",
           "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1789405098275-v980wrm4a",
+          "price": 30,
+          "description": "It is a versioned API path ending in the word chat.",
+          "flagId": "1785360635308-jkqchtqfh",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1786487513868-u3v7orr2p",
+          "price": 50,
+          "description": "The flag is <s1-answer>/api/v1/chat</s1-answer>.",
+          "flagId": "1785360635308-jkqchtqfh",
+          "order": 1,
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
@@ -150,13 +213,13 @@
     },
     {
       "id": "1785360636607-k41u620zu",
-      "type": "static",
+      "type": "choice",
       "name": "Flag 6 - Attempt",
-      "token": "CTF{Injection fuzzing}",
-      "description": "<s1-nav>Find the Alerts view from the menu on the left. \nFrom the Alerts view, locate the Alert cluster that has CF-AI-PromptInjection — LLM Prompt-Injection Probing of SoleDrop Concierge /api/v1/chat in the Alert name column. Click on any one of these alerts.</s1-nav>\n<s1-flag-body>\nWhen a single source IP issues five or more chat POST requests within five minutes, what kind of attempt is this indicative of?</s1-flag-body>\n<s1-flag example=\"brute-forcing\">The flag is the name of the attempt.</s1-flag>",
+      "token": "Injection fuzzing",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open an <s1-value>AI Prompt Injection</s1-value> alert, and read the <s1-label>Purple AI</s1-label> overview panel.</s1-nav>\n<s1-flag-body>\nA single source sending many chat POSTs in a short window is characteristic of what?</s1-flag-body>\n<s1-flag example=\"brute-forcing\">The flag is the name of the attempt.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Injection fuzzing",
       "locked": false,
       "caseSensitive": false,
       "order": 5,
@@ -164,15 +227,23 @@
       "hints": [
         {
           "id": "1786487955684-g7v1p8j56",
-          "price": 10,
-          "description": "The flag is in the Purple AI Overview.",
+          "price": 20,
+          "description": "It is automated trial-and-error against the prompt.",
+          "flagId": "1785360636607-k41u620zu",
+          "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1789405555179-fvr364ov4",
+          "price": 30,
+          "description": "The word rhymes with 'buzzing'.",
           "flagId": "1785360636607-k41u620zu",
           "order": 0,
           "boxId": "1785360586323-rs0gm544e"
         },
         {
           "id": "1786488042329-4tb6xdhcc",
-          "price": 10,
+          "price": 50,
           "description": "The flag is <s1-answer>Injection fuzzing</s1-answer>.",
           "flagId": "1785360636607-k41u620zu",
           "order": 1,
@@ -180,28 +251,50 @@
         }
       ],
       "dependsOn": "Flag 5 - AI Prompt Injection",
-      "disabled": false
+      "disabled": false,
+      "choices": [
+        "Injection fuzzing",
+        "Credential stuffing",
+        "Data exfiltration",
+        "Port scanning"
+      ]
     },
     {
       "id": "1786488562377-trcnp51m7",
       "type": "static",
       "name": "Flag 7 - Enrichment",
-      "token": "CTF{{{Function.DEFAULT(Function.JQ(create-power-query.body.data.data, \"(.[0] // [])[1] | values | floor\", true), \"N/A\")}}}",
-      "description": "<s1-nav>Navigation instructions here...</s1-nav>\n<s1-flag-body>\nOftentimes, analysts will append contextual data fields—such as agent specs, file hashes, and user details—to reduce manual triage time. These are referred to as Enrichment fields.\n\nTake a look at the enrichment field that would display the number of injection posts.\n</s1-flag-body>\n<s1-flag example=\"{{Function.DEFAULT...}}\">The flag is the value associated with injection_posts</s1-flag>",
+      "token": "failed_logins",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Hyperautomation</s1-label>, open the <s1-value>See WAF Rule</s1-value> workflow, and add the <span style=\"color: #f38020;\">Cloudflare</span> action named <s1-value>Get zero trust user failed logins</s1-value>. Read its default URL before filling in any values.</s1-nav>\n<s1-flag-body>\nWhat is the LAST path segment of that default URL?\n</s1-flag-body>\n<s1-flag example=\"waf_rules\">The flag is the segment.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "failed_logins",
       "locked": false,
       "caseSensitive": false,
       "order": 6,
       "attachments": [],
       "hints": [
         {
-          "id": "1786488972598-p0avh8k51",
-          "price": 100,
-          "description": "The flag is <s1-answer>{{Function.DEFAULT(Function.JQ(create-power-query.body.data.data, \"(.[0] // [])[1] | values | floor\", true), \"N/A\")}}</s1-answer>.",
+          "id": "1789405746441-aeybp4oe3",
+          "price": 20,
+          "description": "The URL is a template with unfilled placeholders like <s1-value>account_id</s1-value>.",
           "flagId": "1786488562377-trcnp51m7",
           "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1789405744781-c52yhlrln",
+          "price": 30,
+          "description": "It is the very end of the path, after the user id — two words joined by an underscore.",
+          "flagId": "1786488562377-trcnp51m7",
+          "order": 1,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1786488972598-p0avh8k51",
+          "price": 50,
+          "description": "The flag is <s1-answer>failed_logins</s1-answer>.",
+          "flagId": "1786488562377-trcnp51m7",
+          "order": 2,
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
@@ -209,24 +302,40 @@
     },
     {
       "id": "1785360638067-tvo9cwqvf",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 8 - Default URL",
-      "token": "CTF{https://api.cloudflare.com/client/v4/accounts/account_id/access/users/user_id/failed_logins}",
-      "description": "<s1-nav>Navigate to HyperAutomation. Open the workflow designated 'See WAF Rule'. Add the Cloudflare integration named 'Get zero trust user failed logins'.</s1-nav>\n<s1-flag-body>\nWhat is the default URL before any account or user information has been input?\n</s1-flag-body>\n<s1-flag example=\"https://api.cloudflare...\">The flag is the default URL.</s1-flag>",
+      "token": "^Could not route to.*$",
+      "description": "<s1-nav>Copy the default URL from the previous question, paste it into a browser address bar exactly as-is with the placeholders still in it, and press enter.</s1-nav>\n<s1-flag-body>\nPaste that default URL into a browser — what is the error message in the JSON body?\n</s1-flag-body>\n<s1-flag example=\"Could not ...\">The flag is the error message.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "Could not route to /client/v4/accounts/account_id/access/users/user_id/failed_logins, perhaps your object identifier is invalid?",
       "locked": false,
       "caseSensitive": false,
       "order": 7,
       "attachments": [],
       "hints": [
         {
-          "id": "1786489113670-7d17mxwga",
-          "price": 10,
-          "description": "The flag is <s1-answer>https://api.cloudflare.com/client/v4/accounts/account_id/access/users/user_id/failed_logins</s1-answer>.",
+          "id": "1789406514840-11n653j7h",
+          "price": 20,
+          "description": "<span style=\"color: #f38020;\">Cloudflare's</span> API rejects the unfilled placeholders as invalid object identifiers.",
           "flagId": "1785360638067-tvo9cwqvf",
           "order": 0,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1789406514996-zqdm61sf1",
+          "price": 30,
+          "description": "The message begins with <s1-value>Could not route to ...</s1-value> and ends by questioning your object identifier.",
+          "flagId": "1785360638067-tvo9cwqvf",
+          "order": 1,
+          "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1786489113670-7d17mxwga",
+          "price": 50,
+          "description": "The flag is <s1-answer>Could not route to /client/v4/accounts/account_id/access/users/user_id/failed_logins, perhaps your object identifier is invalid?</s1-answer>.",
+          "flagId": "1785360638067-tvo9cwqvf",
+          "order": 2,
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
@@ -234,40 +343,14 @@
       "disabled": false
     },
     {
-      "id": "1785360639526-sxam3o1ux",
-      "type": "static",
-      "name": "Flag 9 - Error Message JSON Body",
-      "token": "CTF{Could not route to /client/v4/accounts/account_id/access/users/user_id/failed_logins, perhaps your object identifier is invalid?}",
-      "description": "<s1-nav>Navigate to HyperAutomation. Open the workflow designated 'See WAF Rule'. Add the Cloudflare integration named 'Get zero trust user failed logins'.</s1-nav>\n<s1-flag-body>\nPaste that URL into a web browser. What is the error message in the json body?\n</s1-flag-body>\n<s1-flag example=\"Could not ...\">The flag is the error message.</s1-flag>",
-      "captureMessage": "",
-      "value": 100,
-      "plainAnswer": "",
-      "locked": false,
-      "caseSensitive": false,
-      "order": 8,
-      "attachments": [],
-      "hints": [
-        {
-          "id": "1786489220993-3gic72ask",
-          "price": 100,
-          "description": "The flag is <s1-answer>Could not route to /client/v4/accounts/account_id/access/users/user_id/failed_logins, perhaps your object identifier is invalid?</s1-answer>.",
-          "flagId": "1785360639526-sxam3o1ux",
-          "order": 0,
-          "boxId": "1785360586323-rs0gm544e"
-        }
-      ],
-      "dependsOn": "Flag 8 - Default URL",
-      "disabled": false
-    },
-    {
       "id": "1785360641095-yk8dih9n4",
       "type": "static",
-      "name": "Flag 10 - Failed Login Attempt",
-      "token": "CTF{2026-07-28T21:45:39.501Z}",
-      "description": "<s1-nav>Navigate to HyperAutomation. Open the workflow designated 'See WAF Rule'. Add the Cloudflare integration named 'Get zero trust user failed logins'.</s1-nav>\n<s1-flag-body>\nTest the given Workflow and see the correct response when the account and user information has been input.\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the time the failed login occurred.</s1-flag>",
+      "name": "Flag 9 - Failed Login Attempt",
+      "token": "datetime",
+      "description": "<s1-nav>In that same <s1-label>Hyperautomation</s1-label> action, fill in the <s1-value>account ID</s1-value> and <s1-value>user ID</s1-value> your facilitator reads out, click <s1-label>Test Action</s1-label>, and read the response.</s1-nav>\n<s1-flag-body>\nTest the given <s1-label>Workflow</s1-label> and see the correct response when the account and user information has been input.\n\nWhich JSON key holds the time of the failed login?\n</s1-flag-body>\n<s1-flag example=\"timestamp\">The flag is the JSON key.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "",
+      "plainAnswer": "datetime",
       "locked": false,
       "caseSensitive": false,
       "order": 9,
@@ -275,22 +358,30 @@
       "hints": [
         {
           "id": "1786489334695-k41fbyvkg",
-          "price": 10,
-          "description": "The flag is the value of the datetime field.",
+          "price": 20,
+          "description": "The response is a list of failed-login records; look at the fields on one record.",
           "flagId": "1785360641095-yk8dih9n4",
           "order": 0,
           "boxId": "1785360586323-rs0gm544e"
         },
         {
           "id": "1786489336248-8bga01ulz",
-          "price": 10,
-          "description": "The flag is <s1-answer>2026-07-28T21:45:39.501Z</s1-answer>.",
+          "price": 30,
+          "description": "It is one word, and it is not <s1-value>timestamp</s1-value>.",
           "flagId": "1785360641095-yk8dih9n4",
           "order": 1,
           "boxId": "1785360586323-rs0gm544e"
+        },
+        {
+          "id": "1789406975252-6yqa86sy2",
+          "price": 50,
+          "description": "The flag is <s1-answer>datetime</s1-answer>.",
+          "flagId": "1785360641095-yk8dih9n4",
+          "order": 2,
+          "boxId": "1785360586323-rs0gm544e"
         }
       ],
-      "dependsOn": "Flag 9 - Error Message JSON Body",
+      "dependsOn": "Flag 8 - Default URL",
       "disabled": false
     }
   ],
