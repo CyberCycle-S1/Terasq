@@ -565,7 +565,7 @@
       "type": "static",
       "name": "Flag 14 - S1 PowerQuery",
       "token": "1048576",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> and open the <s1-value>Bulk Data Exfiltration</s1-value> rule (CF-API-Exfil). Read the <s1-value>filter</s1-value> line at the end of its <s1-label>PowerQuery</s1-label> body.</s1-nav>\n<s1-flag-body>\nThis rule fires on either of two conditions. One of them is a response-size floor — a single response body larger than N bytes. What is N?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the string + domain that is cited as evidence. </s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> and open the <s1-value>Bulk Data Exfiltration</s1-value> rule (CF-API-Exfil). Read the <s1-value>filter</s1-value> line at the end of its <s1-label>PowerQuery</s1-label> body.</s1-nav>\n<s1-flag-body>\nThis rule fires on either of two conditions. One of them is a response-size floor — a single response body larger than N bytes. What is N?\n</s1-flag-body>\n<s1-flag example=\"1024\">The flag is the numeric value of N.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "1048576",
