@@ -144,7 +144,7 @@
       "type": "regex",
       "name": "Flag 4 - CF Referers",
       "token": "^(?:shop\\.)?soledrop\\.co$",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, click <s1-label>Analytics</s1-label> from the left-hand navigation (this must be done at the account level, not inside a specific zone/domain) and select <s1-label>HTTP Traffic</s1-label> from the dropdown at the top of the page. Scroll down to the <s1-label>Referers</s1-label> panel. Change the <s1-label>Absolute time range</s1-label> to see data from the last 30 days.</s1-nav>\n\nIn the context of web traffic monitoring, a <s1-label>Referer</s1-label> is the webpage that linked to the resource being requested.\n\nIn other words, it is inbound traffic from a link. So if a visitor to <s1-value>example.com</s1-value> clicks a link to your site there, the request will include a <s1-label>Referer</s1-label> header saying they came via <s1-value>example.com</s1-value>.\n \n<s1-flag example=\"example.com\">The flag is the most prevalent<s1-label>Referer</s1-label>.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, click <s1-label>Analytics</s1-label> from the left-hand navigation (this must be done at the account level, not inside a specific zone/domain) and select <s1-label>HTTP Traffic</s1-label> from the dropdown at the top of the page. Scroll down to the <s1-label>Referers</s1-label> panel. Change the <s1-label>Absolute time range</s1-label> to see data from the last 30 days.</s1-nav>\n\n<s1-flag-body>In the context of web traffic monitoring, a <s1-label>Referer</s1-label> is the webpage that linked to the resource being requested.\n\nIn other words, it is inbound traffic from a link. So if a visitor to <s1-value>example.com</s1-value> clicks a link to your site there, the request will include a <s1-label>Referer</s1-label> header saying they came via <s1-value>example.com</s1-value>.</s1-flag-body>\n \n<s1-flag example=\"example.com\">The flag is the most prevalent<s1-label>Referer</s1-label>.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "shop.soledrop.co",
@@ -267,7 +267,7 @@
       "type": "choice",
       "name": "Flag 7 - Cf Logpush",
       "token": "Firewall",
-      "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> <s1-label>Logpush</s1-label> documentation at <s1-value>https://developers.cloudflare.com/logs/logpush/</s1-value> and review the list of available datasets <s1-label>Logpush</s1-label> can export.</s1-nav>\n<s1-flag-body>\n<s1-label>Logpush</s1-label> allows <span style=\"color: #f38020;\">Cloudflare</span> to send large volumes of specified traffic logs to storage services, log management providers and SIEMs like <span style=\"color: #A220F3;\">SentinelOne</span>.\n\nWhich dataset carries WAF block and challenge decisions, separately from the HTTP request log?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the name of the dataset.</s1-flag>",
+      "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> <s1-label>Logpush</s1-label> documentation at <s1-value>https://developers.cloudflare.com/logs/logpush/</s1-value> and review the list of available datasets <s1-label>Logpush</s1-label> can export.</s1-nav>\n<s1-flag-body>\n<s1-label>Logpush</s1-label> allows <span style=\"color: #f38020;\">Cloudflare</span> to send large volumes of specified traffic logs to storage services, log management providers and SIEMs like <span style=\"color: #A220F3;\">SentinelOne</span>.\n<hr class=\"hr-purple\">\n<span style=\"color: white;\">Which dataset carries WAF block and challenge decisions, separately from the HTTP request log?</span>\n</s1-flag-body>\n<s1-flag example=\"Gateway DNS | Firewall | HTTP Requests | Gateway HTTP\">The flag is the name of the dataset.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Firewall",
@@ -298,7 +298,7 @@
       "choices": [
         "Gateway DNS",
         "Firewall",
-        "HTTP requests",
+        "HTTP Requests",
         "Gateway HTTP"
       ]
     },
