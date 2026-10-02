@@ -15,38 +15,30 @@
   "flags": [
     {
       "id": "1783699299308-l58vwm9wc",
-      "type": "choice",
+      "type": "regex",
       "name": "Flag 1 - CF Dashboard",
-      "token": "SSO",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Zero Trust</s1-label> from the left-hand menu. Navigate to <s1-label>Insights and Logs</s1-label> from the new left-hand menu and select <s1-label>Dashboards</s1-label> from the dropdown. Open the <s1-label>Access Event Analytics</s1-label> dashboard, set the event window to <s1-value>30 days</s1-value>, and review the <s1-label>Access Events by Type</s1-label> panel.</s1-nav>\r\n<s1-flag-body>\r\nThe <span style=\"color: #f38020;\">Cloudflare</span> dashboards provide a catalog of saved analytics views for reporting and investigation. <s1-label>Analytics Dashboards</s1-label> provide visualizations of your log data.\r\n\r\nThe <s1-label>Access event analytics</s1-label> dashboard lets users review login attempts to the applications they protected behind Access.\r\n\r\nSet the event window to <s1-value>30 days</s1-value>. Pay attention to <s1-label>Access events by type</s1-label>. What is the least common type?\r\n\r\n</s1-flag-body>\r\n<s1-flag example=\"\">The flag is the type of access event.</s1-flag>",
+      "token": "OneFlare ThreatOps Console",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Zero Trust</s1-label> from the left-hand menu. Navigate to <s1-label>Insights and Logs</s1-label> from the new left-hand menu and select <s1-label>Dashboards</s1-label> from the dropdown. Open the <s1-label>Access Event Analytics</s1-label> dashboard, set the event window to <s1-value>30 days</s1-value>, and review the <s1-label>Access Events by Type</s1-label> panel.</s1-nav>\r\n<s1-flag-body>\r\nThe <span style=\"color: #f38020;\">Cloudflare</span> dashboards provide a catalog of saved analytics views for reporting and investigation. <s1-label>Analytics Dashboards</s1-label> provide visualizations of your log data. The <s1-label>Access event analytics</s1-label> dashboard lets users review login attempts to the applications they protected behind Access.\r\n<hr class=\"hr-purple\">\r\n<span style=\"color: white\">Set the event window to <s1-value>30 days</s1-value>. Pay attention to <s1-label>Application Names</s1-label> under <s1-label>Access Insights</s1-label>. What application is being accessed most frequently?</span>\r\n\r\n</s1-flag-body>\r\n<s1-flag example=\"SentinelOne console\">The flag is the name of the application.</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "SSO",
+      "plainAnswer": "OneFlare ThreatOps Console",
       "locked": false,
       "caseSensitive": false,
       "order": 0,
       "attachments": [],
       "hints": [
         {
-          "id": "1789151271363-t9pp4ypb2",
-          "price": 20,
-          "description": "Two of the four types are the obvious pair; you want one of remaining two.",
-          "flagId": "1783699299308-l58vwm9wc",
-          "order": 0,
-          "boxId": "1783699237357-q3jwvoke2"
-        },
-        {
           "id": "1789151272296-7pcmutajm",
-          "price": 30,
-          "description": "Three letters. It is the handoff to your IdP.",
+          "price": 20,
+          "description": "There will likely be 2 application names in the box; <s1-value>invite</s1-value> is one, the flag is the other.",
           "flagId": "1783699299308-l58vwm9wc",
           "order": 1,
           "boxId": "1783699237357-q3jwvoke2"
         },
         {
           "id": "1783704560827-7869tz1x2",
-          "price": 50,
-          "description": "The flag is <s1-answer>SSO</s1-answer>.",
+          "price": 80,
+          "description": "The flag is <s1-answer>OneFlare ThreatOps Console</s1-answer>.",
           "flagId": "1783699299308-l58vwm9wc",
           "order": 2,
           "boxId": "1783699237357-q3jwvoke2"
@@ -185,7 +177,7 @@
       "type": "static",
       "name": "Flag 5 - S1 Oneflare Custom Dashboad",
       "token": "20",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Dashboards</s1-label> from the left-hand menu and open the <s1-value>OneFlare 'Cloudflare Threat Detection'</s1-value> custom dashboard. Find the <s1-label>Attack Types</s1-label> panel and read its title/description.</s1-nav>\r\n<s1-flag-body>\r\nCustom dashboards are helpful because they allow analysts to display the information they think is most relevant. Dashboards allow this information to be readily accessible for threat analysis.\r\n\r\nThe <s1-label>Attack Types</s1-label> panel filters on a <s1-value>WAF ML attack score</s1-value> at or below a threshold. What is that threshold?\r\n</s1-flag-body>\r\n<s1-flag example=\"50\">The flag is the number of WAF blocks that have occurred.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Dashboards</s1-label> from the left-hand menu and open the <s1-value>OneFlare 'Cloudflare Threat Detection'</s1-value> custom dashboard. Find the <s1-label>Attack Types</s1-label> panel and read its title/description.</s1-nav>\r\n<s1-flag-body>\r\nCustom dashboards are helpful because they allow analysts to display the information they think is most relevant. Dashboards allow this information to be readily accessible for threat analysis.\r\n\r\nThe <s1-label>Attack Types</s1-label> panel filters on a <s1-value>WAF ML attack score</s1-value> at or below a threshold. What is that threshold?\r\n</s1-flag-body>\r\n<s1-flag example=\"50\">The flag is the numerical value of the threshold.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "20",
