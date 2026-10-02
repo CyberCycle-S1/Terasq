@@ -525,7 +525,7 @@
       "type": "choice",
       "name": "Flag 13 - CF Traffic Loggin",
       "token": "Capture all",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Zero Trust</s1-label> from the left-hand menu. Navigate to the <s1-label>Traffic Controls</s1-label> from the new left-hand menu, then select <s1-label>Traffic Settings</s1-label> from the dropdown. Scroll down to the <s1-label>Traffic Logging</s1-label> section.</s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> allows users to configure what events actually get logged. \n\nWhat is the default scope that Gateway uses when capturing events?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default scope.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Zero Trust</s1-label> from the left-hand menu. Navigate to the <s1-label>Traffic Controls</s1-label> from the new left-hand menu, then select <s1-label>Traffic Settings</s1-label> from the dropdown. Scroll down to the <s1-label>Traffic Logging</s1-label> section.</s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> allows users to configure what events actually get logged. \n<hr class=\"hr-purple\">\n<span style=\"color: white;\">What is the default scope that Gateway uses when capturing events?</span>\n\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the default scope.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Capture all",
