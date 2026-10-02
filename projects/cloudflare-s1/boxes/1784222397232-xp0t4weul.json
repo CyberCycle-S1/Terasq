@@ -141,9 +141,9 @@
     },
     {
       "id": "1784303365739-hi9ouoy9b",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 4 - CF Referers",
-      "token": "shop.soledrop.co",
+      "token": "^(?:shop\\.)?soledrop\\.co$",
       "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, click <s1-label>Analytics</s1-label> from the left-hand navigation (this must be done at the account level, not inside a specific zone/domain) and select <s1-label>HTTP Traffic</s1-label> from the dropdown at the top of the page. Scroll down to the <s1-label>Referers</s1-label> panel. Change the <s1-label>Absolute time range</s1-label> to see data from the last 30 days.</s1-nav>\n\nIn the context of web traffic monitoring, a <s1-label>Referer</s1-label> is the webpage that linked to the resource being requested.\n\nIn other words, it is inbound traffic from a link. So if a visitor to <s1-value>example.com</s1-value> clicks a link to your site there, the request will include a <s1-label>Referer</s1-label> header saying they came via <s1-value>example.com</s1-value>.\n \n<s1-flag example=\"example.com\">The flag is the most prevalent<s1-label>Referer</s1-label>.</s1-flag>",
       "captureMessage": "",
       "value": 100,
