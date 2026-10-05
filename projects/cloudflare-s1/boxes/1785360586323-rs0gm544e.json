@@ -131,11 +131,11 @@
       "id": "1785360634001-p2l9t6mym",
       "type": "regex",
       "name": "Flag 4 - CF Workers AI",
-      "token": "^assemblyai/universal.*$",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>Build</s1-label> from the left-hand menu, select <s1-label>AI</s1-label> from the dropdown, and open <s1-label>Workers AI</s1-label>. In the model catalog, filter for <s1-value>Automatic Speech Recognition</s1-value>.</s1-nav>\n<s1-flag-body>\nLike standard <span style=\"color: #f38020;\">Cloudflare</span> <s1-label>Workers</s1-label>, <s1-label>Workers AI</s1-label> allow users to deploy LLMs and AI agents across <span style=\"color: #f38020;\">Cloudflare's</span> global network.\n\nFrom the model catalog, what is the name of the model that can perform <s1-value>Automatic Speech Recognition</s1-value>?</s1-flag-body>\n<s1-flag example=\"anthropic/...\">The flag is the name of the model</s1-flag>",
+      "token": "resnet-50",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, navigate to <s1-label>AI</s1-label> from the left-hand menu, and select <s1-label>Workers AI</s1-label> from the dropdown. In the model catalog, filter for <s1-value>Image Classification</s1-value>.</s1-nav>\n<s1-flag-body>\nLike standard <span style=\"color: #f38020;\">Cloudflare</span> <s1-label>Workers</s1-label>, <s1-label>Workers AI</s1-label> allow users to deploy LLMs and AI agents across <span style=\"color: #f38020;\">Cloudflare's</span> global network.\n\nFrom the model catalog, what is the name of the model that can perform <s1-value>Image Classification</s1-value>?</s1-flag-body>\n<s1-flag example=\"anthropic/...\">The flag is the name of the model</s1-flag>",
       "captureMessage": "",
       "value": 100,
-      "plainAnswer": "assemblyai/universal-3-pro",
+      "plainAnswer": "resnet-50",
       "locked": false,
       "caseSensitive": false,
       "order": 3,
@@ -144,7 +144,7 @@
         {
           "id": "1789404762798-qsoctnr08",
           "price": 20,
-          "description": "There are 6 models listed on the page. The flag is the name of either of the models associated with <s1-value>Automatic Speech Recognition</s1-value>.",
+          "description": "Use the search bar to find models with <s1-value>Image Classification</s1-value> abilities.",
           "flagId": "1785360634001-p2l9t6mym",
           "order": 0,
           "boxId": "1785360586323-rs0gm544e"
@@ -152,7 +152,7 @@
         {
           "id": "1789404776747-xas2mcdhg",
           "price": 30,
-          "description": "The flag will begin with <s1-value>assemblyai/</s1-value>...",
+          "description": "The model is authored by <s1-value>Microsoft</s1-value>.",
           "flagId": "1785360634001-p2l9t6mym",
           "order": 1,
           "boxId": "1785360586323-rs0gm544e"
@@ -160,7 +160,7 @@
         {
           "id": "1789404818103-buhdln265",
           "price": 50,
-          "description": "The flag is <s1-answer>assemblyai/universal-3-pro</s1-answer>.",
+          "description": "The flag is <s1-answer>resnet-50</s1-answer>.",
           "flagId": "1785360634001-p2l9t6mym",
           "order": 2,
           "boxId": "1785360586323-rs0gm544e"
