@@ -177,7 +177,7 @@
       "type": "static",
       "name": "Flag 5 - S1 Oneflare Custom Dashboad",
       "token": "20",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Dashboards</s1-label> from the left-hand menu and open the <s1-value>OneFlare 'Cloudflare Threat Detection'</s1-value> custom dashboard. Find the <s1-label>Attack Types</s1-label> panel and read its title/description.</s1-nav>\r\n<s1-flag-body>\r\nCustom dashboards are helpful because they allow analysts to display the information they think is most relevant. Dashboards allow this information to be readily accessible for threat analysis.\r\n<hr class=\"hr-purple\">\r\n<span style=\"color: white\">The <s1-label>Web App Attacks (WAF)</s1-label> panel filters on a <s1-value>WAF ML attack score</s1-value> at or below a threshold. What is that threshold?</span>\r\n</s1-flag-body>\r\n<s1-flag example=\"50\">The flag is the numerical value of the threshold.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Dashboards</s1-label> from the left-hand menu and open the <s1-value>OneFlare 'Cloudflare Threat Detection'</s1-value> custom dashboard. Find the <s1-label>Web App Attacks (WAF)</s1-label> tab and read its title/description. Alternatively scroll down to the <s1-label>Attack Types</s1-label> panel while in the <s1-label>Threat Overview</s1-label> tab.</s1-nav>\r\n<s1-flag-body>\r\nCustom dashboards are helpful because they allow analysts to display the information they think is most relevant. Dashboards allow this information to be readily accessible for threat analysis.\r\n<hr class=\"hr-purple\">\r\n<span style=\"color: white\">The <s1-label>Web App Attacks (WAF)</s1-label> panel filters on a <s1-value>WAF ML attack score</s1-value> at or below a threshold. What is that threshold?</span>\r\n</s1-flag-body>\r\n<s1-flag example=\"50\">The flag is the numerical value of the threshold.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "20",
@@ -189,7 +189,7 @@
         {
           "id": "1785360329422-7lv2vywr9",
           "price": 20,
-          "description": "The flag is found in the description of the <s1-label>Web Application Firewall (WAF)</s1-label> subsection.",
+          "description": "The flag is found in the description of the <s1-label>Web App Attacks (WAF)</s1-label> tab and is bolded.",
           "flagId": "1785360329421-dxgp4c67s",
           "order": 0,
           "boxId": "1783699237357-q3jwvoke2",
