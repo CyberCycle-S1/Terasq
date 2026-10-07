@@ -274,7 +274,7 @@
       "type": "choice",
       "name": "Flag 7 - S1 Credential Stuffing",
       "token": "src_ip",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, filter for <s1-value>Credential Stuffing</s1-value>, open an alert, scroll down to <s1-label>Rule Details</s1-label>, and read the <s1-value>group ... by</s1-value> clause at the end of the underlying PowerQuery.</s1-nav>\n<s1-flag-body>\nEach alert represents one attacker, not one request. Which field does the rule group by to make that true?\n</s1-flag-body>\n<s1-flag example=\"type_name\">The flag is the field.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, filter for <s1-value>Credential Stuffing</s1-value>, open an alert, scroll down to <s1-label>Rule Details</s1-label>, and read the <s1-value>group ... by</s1-value> clause at the end of the underlying PowerQuery.</s1-nav>\n<s1-flag-body>\nEach alert represents one attacker, not one request. Which field does the rule group by to make that true?\n</s1-flag-body>\n<s1-flag example=\"status | host | src_ip | country\">The flag is the field.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "src_ip",
@@ -286,7 +286,7 @@
         {
           "id": "1789167174710-pr0ftlvbb",
           "price": 20,
-          "description": "Look at the last line of the query's <s1-value>group ... by</s1-value> clause.",
+          "description": "Look at the last line of the query's <s1-value>group ... by</s1-value> clause. This narrows it down to 2 of the options.",
           "flagId": "1785360568037-hgvce8onz",
           "order": 0,
           "boxId": "1785360521872-cmbpqfpe3"
