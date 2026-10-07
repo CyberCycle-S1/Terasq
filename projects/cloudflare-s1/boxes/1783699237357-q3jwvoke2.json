@@ -32,7 +32,7 @@
           "price": 20,
           "description": "There will likely be 2 application names in the box; <s1-value>invite</s1-value> is one, the flag is the other.",
           "flagId": "1783699299308-l58vwm9wc",
-          "order": 1,
+          "order": 0,
           "boxId": "1783699237357-q3jwvoke2"
         },
         {
@@ -40,7 +40,7 @@
           "price": 80,
           "description": "The flag is <s1-answer>OneFlare ThreatOps Console</s1-answer>.",
           "flagId": "1783699299308-l58vwm9wc",
-          "order": 2,
+          "order": 1,
           "boxId": "1783699237357-q3jwvoke2"
         }
       ],
@@ -481,7 +481,7 @@
           "price": 80,
           "description": "The flag is <s1-answer>True Positive/Data Exfiltration</s1-answer>.",
           "flagId": "1785360336308-vvrhpvjrm",
-          "order": 2,
+          "order": 1,
           "boxId": "1783699237357-q3jwvoke2",
           "disabled": false
         }
