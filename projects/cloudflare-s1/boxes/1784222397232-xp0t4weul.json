@@ -97,7 +97,7 @@
       "type": "choice",
       "name": "Flag 3 - CF WAF Score",
       "token": "Almost certainly an attack",
-      "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> documentation on the WAF attack score at <s1-value>https://developers.cloudflare.com/waf/about/waf-attack-score/</s1-value> and read how the numeric scale is calculated and what the range represents.</s1-nav>\n\n<s1-flag-body>A request is scored 3 out of 99 by the WAF attack score. What does that tell you?</s1-flag-body>\n \n<s1-flag example=\"No Bot Traffic\">The flag is the finding based on a score of 3.</s1-flag>",
+      "description": "<s1-nav>Open <span style=\"color: #f38020;\">Cloudflare's</span> documentation on the WAF attack score at <s1-value>https://developers.cloudflare.com/waf/about/waf-attack-score/</s1-value> and read how the numeric scale is calculated and what the range represents.</s1-nav>\n<s1-flag-body>\n<hr class=\"hr-purple\">\n<span style=\"color: white\">A request is scored 3 out of 99 by the WAF attack score. What does that tell you?</span> </s1-flag-body>\n<s1-flag example=\"Almost certainly an attack | Almost certainly clean | Inconclusive | Bot Traffic\">The flag is the finding based on a score of 3.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Almost certainly an attack",
