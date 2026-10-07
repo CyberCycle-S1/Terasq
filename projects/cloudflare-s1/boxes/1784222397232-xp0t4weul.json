@@ -477,7 +477,7 @@
       "type": "choice",
       "name": "Flag 12 - S1 Detection",
       "token": "High",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the rule whose name contains <s1-value>CF-WAF-Traversal</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nWhat severity is this detection rule configured with?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the severity level.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the rule whose name contains <s1-value>CF-WAF-Traversal</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nThe severity field allows \n\n\nWhat severity is this detection rule configured with?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the severity level.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "High",
