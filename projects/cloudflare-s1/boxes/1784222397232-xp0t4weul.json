@@ -185,7 +185,7 @@
       "type": "regex",
       "name": "Flag 5 - Soledrop",
       "token": "\\b(?:Drop[- ]?Day\\s+)?Bot[- ]?Swarm(?:\\s+Detected)?\\b",
-      "description": "<s1-nav>Open a new browser tab and navigate to <s1-value>https://shop.soledrop.co/status</s1-value> to view the store's public status page.</s1-nav>\n<s1-flag-body><span style=\"color: white\">The store is publishing an active incident. What is the operation called?</span>\n</s1-flag-body> \n<s1-flag example=\"Drop-day Virus Infestation\">The flag is the name of the operation <s1-value>shop.soledrop.co</s1-value> is under attack by.</s1-value></s1-flag>",
+      "description": "<s1-nav>Open a new browser tab and navigate to <s1-value>https://shop.soledrop.co/status</s1-value> to view the store's public status page.</s1-nav>\n<s1-flag-body>\nBecause SoleDrop sits behind <span style=\"color: #f38020;\">Cloudflare's</span> edge security stack, every incoming request is analyzed in real time before reaching the application. <span style=\"color: #f38020;\">Cloudflare's</span> WAF, Bot Management, and logging engines capture deep edge telemetry—including JA4 TLS fingerprints, heuristic bot scores, and WAF attack scores—allowing defenders to stream live, multi-phase attack metrics directly onto the status dashboard.\n<hr class=\"hr-purple\">\n<span style=\"color: white\">The SoleDrop store's webpage is publishing an active incident. What is the operation called?</span>\n</s1-flag-body> \n<s1-flag example=\"Drop-day Virus Infestation\">The flag is the name of the operation <s1-value>shop.soledrop.co</s1-value> is under attack by.</s1-value></s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Drop-day Bot Swarm",
