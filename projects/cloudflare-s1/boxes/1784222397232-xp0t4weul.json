@@ -182,10 +182,10 @@
     },
     {
       "id": "1784303848387-2x2f5ad22",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 5 - Soledrop",
-      "token": "Drop-day Bot Swarm",
-      "description": "<s1-nav>Open a new browser tab and navigate to <s1-value>https://shop.soledrop.co/status</s1-value> to view the store's public status page.</s1-nav>\n\n<s1-flag-body>The store is publishing an active incident. What is the operation called?\n</s1-flag-body> \n\n<s1-flag example=\"50\">The flag is the name of the operation <s1-value>shop.soledrop.co</s1-value> is under attack by.</s1-value></s1-flag>",
+      "token": "\\b(?:Drop[- ]?Day\\s+)?Bot[- ]?Swarm(?:\\s+Detected)?\\b",
+      "description": "<s1-nav>Open a new browser tab and navigate to <s1-value>https://shop.soledrop.co/status</s1-value> to view the store's public status page.</s1-nav>\n\n<s1-flag-body>The store is publishing an active incident. What is the operation called?\n</s1-flag-body> \n\n<s1-flag example=\"Drop-day Virus Infestation\">The flag is the name of the operation <s1-value>shop.soledrop.co</s1-value> is under attack by.</s1-value></s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Drop-day Bot Swarm",
