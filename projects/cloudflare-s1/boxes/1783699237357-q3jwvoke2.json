@@ -185,7 +185,7 @@
       "type": "choice",
       "name": "Flag 5 - CF WAF Rule",
       "token": "Log",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, select the <s1-value>soledrop.co</s1-value> domain, open the <s1-label>Security</s1-label> dropdown from the left-hand menu, and choose <s1-label>Security Rules</s1-label>. Read down the <s1-label>Action</s1-label> column.</s1-nav>\r\n<s1-flag-body>\r\nOne rule on this zone deliberately does not block — it only records matches so the SOC can see them. What action is it set to?</s1-flag-body>\r\n<s1-flag example=\"Record\">The flag is the action.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, select the <s1-value>soledrop.co</s1-value> domain, open the <s1-label>Security</s1-label> dropdown from the left-hand menu, and choose <s1-label>Security Rules</s1-label>. Read down the <s1-label>Action</s1-label> column.</s1-nav>\r\n<s1-flag-body>\r\nOne rule on the <s1-value>soledrop.co</s1-value> zone deliberately does not block — it only records matches so the SOC can see them. What action is it set to?</s1-flag-body>\r\n<s1-flag example=\"Record\">The flag is the action.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Log",
