@@ -90,7 +90,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 1 - CF Nav"
+      "dependsOn": "Flag 1 - CF Playbook Configurations"
     },
     {
       "id": "1784302979510-5bqfje1wn",
@@ -131,7 +131,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 2 - CF Nav",
+      "dependsOn": "Flag 2 - CF Security Rules",
       "choices": [
         "Almost certainly an attack",
         "Almost certainly clean",
@@ -178,7 +178,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 3 - Analytics"
+      "dependsOn": "Flag 3 - CF WAF Score"
     },
     {
       "id": "1784303848387-2x2f5ad22",
@@ -219,7 +219,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 4 - Analytics"
+      "dependsOn": "Flag 4 - CF Referers"
     },
     {
       "id": "1785340751216-gocd6hcvy",
@@ -293,7 +293,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 6 - Bot score",
+      "dependsOn": "Flag 6 - CF Bot score",
       "disabled": false,
       "choices": [
         "Gateway DNS",
@@ -341,7 +341,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 7 - Logpush",
+      "dependsOn": "Flag 7 - Cf Logpush",
       "disabled": false,
       "choices": [
         "1 hour",
@@ -381,7 +381,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 8 - Default time",
+      "dependsOn": "Flag 8 - S1 Default time",
       "disabled": false
     },
     {
@@ -415,7 +415,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 9 - Data ingest",
+      "dependsOn": "Flag 9 - S1 Data ingest",
       "disabled": false,
       "choices": [
         "Single Event (STAR)",
@@ -463,7 +463,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 10 - Detection",
+      "dependsOn": "Flag 10 - S1 Detection",
       "disabled": false,
       "choices": [
         "401, 403, 429",
@@ -511,7 +511,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 11 - Detection",
+      "dependsOn": "Flag 11 - S1 Detection",
       "disabled": false,
       "choices": [
         "Low",
@@ -551,7 +551,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 12 - Detection",
+      "dependsOn": "Flag 12 - S1 Detection",
       "disabled": false,
       "choices": [
         "Capture all",
@@ -599,7 +599,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 13 - CF Filtering",
+      "dependsOn": "Flag 13 - CF Traffic Logging",
       "disabled": false
     }
   ],

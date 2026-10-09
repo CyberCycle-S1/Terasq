@@ -135,7 +135,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 3 - CF Endpoints"
+      "dependsOn": "Flag 2 - CF Endpoints"
     },
     {
       "id": "1785360329421-dxgp4c67s",
@@ -178,7 +178,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 4 - CF Suspicious Activity"
+      "dependsOn": "Flag 3 - CF Suspicious Activity"
     },
     {
       "id": "1785360330487-x4itwk4g4",
@@ -221,7 +221,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 5 - S1 Oneflare Custom Dashboad",
+      "dependsOn": "Flag 4 - S1 Oneflare Custom Dashboad",
       "choices": [
         "Block",
         "Skip",
@@ -262,7 +262,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 6 - CF WAF Rule"
+      "dependsOn": "Flag 5 - CF WAF Rule"
     },
     {
       "id": "1785360332466-8f9ljg6sq",
@@ -297,7 +297,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 7 - Oneflare Custom Dashboard"
+      "dependsOn": "Flag 6 - Oneflare Custom Dashboard"
     },
     {
       "id": "1785360333333-axik2dzfr",
@@ -340,7 +340,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 8 - CF HTTP Traffic"
+      "dependsOn": "Flag 7 - CF HTTP Traffic"
     },
     {
       "id": "1785360334216-7newhhgyk",
@@ -375,7 +375,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 9 - S1 Bulk Data Exfil"
+      "dependsOn": "Flag 8 - S1 Bulk Data Exfil"
     },
     {
       "id": "1785360335174-vanwhf6sg",
@@ -417,7 +417,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 10 -  S1 Bulk Data Exfil"
+      "dependsOn": "Flag 9 -  S1 Bulk Data Exfil"
     },
     {
       "id": "1785360336308-vvrhpvjrm",
@@ -452,7 +452,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 11 -  S1 Bulk Data Exfil",
+      "dependsOn": "Flag 10 -  S1 Bulk Data Exfil",
       "choices": [
         "Benign",
         "Suspicious",
