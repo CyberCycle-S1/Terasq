@@ -18,7 +18,7 @@
       "type": "regex",
       "name": "Flag 1 - S1 XSS",
       "token": "^CF-WAF-XSS.*$",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, use the search bar to filter for <s1-value>XSS</s1-value>, and open any matching alert to read the name of the detection rule that raised it.</s1-nav>\n<s1-flag-body>\nOpen an <s1-value>XSS</s1-value> alert. What is the name of the detection rule that raised it? The CF- prefix code is enough.\n</s1-flag-body>\n<s1-flag example=\"CF-...\">The flag is the name of the detection rule.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, use the search bar to filter for <s1-value>XSS</s1-value>, and open any matching alert to read the name of the detection rule that raised it.</s1-nav>\n<s1-flag-body>\n<span style=\"color: white\">Open an <s1-value>XSS</s1-value> alert. What is the name of the detection rule that raised it? The <s1-value>CF-</s1-value> prefix code is enough.</span>\n</s1-flag-body>\n<s1-flag example=\"CF-...\">The flag is the name of the detection rule.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "CF-WAF-XSS — Cross-Site Scripting against shop.soledrop.co (WAF ML score)",
@@ -45,7 +45,7 @@
         },
         {
           "id": "1786481597671-iq4l9a7yc",
-          "price": 100,
+          "price": 50,
           "description": "The flag is <s1-answer>CF-WAF-XSS — Cross-Site Scripting against shop.soledrop.co (WAF ML score)</s1-answer>.",
           "flagId": "1785360537414-rigw7n4m4",
           "order": 2,
@@ -58,7 +58,7 @@
       "type": "static",
       "name": "Flag 2 - S1 XSS",
       "token": "T1059.007",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open a <s1-value>CF-WAF-XSS</s1-value> alert, and read the <s1-label>Purple AI Overview</s1-label> panel.</s1-nav>\n<s1-flag-body>\nWhich <s1-value>MITRE ATT&CK ID</s1-value> does this detection map to the Execution tactic?\n</s1-flag-body>\n<s1-flag example=\"T####.###\">The flag is the <s1-value>MITRE ATT&CK ID</s1-value></s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open a <s1-value>CF-WAF-XSS</s1-value> alert, and read the <s1-label>Purple AI Overview</s1-label> panel.</s1-nav>\n<s1-flag-body>\n<span style=\"color: white\">In the <s1-label>Purple AI Overview</s1-label> for the <s1-value>CF-WAF-XSS</s1-value> alert, which <s1-label>MITRE ATT&CK ID</s1-label> is mapped to the <s1-value>JavaScript execution</s1-value> technique?</span>\n</s1-flag-body>\n<s1-flag example=\"T####.###\">The flag is the <s1-value>MITRE ATT&CK ID</s1-value></s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "T1059.007",
@@ -70,22 +70,14 @@
         {
           "id": "1786473492456-fvn3ekil8",
           "price": 20,
-          "description": "Two techniques are listed; the other one, <s1-value>T1190</s1-value>, is <s1-value>Initial Access</s1-value>.",
+          "description": "Two techniques are listed; the other one, <s1-value>T1190</s1-value>, is <s1-value>exploitation of public-facing applications</s1-value>.",
           "flagId": "1785360559687-fel8obcp5",
           "order": 0,
           "boxId": "1785360521872-cmbpqfpe3"
         },
         {
-          "id": "1789165847995-k3d2mgvmw",
-          "price": 30,
-          "description": "It is the JavaScript sub-technique of <s1-value>Command and Scripting Interpreter</s1-value>.",
-          "flagId": "1785360559687-fel8obcp5",
-          "order": 1,
-          "boxId": "1785360521872-cmbpqfpe3"
-        },
-        {
           "id": "1786473494338-rl45ui4zm",
-          "price": 50,
+          "price": 80,
           "description": "The flag is <s1-answer>T1059.007</s1-answer>.",
           "flagId": "1785360559687-fel8obcp5",
           "order": 2,
