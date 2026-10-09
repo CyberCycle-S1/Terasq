@@ -221,7 +221,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 4 - S1 Oneflare Custom Dashboad",
+      "dependsOn": "Flag 4 - S1 Oneflare Custom Dashboard",
       "choices": [
         "Block",
         "Skip",
@@ -375,7 +375,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 8 - S1 Bulk Data Exfil"
+      "dependsOn": "Flag 8 - S1 Bulk Data Exfil Host"
     },
     {
       "id": "1785360335174-vanwhf6sg",
@@ -417,7 +417,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 9 -  S1 Bulk Data Exfil"
+      "dependsOn": "Flag 9 - S1 Bulk Data Exfil API Route"
     },
     {
       "id": "1785360336308-vvrhpvjrm",
@@ -452,7 +452,7 @@
         }
       ],
       "disabled": false,
-      "dependsOn": "Flag 10 -  S1 Bulk Data Exfil",
+      "dependsOn": "Flag 10 - S1 Bulk Data Exfil MITRE",
       "choices": [
         "Benign",
         "Suspicious",

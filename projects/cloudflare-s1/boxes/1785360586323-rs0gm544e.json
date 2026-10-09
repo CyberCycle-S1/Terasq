@@ -250,7 +250,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
-      "dependsOn": "Flag 5 - S1 AI Prompt Injection",
+      "dependsOn": "Flag 5 - S1 AI Prompt Injection API Route",
       "disabled": false,
       "choices": [
         "Injection fuzzing",
@@ -298,7 +298,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
-      "dependsOn": "Flag 6 - S1 AI Prompt Injection"
+      "dependsOn": "Flag 6 - S1 AI Prompt Injection Attempt"
     },
     {
       "id": "1785360638067-tvo9cwqvf",

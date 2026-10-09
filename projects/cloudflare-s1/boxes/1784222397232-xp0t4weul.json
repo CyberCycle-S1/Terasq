@@ -463,7 +463,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 10 - S1 Detection",
+      "dependsOn": "Flag 10 - S1 Detection Rule Type",
       "disabled": false,
       "choices": [
         "401, 403, 429",
@@ -511,7 +511,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 11 - S1 Detection",
+      "dependsOn": "Flag 11 - S1 Detection Erro Code",
       "disabled": false,
       "choices": [
         "Low",
@@ -551,7 +551,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 12 - S1 Detection",
+      "dependsOn": "Flag 12 - S1 Detection Severity",
       "disabled": false,
       "choices": [
         "Capture all",

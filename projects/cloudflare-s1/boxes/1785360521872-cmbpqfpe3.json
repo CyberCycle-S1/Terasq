@@ -84,7 +84,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
-      "dependsOn": "Flag 1 - S1 XSS",
+      "dependsOn": "Flag 1 - S1 XSS Name",
       "disabled": false
     },
     {
@@ -126,7 +126,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
-      "dependsOn": "Flag 2 - S1 XSS",
+      "dependsOn": "Flag 2 - S1 XSS MITRE",
       "disabled": false
     },
     {
@@ -210,7 +210,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
-      "dependsOn": "Flag 4 - S1 CF Integration",
+      "dependsOn": "Flag 4 - S1 CF Integration Name",
       "disabled": false
     },
     {
@@ -252,7 +252,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
-      "dependsOn": "Flag 5 - S1 CF Integration",
+      "dependsOn": "Flag 5 - S1 CF Integration Action",
       "disabled": false,
       "choices": [
         "Account",
@@ -348,7 +348,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
-      "dependsOn": "Flag 7 - S1 Credential Stuffing",
+      "dependsOn": "Flag 7 - S1 Credential Stuffing Field",
       "disabled": false
     },
     {
@@ -390,7 +390,7 @@
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
-      "dependsOn": "Flag 8 - S1 Credential Stuffing",
+      "dependsOn": "Flag 8 - S1 Credential Stuffing MITRE",
       "disabled": false
     },
     {
