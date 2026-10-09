@@ -395,9 +395,9 @@
     },
     {
       "id": "1785360578280-mrtpp9p73",
-      "type": "static",
+      "type": "regex",
       "name": "Flag 10 - S1 Destination URL",
-      "token": "portal.soledrop.co",
+      "token": "^(portal\\.soledrop\\.co|portal)$",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, filter for <s1-value>CF-Access-CredStuffing</s1-value>, and sort by the <s1-value>Analyst Verdict</s1-value> column — the playbook's enrichment note only exists on an alert an analyst has already judged. Open one with a verdict, then open its <s1-label>Notes</s1-label> tab. Read the destination URL the playbook recorded.</s1-nav>\n<s1-flag-body>\n<span style=\"color: white\">According to the <s1-label>Notes</s1-label> page in the <s1-value>CF-Access-CredStuffing</s1-value> alert panel, what is the URL of the site being targeted?</span>\n</s1-flag-body>\n<s1-flag example=\"____.soledrop.co\">The flag is URL of the site being targeted.</s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -410,7 +410,7 @@
         {
           "id": "1789168329188-n17go9tsj",
           "price": 20,
-          "description": "It is in the same note you just read — the host the <s1-value>Credential Stuffing</s1-value> was aimed at.",
+          "description": "It is in the same note you just read — the host the <s1-value>Credential Stuffing</s1-value> attack was aimed at.",
           "flagId": "1785360578280-mrtpp9p73",
           "order": 0,
           "boxId": "1785360521872-cmbpqfpe3"
