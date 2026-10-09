@@ -166,7 +166,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
-      "dependsOn": "Flag 3 - Security Insight",
+      "dependsOn": "Flag 3 - CF Workers",
       "disabled": false
     },
     {
@@ -208,7 +208,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
-      "dependsOn": "Flag 4 - CF HA Equivalent",
+      "dependsOn": "Flag 4 - CF Workers AI",
       "disabled": false
     },
     {
@@ -250,7 +250,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
-      "dependsOn": "Flag 5 - AI Prompt Injection",
+      "dependsOn": "Flag 5 - S1 AI Prompt Injection",
       "disabled": false,
       "choices": [
         "Injection fuzzing",
@@ -298,7 +298,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
-      "dependsOn": "Flag 6 - Attempt"
+      "dependsOn": "Flag 6 - S1 AI Prompt Injection"
     },
     {
       "id": "1785360638067-tvo9cwqvf",
@@ -339,49 +339,7 @@
           "boxId": "1785360586323-rs0gm544e"
         }
       ],
-      "dependsOn": "Flag 7 - Enrichment",
-      "disabled": false
-    },
-    {
-      "id": "1785360641095-yk8dih9n4",
-      "type": "static",
-      "name": "Flag 9 - S1 Failed Login Attempt",
-      "token": "date",
-      "description": "<s1-nav>In that same <s1-label>Hyperautomation</s1-label> action, fill in the <s1-value>account ID</s1-value> and <s1-value>user ID</s1-value> your facilitator reads out, click <s1-label>Test Action</s1-label>, and read the response.</s1-nav>\n<s1-flag-body>\nTest the given <s1-label>Workflow</s1-label> and see the correct response when the account and user information has been input.\n\nWhich JSON key holds the time of the failed login?\n</s1-flag-body>\n<s1-flag example=\"timestamp\">The flag is the JSON key.</s1-flag>",
-      "captureMessage": "",
-      "value": 100,
-      "plainAnswer": "date",
-      "locked": false,
-      "caseSensitive": false,
-      "order": 9,
-      "attachments": [],
-      "hints": [
-        {
-          "id": "1786489334695-k41fbyvkg",
-          "price": 20,
-          "description": "The response is a list of failed-login records; look at the fields on one record.",
-          "flagId": "1785360641095-yk8dih9n4",
-          "order": 0,
-          "boxId": "1785360586323-rs0gm544e"
-        },
-        {
-          "id": "1786489336248-8bga01ulz",
-          "price": 30,
-          "description": "It is one word, and it is not <s1-value>timestamp</s1-value>.",
-          "flagId": "1785360641095-yk8dih9n4",
-          "order": 1,
-          "boxId": "1785360586323-rs0gm544e"
-        },
-        {
-          "id": "1789406975252-6yqa86sy2",
-          "price": 50,
-          "description": "The flag is <s1-answer>datetime</s1-answer>.",
-          "flagId": "1785360641095-yk8dih9n4",
-          "order": 2,
-          "boxId": "1785360586323-rs0gm544e"
-        }
-      ],
-      "dependsOn": "Flag 8 - Default URL",
+      "dependsOn": "Flag 7 - S1 See WAF Rule",
       "disabled": false
     }
   ],
