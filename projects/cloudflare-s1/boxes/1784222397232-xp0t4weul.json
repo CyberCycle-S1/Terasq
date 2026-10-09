@@ -387,7 +387,7 @@
     {
       "id": "1785340765990-3p2w16l7j",
       "type": "choice",
-      "name": "Flag 10 - S1 Detection",
+      "name": "Flag 10 - S1 Detection Rule Type",
       "token": "Scheduled",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the detection rule for <s1-value>Credential Stuffing</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nDetections are a feature of <span style=\"color: #A220F3;\">SentinelOne</span> that allow you to create queries that are applied to all incoming traffic. If a log or set of logs match the pattern they are aggregated into an alert for the SOC team to analyze.\n<hr class=\"hr-purple\">\n<span style=\"color: white\">Find the detection associated with <s1-value>Credential Stuffing</s1-value>. What is it's <s1-value>Rule Type</s1-value>?</span>\n</s1-flag-body>\n<s1-flag example=\"Single Event (STAR) | Correlation | Watchlist | Scheduled\">The flag is the <s1-value>Rule Type</s1-value>.</s1-flag>",
       "captureMessage": "",
@@ -427,7 +427,7 @@
     {
       "id": "1785340775265-03xss86mr",
       "type": "choice",
-      "name": "Flag 11 - S1 Detection",
+      "name": "Flag 11 - S1 Detection Erro Code",
       "token": "401, 403, 429",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label>, open the <s1-value>Credential Stuffing</s1-value> rule, and read the <s1-value>filter status in (...)</s1-value> line of its scheduled <s1-label>PowerQuery</s1-label> body.</s1-nav>\n<s1-flag-body>\n<s1-label>PowerQuery</s1-label> in <span style=\"color: #A220F3;\">SentinelOne</span> (also referred to as S1QL 2.0) is an advanced query interface designed for the <s1-label>Singularity XDR</s1-label> and <s1-label>SentinelOne Data Lake</s1-label> platforms. Originally derived from <s1-label>SentinelOne's DataSet</s1-label> (formerly Scalyr) engine, <s1-label>PowerQuery</s1-label> goes beyond simple keyword filtering to allow security teams to transform, manipulate, group, and summarize vast amounts of telemetry data on the fly.\n<hr class=\"hr-purple\">\n<span style=\"color: white\">The rule only counts login requests that failed. Which set of HTTP status codes does its query treat as a failed login?</span>\n</s1-flag-body>\n<s1-flag example=\"401, 403, 429 | 400, 401, 500 | 403 only | 401, 404, 502\">The flag is the error code or codes.</s1-flag>",
       "captureMessage": "",
@@ -475,7 +475,7 @@
     {
       "id": "1785340777240-95fyfow4d",
       "type": "choice",
-      "name": "Flag 12 - S1 Detection",
+      "name": "Flag 12 - S1 Detection Severity",
       "token": "High",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label> from the left-hand menu. Find the rule whose name contains <s1-value>CF-WAF-Traversal</s1-value> and open it.</s1-nav>\n<s1-flag-body>\nThe <s1-value>severity</s1-value> field allows analysts to prioritize certain alerts over others based on the request string that was recieved by the log collector. \n<table>\n  <thead>\n    <tr>\n      <th>Request string</th>\n      <th>Assigned integer</th>\n      <th>Displayed severity</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>fatal</td>\n      <td>6</td>\n      <td>Critical</td>\n    </tr>\n    <tr>\n      <td>error</td>\n      <td>5</td>\n      <td>Critical</td>\n    </tr>\n    <tr>\n      <td>warn</td>\n      <td>4</td>\n      <td>High</td>\n    </tr>\n    <tr>\n      <td>info</td>\n      <td>3</td>\n      <td>Medium</td>\n    </tr>\n    <tr>\n      <td>fine</td>\n      <td>2</td>\n      <td>Low</td>\n    </tr>\n    <tr>\n      <td>finer</td>\n      <td>1</td>\n      <td>Info</td>\n    </tr>\n    <tr>\n      <td>finest</td>\n      <td>0</td>\n      <td>No severity</td>\n    </tr>\n  </tbody>\n</table>\n<hr class=\"hr-purple\">\n<span style=\"color: white\">What <s1-value>severity</s1-value> is the <s1-value>CF-WAF-Traversal</s1-value> detection rule configured with?</span>\n</s1-flag-body>\n<s1-flag example=\"Low | Medium | High | Critical\">The flag is the severity level.</s1-flag>",
       "captureMessage": "",
