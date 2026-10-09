@@ -176,7 +176,7 @@
       "type": "static",
       "name": "Flag 5 - S1 CF Integration",
       "token": "Block",
-      "description": "<s1-nav>Still in that same workflow, find the <span style=\"color: #f38020;\">Cloudflare</span> action named <s1-value>CF Ruleset Host Block</s1-value>, which sits immediately before the <s1-value>Response Had Failure</s1-value> condition, open it, and read its JSON request body.</s1-nav>\n<s1-flag-body>\nFind the action labeled <s1-value>CF Ruleset Host Block</s1-value>.\n\nThis action has already ran. Look in the <s1-label>Body</s1-label> section to see the JSON body that was returned. What action was taken?\n\n</s1-flag-body>\n<s1-flag example=\"skip\">The flag is the value of the action field.</s1-flag>",
+      "description": "<s1-nav>Still in the <s1-value>CF-WAF-WebAttack</s1-value> workflow, find the <span style=\"color: #f38020;\">Cloudflare</span> action named <s1-value>CF Ruleset Host Block</s1-value>, which sits immediately before the <s1-value>Response Had Failure</s1-value> condition, open it, and read its JSON request body.</s1-nav>\n<s1-flag-body>\nFind the action labeled <s1-value>CF Ruleset Host Block</s1-value>.\n<hr class=\"hr-purple\">\nThis action has already ran. Look in the <s1-label>Body</s1-label> section to see the JSON body that was returned. What action was taken?\n</s1-flag-body>\n<s1-flag example=\"skip\">The flag is the value of the action field.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Block",
