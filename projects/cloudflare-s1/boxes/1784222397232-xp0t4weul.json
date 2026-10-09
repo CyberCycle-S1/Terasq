@@ -511,7 +511,7 @@
           "boxId": "1784222397232-xp0t4weul"
         }
       ],
-      "dependsOn": "Flag 11 - S1 Detection Erro Code",
+      "dependsOn": "Flag 11 - S1 Detection Error Code",
       "disabled": false,
       "choices": [
         "Low",
