@@ -427,7 +427,7 @@
     {
       "id": "1785340775265-03xss86mr",
       "type": "choice",
-      "name": "Flag 11 - S1 Detection Erro Code",
+      "name": "Flag 11 - S1 Detection Error Code",
       "token": "401, 403, 429",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Detections</s1-label>, open the <s1-value>Credential Stuffing</s1-value> rule, and read the <s1-value>filter status in (...)</s1-value> line of its scheduled <s1-label>PowerQuery</s1-label> body.</s1-nav>\n<s1-flag-body>\n<s1-label>PowerQuery</s1-label> in <span style=\"color: #A220F3;\">SentinelOne</span> (also referred to as S1QL 2.0) is an advanced query interface designed for the <s1-label>Singularity XDR</s1-label> and <s1-label>SentinelOne Data Lake</s1-label> platforms. Originally derived from <s1-label>SentinelOne's DataSet</s1-label> (formerly Scalyr) engine, <s1-label>PowerQuery</s1-label> goes beyond simple keyword filtering to allow security teams to transform, manipulate, group, and summarize vast amounts of telemetry data on the fly.\n<hr class=\"hr-purple\">\n<span style=\"color: white\">The rule only counts login requests that failed. Which set of HTTP status codes does its query treat as a failed login?</span>\n</s1-flag-body>\n<s1-flag example=\"401, 403, 429 | 400, 401, 500 | 403 only | 401, 404, 502\">The flag is the error code or codes.</s1-flag>",
       "captureMessage": "",
