@@ -80,7 +80,7 @@
           "price": 80,
           "description": "The flag is <s1-answer>T1059.007</s1-answer>.",
           "flagId": "1785360559687-fel8obcp5",
-          "order": 2,
+          "order": 1,
           "boxId": "1785360521872-cmbpqfpe3"
         }
       ],
@@ -92,7 +92,7 @@
       "type": "static",
       "name": "Flag 3 - S1 XSS Workflow",
       "token": "CF-WAF-WebAttack",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open an <s1-value>XSS</s1-value> alert, and click the <s1-label>Automate</s1-label> button in the top right of the alert panel.</s1-nav>\n<s1-flag-body>\n<s1-label>HyperAutomation</s1-label> workflows allow Threat Hunters to enrich alerts, gather third-party threat intel, seek out determinitions from analysts, and conduct follow-up responses automatically whenever alerts are triggered.\n\nWhat is the name of the available workflow?\n</s1-flag-body>\n<s1-flag example=\"S1-CNAPP-AppAttack\">The flag is the name of the workflow under <s1-label>Available Workflows</s1-label></s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open a <s1-value>CF-WAF-XSS</s1-value> alert, and click the <s1-label>Automate</s1-label> button in the top right of the alert panel.</s1-nav>\n<s1-flag-body>\n<s1-label>HyperAutomation</s1-label> workflows allow Threat Hunters to enrich alerts, gather third-party threat intel, seek out determinitions from analysts, and conduct follow-up responses automatically whenever alerts are triggered.\n<hr class=\"hr-purple\">\n<span style=\"color: white\">What is the name of the available workflow for the <s1-value>CF-WAF-XSS</s1-value> alert?</span>\n</s1-flag-body>\n<s1-flag example=\"S1-CNAPP-AppAttack\">The flag is the name of the workflow under <s1-label>Available Workflows.</s1-label></s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "CF-WAF-WebAttack",
@@ -134,7 +134,7 @@
       "type": "static",
       "name": "Flag 4 - S1 CF Integration",
       "token": "CF JD Cloud IP Details",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Hyperautomation</s1-label> and open the <s1-value>CF-WAF-WebAttack</s1-value> workflow. Its actions run top to bottom, in order — scroll through them to find the first block that uses a <span style=\"color: #f38020;\">Cloudflare</span> integration.\n</s1-nav>\n<s1-flag-body>\nWhat is the name of the first block that uses the <span style=\"color: #f38020;\">Cloudflare</span> integration?\n</s1-flag-body>\n<s1-flag example=\"CF Create IP Rule\">The flag is the name of the Cloudflare integration.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Hyperautomation</s1-label> and open the <s1-value>CF-WAF-WebAttack</s1-value> workflow. Its actions run top to bottom, in order — scroll through them to find the first block that uses a <span style=\"color: #f38020;\">Cloudflare</span> integration.\n</s1-nav>\n<s1-flag-body>\nHyperautomation integrations are pre-built connectors that let you hook up the tools in your stack to automate security response actions and streamline incident workflows without custom code.\n<hr class=\"hr-purple\">\n<span style=\"color: white\">In the <s1-value>CF-WAF-WebAttack</s1-value> workflow, what is the name of the first block that uses the <span style=\"color: #f38020;\">Cloudflare</span> integration?</span>\n</s1-flag-body>\n<s1-flag example=\"CF Create IP Rule\">The flag is the name of the <span style=\"color: #f38020;\">Cloudflare</span> integration.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "CF JD Cloud IP Details",
