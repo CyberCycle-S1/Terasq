@@ -218,7 +218,7 @@
       "type": "choice",
       "name": "Flag 6 - S1 CF Block IP",
       "token": "Zone",
-      "description": "<s1-nav>Still in the <s1-value>CF-WAF-WebAttack</s1-value> workflow, open the <s1-value>Cloudflare Block IP</s1-value> action and read the URL it calls.</s1-nav>\n<s1-flag-body>\nThe access rule it creates — is it scoped to the whole account/user, or to a single zone?\n</s1-flag-body>\n<s1-flag example=\"\">The flag is the scope of the access rule.</s1-flag>",
+      "description": "<s1-nav>Still in the <s1-value>CF-WAF-WebAttack</s1-value> workflow, open the <s1-value>Cloudflare Block IP</s1-value> action and read the URL it calls.</s1-nav>\n<s1-flag-body>\nIn the <s1-value>CF-WAF-WebAttack</s1-value> workflow, open the <s1-value>Cloudflare Block IP</s1-value> action and read the URL it calls.\n<hr class=\"hr-purple\">\n<span style=\"color: white\">The access rule it creates — is it scoped to the whole account/user, or to a single zone?</span>\n</s1-flag-body>\n<s1-flag example=\"Account | User | Zone | Ruleset\">The flag is the scope of the access rule.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Zone",
