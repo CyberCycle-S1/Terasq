@@ -356,7 +356,7 @@
       "type": "static",
       "name": "Flag 9 - S1 VirusTotal",
       "token": "AbuseIPDB",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, filter for <s1-value>Credential Stuffing</s1-value>, and sort by the <s1-value>Analyst Verdict</s1-value> column — the playbook's enrichment note only exists on an alert an analyst has already judged. Open one with a verdict, then open its <s1-label>Notes</s1-label> tab.</s1-nav>\n<s1-flag-body>\nThe response playbook enriched the attacker IP against two reputation services. <s1-value>VirusTotal</s1-value> is one. What is the other?\n</s1-flag-body>\n<s1-flag example=\"Gartner\">The flag is the other reputation service.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, filter for <s1-value>CF-Access-CredStuffing</s1-value>, and sort by the <s1-value>Analyst Verdict</s1-value> column — the playbook's enrichment note only exists on an alert an analyst has already judged. Open one with a verdict, then open its <s1-label>Notes</s1-label> tab.</s1-nav>\n<s1-flag-body>\n<span style=\"color: white\">The <s1-value>CF-Access-CredStuffing</s1-value> response playbook enriched the attacker IP against two reputation services. <s1-value>VirusTotal</s1-value> is one. What is the other?</span>\n</s1-flag-body>\n<s1-flag example=\"Gartner\">The flag is the other reputation service.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "AbuseIPDB",
