@@ -216,7 +216,7 @@
       "type": "choice",
       "name": "Flag 6 - S1 AI Prompt Injection",
       "token": "Injection fuzzing",
-      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open an <s1-value>AI Prompt Injection</s1-value> alert, and read the <s1-label>Purple AI</s1-label> overview panel.</s1-nav>\n<s1-flag-body>\nA single source sending many chat POSTs in a short window is characteristic of what?</s1-flag-body>\n<s1-flag example=\"brute-forcing\">The flag is the name of the attempt.</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, navigate to <s1-label>Alerts</s1-label>, open a <s1-value>CF-AI-PromptInjection</s1-value> alert, and read the <s1-label>Purple AI</s1-label> overview panel.</s1-nav>\n<s1-flag-body>\n<span style=\"color: white\">According to the <s1-label>Purple AI</s1-label> overview for the <s1-value>CF-AI-PromptInjection</s1-value> alerts. A single source sending many chat POSTs in a short window is characteristic of what?</span></s1-flag-body>\n<s1-flag example=\"brute-forcing\">The flag is the name of the attempt.</s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "Injection fuzzing",
