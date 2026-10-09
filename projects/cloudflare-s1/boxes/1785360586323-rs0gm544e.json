@@ -18,7 +18,7 @@
       "type": "static",
       "name": "Flag 1 - CF Bot Management",
       "token": "403",
-      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, select the <s1-value>one-flare.com</s1-value> domain, navigate to <s1-label>Security Rules</s1-label>, and open the <s1-value>Mitigate definite bot traffic</s1-value> rule.</s1-nav>\n<s1-flag-body>\nCloudflare allows users to customize their security rules. For this specific rule, what is the response code sent after blocking?\n</s1-flag-body>\n<s1-flag example=\"400\">The flag is the response code</s1-flag>",
+      "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, select the <s1-value>one-flare.com</s1-value> domain, navigate to <s1-label>Security Rules</s1-label>, and open the <s1-value>Mitigate definite bot traffic</s1-value> rule.</s1-nav>\n<s1-flag-body>\n<span style=\"color: #f38020;\">Cloudflare</span> allows users to customize their security rules. For the <s1-value>Mitigate definite bot traffic</s1-value> rule on the <s1-value>one-flare.com</s1-value> domain, open it and see how it has been configured.\n<hr class=\"hr-purple\">\n<span style=\"color: white\">What is the <s1-value>response code</s1-value> sent after blocking?</span>\n</s1-flag-body>\n<s1-flag example=\"400\">The flag is the <s1-value>response code.</s1-value></s1-flag>",
       "captureMessage": "",
       "value": 100,
       "plainAnswer": "403",
