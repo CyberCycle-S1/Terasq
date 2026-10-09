@@ -367,7 +367,7 @@
         {
           "id": "1785779720478-h98bzc1rp",
           "price": 20,
-          "description": "After finding the <s1-value>dataVender.vendor</s1-value> field, clicking on it will show the number of logs coming from <span style=\"color: #A220F3;\">SentinelOne</span> internally, and <span style=\"color: #f38020;\">Cloudflare</span> externally.",
+          "description": "After finding the <s1-value>dataSource.vendor</s1-value> field, clicking on it will show the number of logs coming from <span style=\"color: #A220F3;\">SentinelOne</span> internally, and <span style=\"color: #f38020;\">Cloudflare</span> externally.",
           "flagId": "1785340763306-9az0eoav7",
           "order": 0,
           "boxId": "1784222397232-xp0t4weul"
