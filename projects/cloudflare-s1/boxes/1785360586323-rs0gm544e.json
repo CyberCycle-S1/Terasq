@@ -5,7 +5,7 @@
   "corporationId": "1783699235121-0k0xxng4b",
   "order": 3,
   "operatingSystem": "none",
-  "description": "",
+  "description": "Trace M4RVIN's edge footprint through <span style=\"color: #f38020;\">Cloudflare</span> Workers, traffic sequence routing, and Workers AI models, then use <span style=\"color: #A220F3;\">SentinelOne</span> detections and workflows to neutralize autonomous prompt injection fuzzing attacks.",
   "captureMessage": "",
   "value": 0,
   "flagSubmissionType": "CLASSIC",

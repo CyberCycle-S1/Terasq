@@ -5,7 +5,7 @@
   "corporationId": "1783699235121-0k0xxng4b",
   "order": 2,
   "operatingSystem": "none",
-  "description": "",
+  "description": "Investigate web application attacks and credential stuffing alerts in <span style=\"color: #A220F3;\">SentinelOne</span>, enrich adversary infrastructure with threat intel, and leverage Hyperautomation playbooks to deploy automated <span style=\"color: #f38020;\">Cloudflare</span> edge mitigations.",
   "captureMessage": "",
   "value": 0,
   "flagSubmissionType": "CLASSIC",

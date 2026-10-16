@@ -5,7 +5,7 @@
   "corporationId": "1783699235121-0k0xxng4b",
   "order": 1,
   "operatingSystem": "none",
-  "description": "",
+  "description": "Analyze edge and endpoint telemetry across <span style=\"color: #f38020;\">Cloudflare</span> and <span style=\"color: #A220F3;\">SentinelOne</span> dashboards to uncover M4RVIN's reconnaissance, trace exposed API endpoints, and triage bulk data exfiltration alerts.",
   "captureMessage": "",
   "value": 0,
   "flagSubmissionType": "CLASSIC",
