@@ -522,5 +522,6 @@
   ],
   "hints": [],
   "dependency": "linear",
-  "linearDependencies": true
+  "linearDependencies": true,
+  "avatarPath": "box/Oneflare-logo.png"
 }

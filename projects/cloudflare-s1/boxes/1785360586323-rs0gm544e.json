@@ -78,7 +78,7 @@
         {
           "id": "1786660586279-8u50ngxa5",
           "price": 80,
-          "description": "The flag is <s1-answer>Load balancing</s1-answer>.",
+          "description": "The flag is <s1-answer>Load Balancing</s1-answer>.",
           "flagId": "1785360631466-rdodl90ks",
           "order": 1,
           "boxId": "1785360586323-rs0gm544e"
@@ -129,7 +129,7 @@
     },
     {
       "id": "1785360634001-p2l9t6mym",
-      "type": "regex",
+      "type": "static",
       "name": "Flag 4 - CF Workers AI",
       "token": "resnet-50",
       "description": "<s1-nav>In the <span style=\"color: #f38020;\">Cloudflare</span> console, make sure you are at the <s1-label>Account</s1-label> level and not in a specific domain/zone. navigate to <s1-label>AI</s1-label> from the left-hand menu, and select <s1-label>Workers AI</s1-label> from the dropdown. In the model catalog, filter for <s1-value>Image Classification</s1-value>.</s1-nav>\n<s1-flag-body>\nLike standard <span style=\"color: #f38020;\">Cloudflare</span> <s1-label>Workers</s1-label>, <s1-label>Workers AI</s1-label> allow users to deploy LLMs and AI agents across <span style=\"color: #f38020;\">Cloudflare's</span> global network.\n<hr class=\"hr-purple\">\n<span style=\"color: white;\">From the model catalog, what is the name of the model that can perform <s1-value>Image Classification</s1-value>?</span>\n</s1-flag-body>\n<s1-flag example=\"opus-5.5\">The flag is the name of the model</s1-flag>",
@@ -173,7 +173,7 @@
       "id": "1785360635308-jkqchtqfh",
       "type": "regex",
       "name": "Flag 5 - S1 AI Prompt Injection API Route",
-      "token": "/?(?:api/)?v1/chat",
+      "token": "^(?:\\/?api\\/)?v1\\/chat$",
       "description": "<s1-nav>In the <span style=\"color: #A220F3;\">SentinelOne</span> console, make sure you are in the <s1-value>ThreatOps-Cloudflare</s1-value> Account. Navigate to <s1-label>Alerts</s1-label>, select the <s1-label>Custom Alerts</s1-label> tab, filter for <s1-value>CF-AI-PromptInjection</s1-value>, and open any matching alert to read the full name of the detection rule that raised it.</s1-nav>\n<s1-flag-body>\n<span style=\"color: white\">Open a <s1-value>CF-AI-PromptInjection</s1-value> alert. The associated detection rule's name calls out the exact API route it watches. What is that route?</span>\n</s1-flag-body>\n<s1-flag example=\"/api/...\">The flag is the API route.</s1-flag>",
       "captureMessage": "",
       "value": 100,
@@ -345,5 +345,6 @@
   ],
   "hints": [],
   "dependency": "linear",
-  "linearDependencies": true
+  "linearDependencies": true,
+  "avatarPath": "box/Oneflare-logo.png"
 }
